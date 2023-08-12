@@ -1,4 +1,3 @@
-C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows\SaveMyRPGClient.csproj.AssemblyReference.cache
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows\MainWindow.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows\App.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows\SaveMyRPGClient_MarkupCompile.cache

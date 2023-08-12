@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WDAV1lXJYC0i5hFVcmhjgsFMV4N6hiCQ6YOO7kCZOZ5kLJpuL8xzy1/fcbYwerXoUvZMHCAGlaAkJPp3TWe2Dg==",
+  "dgSpecHash": "2C3JpQTD/VCeFxljc08P5B97C0wnfh3NfTaMD7is0XzEginYmDsEGsa+uHu1ObErt0payPnsssDZn5QyIydmMQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\brent\\Documents\\Programming\\SaveMyRPGClient\\SaveMyRPGClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\brent\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.22000.29\\microsoft.windows.sdk.net.ref.10.0.22000.29.nupkg.sha512"
+  ],
   "logs": []
 }
