@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -9,7 +11,12 @@ using System.Threading.Tasks;
 
 namespace SaveMyRPGClient
 {
-    
+    public struct SaveFile {
+        public string FolderName { get; set; }
+        public string LSV_Name { get; set; }
+        public string Pic_Path { get; set; }
+
+    }
     public struct SaveFileChunk {
 
         public UInt32 TotalChunks;
@@ -58,8 +65,32 @@ namespace SaveMyRPGClient
 
 
     }
-    internal class SaveFile
+    public class SaveFileManager
     {
+        static public string default_path = @"C:\%USERPROFILE%\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story";
+        static public List<DirectoryInfo> saves_list;
+        SaveFileManager()
+        {
+            string[] save_folders = SaveFileManager.ListAllSaves();
+            for (int i = 0; i < save_folders.Length; i++)
+            {
+                saves_list.Add ( new DirectoryInfo(save_folders[i]));
+                Debug.WriteLine($"FolderName: {saves_list.Last().Name}");
+                Debug.WriteLine($"Full Path: {saves_list.Last().FullName}");
+                Debug.WriteLine($"Created: {saves_list.Last().CreationTimeUtc}");
+                Debug.WriteLine($"Last Modified: {saves_list.Last().LastWriteTimeUtc}");
+            }
+        }
+
+        static public string[] ListAllSaves() 
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story";
+            Debug.Print(path);
+            return Directory.GetDirectories(path,"*.",SearchOption.TopDirectoryOnly);
+
+
+        }
+
 
     }
 }

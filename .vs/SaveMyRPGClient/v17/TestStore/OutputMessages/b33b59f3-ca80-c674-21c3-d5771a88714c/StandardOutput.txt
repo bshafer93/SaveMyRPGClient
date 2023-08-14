@@ -1,0 +1,610 @@
+FolderName: Bert-081232741__Ravaged Beach - 1h 06m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-081232741__Ravaged Beach - 1h 06m
+FolderName: Bert-1081232734__Wilderness - 1h 16m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-1081232734__Wilderness - 1h 16m
+FolderName: Bert-1381231714__AutoSave_0
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-1381231714__AutoSave_0
+FolderName: Bert-1381231750__A Nautiloid in Hell - 0h 19m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-1381231750__A Nautiloid in Hell - 0h 19m
+FolderName: Bert-1681231712__A Nautiloid in Hell - 0h 22m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-1681231712__A Nautiloid in Hell - 0h 22m
+FolderName: Bert-1781232741__Wilderness - 1h 23m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-1781232741__Wilderness - 1h 23m
+FolderName: Bert-218123273__QuickSave_2
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-218123273__QuickSave_2
+FolderName: Bert-2281231757__A Nautiloid in Hell - 0h 28m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-2281231757__A Nautiloid in Hell - 0h 28m
+FolderName: Bert-2281232723__Campsite - 1h 27m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-2281232723__Campsite - 1h 27m
+FolderName: Bert-238123277__Campsite - 1h 28m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-238123277__Campsite - 1h 28m
+FolderName: Bert-3281231721__AutoSave_1
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-3281231721__AutoSave_1
+FolderName: Bert-328123174__A Nautiloid in Hell - 0h 38m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-328123174__A Nautiloid in Hell - 0h 38m
+FolderName: Bert-3681231737__QuickSave_0
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-3681231737__QuickSave_0
+FolderName: Bert-3881231715__A Nautiloid in Hell - 0h 44m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-3881231715__A Nautiloid in Hell - 0h 44m
+FolderName: Bert-3881231733__AutoSave_2
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-3881231733__AutoSave_2
+FolderName: Bert-4881231724__AutoSave_3
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-4881231724__AutoSave_3
+FolderName: Bert-5181231742__AutoSave_4
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-5181231742__AutoSave_4
+FolderName: Bert-5181231747__Ravaged Beach - 0h 57m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-5181231747__Ravaged Beach - 0h 57m
+FolderName: Bert-5681231729__QuickSave_1
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Bert-5681231729__QuickSave_1
+FolderName: Norbertle-013123479__Campsite - 16h 21m_Before
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-013123479__Campsite - 16h 21m_Before
+FolderName: Norbertle-061233759__Shattered Sanctum - 6h 15m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-061233759__Shattered Sanctum - 6h 15m
+FolderName: Norbertle-10111231759__The Risen Road - 8h 56m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-10111231759__The Risen Road - 8h 56m
+FolderName: Norbertle-10131236745__Waukeens Rest - 17h 16m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-10131236745__Waukeens Rest - 17h 16m
+FolderName: Norbertle-10412320714__Refectory - 2h 08m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-10412320714__Refectory - 2h 08m
+FolderName: Norbertle-1041233756__Refectory - 2h 41m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1041233756__Refectory - 2h 41m
+FolderName: Norbertle-1041234724__Forest - 3h 38m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1041234724__Forest - 3h 38m
+FolderName: Norbertle-10812315733__Whispering Depths - 6h 14m_SpiderDen
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-10812315733__Whispering Depths - 6h 14m_SpiderDen
+FolderName: Norbertle-1091231674__Campsite - 8h 11m_smrpg
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1091231674__Campsite - 8h 11m_smrpg
+FolderName: Norbertle-10912316750__Campsite - 8h 12m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-10912316750__Campsite - 8h 12m
+FolderName: Norbertle-109123374__Whispering Depths - 7h15m_Joey
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-109123374__Whispering Depths - 7h15m_Joey
+FolderName: Norbertle-11111232742__The Risen Road - 9h 47m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-11111232742__The Risen Road - 9h 47m
+FolderName: Norbertle-11111233746__Waukeens Rest - 10h 17m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-11111233746__Waukeens Rest - 10h 17m
+FolderName: Norbertle-11131234742__Campsite - 16h 33m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-11131234742__Campsite - 16h 33m
+FolderName: Norbertle-112123678__Shattered Sanctum - 15h 03m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-112123678__Shattered Sanctum - 15h 03m
+FolderName: Norbertle-1141232752__Chapel Entrance - 2h 00m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1141232752__Chapel Entrance - 2h 00m
+FolderName: Norbertle-1141233727__QuickSave_0
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1141233727__QuickSave_0
+FolderName: Norbertle-1161234727__Wilderness - 7h 24m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1161234727__Wilderness - 7h 24m
+FolderName: Norbertle-1161234739__QuickSave_17
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1161234739__QuickSave_17
+FolderName: Norbertle-118123673__Emerald Grove - 3h 54m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-118123673__Emerald Grove - 3h 54m
+FolderName: Norbertle-1191231673__Campsite - 8h 12m_smrpg
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1191231673__Campsite - 8h 12m_smrpg
+FolderName: Norbertle-12121236715__Shattered Sanctum - 15h 14m_Screwed
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-12121236715__Shattered Sanctum - 15h 14m_Screwed
+FolderName: Norbertle-12131234758__Campsite - 16h 34m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-12131234758__Campsite - 16h 34m
+FolderName: Norbertle-1241233734__QuickSave_1
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1241233734__QuickSave_1
+FolderName: Norbertle-1251233749__Goblin Camp - 5h 46m_bABY
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1251233749__Goblin Camp - 5h 46m_bABY
+FolderName: Norbertle-134123174__Adams Foley
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-134123174__Adams Foley
+FolderName: Norbertle-136123471__Wilderness - 7h 26m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-136123471__Wilderness - 7h 26m
+FolderName: Norbertle-1361234723__Wilderness - 7h 26m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1361234723__Wilderness - 7h 26m
+FolderName: Norbertle-14111230721__AutoSave_16
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-14111230721__AutoSave_16
+FolderName: Norbertle-1412318742__Shadow_Princess
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1412318742__Shadow_Princess
+FolderName: Norbertle-14123276__respect adventure
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-14123276__respect adventure
+FolderName: Norbertle-141234723__AutoSave_9
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-141234723__AutoSave_9
+FolderName: Norbertle-14812314733__Owlbear Nest - 5h 20m_owlbear
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-14812314733__Owlbear Nest - 5h 20m_owlbear
+FolderName: Norbertle-148123476__The Hollow - 3h 05m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-148123476__The Hollow - 3h 05m
+FolderName: Norbertle-1481236714__Secluded Chamber - 3h 58m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1481236714__Secluded Chamber - 3h 58m
+FolderName: Norbertle-14912315720__Shattered Sanctum - 10h 59m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-14912315720__Shattered Sanctum - 10h 59m
+FolderName: Norbertle-15131234716__Shattered Sanctum - 16h 36m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-15131234716__Shattered Sanctum - 16h 36m
+FolderName: Norbertle-15412319728__The Hollow - 1h 16m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-15412319728__The Hollow - 1h 16m
+FolderName: Norbertle-1541234717__Blighted Village - 3h 43m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1541234717__Blighted Village - 3h 43m
+FolderName: Norbertle-1561234737__Wilderness - 7h 28m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1561234737__Wilderness - 7h 28m
+FolderName: Norbertle-15812314746__Owlbear Nest - 5h 21m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-15812314746__Owlbear Nest - 5h 21m
+FolderName: Norbertle-15812315735__AutoSave_15
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-15812315735__AutoSave_15
+FolderName: Norbertle-15812315747__Whispering Depths - 6h 20m_DaSpador
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-15812315747__Whispering Depths - 6h 20m_DaSpador
+FolderName: Norbertle-15912313711__Shattered Sanctum - 9h 29m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-15912313711__Shattered Sanctum - 9h 29m
+FolderName: Norbertle-16111233750__The Risen Road - 10h 22m_FinalSave
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-16111233750__The Risen Road - 10h 22m_FinalSave
+FolderName: Norbertle-16111234754__Underdark - 11h 59m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-16111234754__Underdark - 11h 59m
+FolderName: Norbertle-1641231737__AutoSave_3
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1641231737__AutoSave_3
+FolderName: Norbertle-1661233726__Shattered Sanctum - 6h 29m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1661233726__Shattered Sanctum - 6h 29m
+FolderName: Norbertle-16912313742__Shattered Sanctum - 9h 30m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-16912313742__Shattered Sanctum - 9h 30m
+FolderName: Norbertle-1691234715__Goblin Camp - 8h 19m_Gobb
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1691234715__Goblin Camp - 8h 19m_Gobb
+FolderName: Norbertle-169123476__AutoSave_18
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-169123476__AutoSave_18
+FolderName: Norbertle-1711123375__The Risen Road - 10h 22m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1711123375__The Risen Road - 10h 22m
+FolderName: Norbertle-17131236740__AutoSave_28
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-17131236740__AutoSave_28
+FolderName: Norbertle-1781234751__Emerald Grove - 3h 09m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1781234751__Emerald Grove - 3h 09m
+FolderName: Norbertle-18111234730__Underdark - 12h 01m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-18111234730__Underdark - 12h 01m
+FolderName: Norbertle-18121237710__Campsite - 16h 20mEnd
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-18121237710__Campsite - 16h 20mEnd
+FolderName: Norbertle-181236737__Tiefling Hideout - 3h 45m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-181236737__Tiefling Hideout - 3h 45m
+FolderName: Norbertle-18412318722__AutoSave_4
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-18412318722__AutoSave_4
+FolderName: Norbertle-1841233741__QuickSave_2
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1841233741__QuickSave_2
+FolderName: Norbertle-1991231578__Shattered Sanctum - 11h 03m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-1991231578__Shattered Sanctum - 11h 03m
+FolderName: Norbertle-20412319722__Emerald Grove - 1h 20m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-20412319722__Emerald Grove - 1h 20m
+FolderName: Norbertle-20812314730__Forest - 5h 26m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-20812314730__Forest - 5h 26m
+FolderName: Norbertle-2081234739__Emerald Grove - 3h 12m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2081234739__Emerald Grove - 3h 12m
+FolderName: Norbertle-20912315748__Defiled Temple - 11h 04m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-20912315748__Defiled Temple - 11h 04m
+FolderName: Norbertle-211112314751__Campsite - 13h 01m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-211112314751__Campsite - 13h 01m
+FolderName: Norbertle-21111234743__Storehouse - 12h 04m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-21111234743__Storehouse - 12h 04m
+FolderName: Norbertle-2111232724__AutoSave_19
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2111232724__AutoSave_19
+FolderName: Norbertle-2112123570__Ebonlake Grotto - 14h 23m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2112123570__Ebonlake Grotto - 14h 23m
+FolderName: Norbertle-2131234744__AutoSave_27
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2131234744__AutoSave_27
+FolderName: Norbertle-213123674__Sacred Pool - 17h 07m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-213123674__Sacred Pool - 17h 07m
+FolderName: Norbertle-21412319744__Emerald Grove - 1h 22m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-21412319744__Emerald Grove - 1h 22m
+FolderName: Norbertle-2141232719__AutoSave_6
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2141232719__AutoSave_6
+FolderName: Norbertle-219123370__Wilderness - 7h 26m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-219123370__Wilderness - 7h 26m
+FolderName: Norbertle-22111234713__Storehouse - 12h 04m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-22111234713__Storehouse - 12h 04m
+FolderName: Norbertle-2241234745__QuickSave_7
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2241234745__QuickSave_7
+FolderName: Norbertle-224123475__Blighted Village - 3h 50m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-224123475__Blighted Village - 3h 50m
+FolderName: Norbertle-2281234759__Druids Chambers - 3h 14m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2281234759__Druids Chambers - 3h 14m
+FolderName: Norbertle-22912313723__Shattered Sanctum - 9h 36m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-22912313723__Shattered Sanctum - 9h 36m
+FolderName: Norbertle-23121235712__The Risen Road - 14h 25m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-23121235712__The Risen Road - 14h 25m
+FolderName: Norbertle-23121236754__AutoSave_25
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-23121236754__AutoSave_25
+FolderName: Norbertle-23412319745__Chapel Entrance - 1h 24m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-23412319745__Chapel Entrance - 1h 24m
+FolderName: Norbertle-23812313736__Campsite - 4h 40m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-23812313736__Campsite - 4h 40m
+FolderName: Norbertle-241234733__Dudes
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-241234733__Dudes
+FolderName: Norbertle-2441231874__Ravaged Beach - 0h 36m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2441231874__Ravaged Beach - 0h 36m
+FolderName: Norbertle-2461233720__Shattered Sanctum - 6h 37m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2461233720__Shattered Sanctum - 6h 37m
+FolderName: Norbertle-2481231470__Forest - 5h 29m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2481231470__Forest - 5h 29m
+FolderName: Norbertle-249123378__AutoSave_17
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-249123378__AutoSave_17
+FolderName: Norbertle-251112314716__Campsite - 13h 04m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-251112314716__Campsite - 13h 04m
+FolderName: Norbertle-25111231473__AutoSave_22
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-25111231473__AutoSave_22
+FolderName: Norbertle-2551232716__Blighted Village - 5h 13m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2551232716__Blighted Village - 5h 13m
+FolderName: Norbertle-25812313738__AutoSave_12
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-25812313738__AutoSave_12
+FolderName: Norbertle-261112315715__Campsite - 14h 05mPrep
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-261112315715__Campsite - 14h 05mPrep
+FolderName: Norbertle-26123375__Shattered Sanctum - 6h 15m_BeforeTalk
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-26123375__Shattered Sanctum - 6h 15m_BeforeTalk
+FolderName: Norbertle-261234730__AutoSave_14
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-261234730__AutoSave_14
+FolderName: Norbertle-2651232754__GnomeSave
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2651232754__GnomeSave
+FolderName: Norbertle-2812315757__Whispering Depths - 6h 07m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2812315757__Whispering Depths - 6h 07m
+FolderName: Norbertle-2861232741__Goblin Camp - 5h 46mHmm
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2861232741__Goblin Camp - 5h 46mHmm
+FolderName: Norbertle-29111234744__Storehouse - 12h 12m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-29111234744__Storehouse - 12h 12m
+FolderName: Norbertle-29131236757__Wilderness - 17h 34m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-29131236757__Wilderness - 17h 34m
+FolderName: Norbertle-2941231739__Wilderness - 1h 18m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2941231739__Wilderness - 1h 18m
+FolderName: Norbertle-29412320726__Dank Crypt - 2h 27m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-29412320726__Dank Crypt - 2h 27m
+FolderName: Norbertle-2941233724__QuickSave_3
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2941233724__QuickSave_3
+FolderName: Norbertle-2941233736__Chapel Entrance - 2h 59m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2941233736__Chapel Entrance - 2h 59m
+FolderName: Norbertle-294123471__begin
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-294123471__begin
+FolderName: Norbertle-2961233715__Shattered Sanctum - 6h 42m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2961233715__Shattered Sanctum - 6h 42m
+FolderName: Norbertle-2981236736__Sacred Pool - 4h 13m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-2981236736__Sacred Pool - 4h 13m
+FolderName: Norbertle-29912314746__Worg Pens - 10h 17m_Sylvanus
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-29912314746__Worg Pens - 10h 17m_Sylvanus
+FolderName: Norbertle-3081236748__Enclave Library - 4h 14m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3081236748__Enclave Library - 4h 14m
+FolderName: Norbertle-30912315723__Defiled Temple - 11h 13m_DeadGard
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-30912315723__Defiled Temple - 11h 13m_DeadGard
+FolderName: Norbertle-311112315722__AutoSave_24
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-311112315722__AutoSave_24
+FolderName: Norbertle-31111234759__Storehouse - 12h 14m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-31111234759__Storehouse - 12h 14m
+FolderName: Norbertle-31112316728__Ebonlake Grotto - 14h 22m_smrpg
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-31112316728__Ebonlake Grotto - 14h 22m_smrpg
+FolderName: Norbertle-3121236735__Shattered Sanctum - 15h 06m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3121236735__Shattered Sanctum - 15h 06m
+FolderName: Norbertle-3131234747__Campsite - 16h 25m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3131234747__Campsite - 16h 25m
+FolderName: Norbertle-3181234737__Emerald Grove - 3h 16m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3181234737__Emerald Grove - 3h 16m
+FolderName: Norbertle-31912314711__Gut
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-31912314711__Gut
+FolderName: Norbertle-321112314724__Underdark - 13h 11m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-321112314724__Underdark - 13h 11m
+FolderName: Norbertle-32412320740__AutoSave_10
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-32412320740__AutoSave_10
+FolderName: Norbertle-3281231476__Forest - 5h 37m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3281231476__Forest - 5h 37m
+FolderName: Norbertle-33101236729__Selûnite Outpost - 11h 39m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-33101236729__Selûnite Outpost - 11h 39m
+FolderName: Norbertle-33111231738__The Risen Road - 9h 18m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-33111231738__The Risen Road - 9h 18m
+FolderName: Norbertle-33412319722__Campsite - 1h 33m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-33412319722__Campsite - 1h 33m
+FolderName: Norbertle-3351232752__QuickSave_8
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3351232752__QuickSave_8
+FolderName: Norbertle-3361234751__AutoSave_15
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3361234751__AutoSave_15
+FolderName: Norbertle-33912314726__Shattered Sanctum - 10h 21m_THeGuts
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-33912314726__Shattered Sanctum - 10h 21m_THeGuts
+FolderName: Norbertle-33912315720__Defiled Temple - 11h 16m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-33912315720__Defiled Temple - 11h 16m
+FolderName: Norbertle-34111234733__Underdark - 12h 17m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-34111234733__Underdark - 12h 17m
+FolderName: Norbertle-3412318714__QuickSave_0
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3412318714__QuickSave_0
+FolderName: Norbertle-341232726__Chapel Entrance - 1h 52m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-341232726__Chapel Entrance - 1h 52m
+FolderName: Norbertle-3441230717__AutoSave_0
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3441230717__AutoSave_0
+FolderName: Norbertle-34412318752__Ravaged Beach - 0h 39m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-34412318752__Ravaged Beach - 0h 39m
+FolderName: Norbertle-34412320737__Dank Crypt - 2h 32m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-34412320737__Dank Crypt - 2h 32m
+FolderName: Norbertle-3451232747__QuickSave_9
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3451232747__QuickSave_9
+FolderName: Norbertle-3481236743__Wilderness - 4h 18m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3481236743__Wilderness - 4h 18m
+FolderName: Norbertle-35111231470__Underdark - 13h 14m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-35111231470__Underdark - 13h 14m
+FolderName: Norbertle-35111234711__Underdark - 12h 17m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-35111234711__Underdark - 12h 17m
+FolderName: Norbertle-3581231479__Blighted Village - 5h 39m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3581231479__Blighted Village - 5h 39m
+FolderName: Norbertle-3581234742__AutoSave_11
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3581234742__AutoSave_11
+FolderName: Norbertle-3581234749__Emerald Grove - 3h 20m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3581234749__Emerald Grove - 3h 20m
+FolderName: Norbertle-3581236717__Forest - 4h 19m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3581236717__Forest - 4h 19m
+FolderName: Norbertle-3591234729__AutoSave_19
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3591234729__AutoSave_19
+FolderName: Norbertle-361234730__QuickSave_16
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-361234730__QuickSave_16
+FolderName: Norbertle-36412320738__Dank Crypt - 2h 34m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-36412320738__Dank Crypt - 2h 34m
+FolderName: Norbertle-364123379__QuickSave_4
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-364123379__QuickSave_4
+FolderName: Norbertle-3651232730__Blighted Village - 5h 20m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3651232730__Blighted Village - 5h 20m
+FolderName: Norbertle-36912313753__Shattered Sanctum - 9h 49m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-36912313753__Shattered Sanctum - 9h 49m
+FolderName: Norbertle-37111234747__AutoSave_21
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-37111234747__AutoSave_21
+FolderName: Norbertle-3713123672__Campsite - 17h 37m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3713123672__Campsite - 17h 37m
+FolderName: Norbertle-3741231970__AutoSave_8
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3741231970__AutoSave_8
+FolderName: Norbertle-3751232757__AutoSave_12
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3751232757__AutoSave_12
+FolderName: Norbertle-3761232713__BillNYethenickyguy
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3761232713__BillNYethenickyguy
+FolderName: Norbertle-3761232745__AutoSave_13
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3761232745__AutoSave_13
+FolderName: Norbertle-3812316722__The Hollow - 7h 05m_RemoveBUllshit
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3812316722__The Hollow - 7h 05m_RemoveBUllshit
+FolderName: Norbertle-381234733__The Hollow - 2h 55m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-381234733__The Hollow - 2h 55m
+FolderName: Norbertle-385123272__Goblin Camp - 5h 22m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-385123272__Goblin Camp - 5h 22m
+FolderName: Norbertle-39111232711__TheAdam
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-39111232711__TheAdam
+FolderName: Norbertle-3912316710__Selûnite Outpost - 11h 36m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3912316710__Selûnite Outpost - 11h 36m
+FolderName: Norbertle-3941231735__Joeys folly
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3941231735__Joeys folly
+FolderName: Norbertle-3941233713__QuickSave_5
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3941233713__QuickSave_5
+FolderName: Norbertle-3941233726__Ravaged Beach - 3h 09m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-3941233726__Ravaged Beach - 3h 09m
+FolderName: Norbertle-39812314722__Blighted Village - 5h 43m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-39812314722__Blighted Village - 5h 43m
+FolderName: Norbertle-399123471__Goblin Camp - 8h 42m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-399123471__Goblin Camp - 8h 42m
+FolderName: Norbertle-4041230749__A Nautiloid in Hell - 0h 30m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4041230749__A Nautiloid in Hell - 0h 30m
+FolderName: Norbertle-4041231725__AutoSave_4
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4041231725__AutoSave_4
+FolderName: Norbertle-41111232729__The Risen Road - 9h 47m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-41111232729__The Risen Road - 9h 47m
+FolderName: Norbertle-41412318744__Wilderness - 0h 46m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-41412318744__Wilderness - 0h 46m
+FolderName: Norbertle-4141234730__Whispering Depths - 4h 09m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4141234730__Whispering Depths - 4h 09m
+FolderName: Norbertle-4141234753__Adams Save
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4141234753__Adams Save
+FolderName: Norbertle-4151231747__Campsite - 4h 32mRespec
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4151231747__Campsite - 4h 32mRespec
+FolderName: Norbertle-41912313716__Shattered Sanctum - 9h 54m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-41912313716__Shattered Sanctum - 9h 54m
+FolderName: Norbertle-4191234735__ADAM
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4191234735__ADAM
+FolderName: Norbertle-42101236754__Selûnite Outpost - 11h 48m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-42101236754__Selûnite Outpost - 11h 48m
+FolderName: Norbertle-421112314726__ZeWeapon
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-421112314726__ZeWeapon
+FolderName: Norbertle-42111231577__The Risen Road - 14h 12m_GoodStop
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-42111231577__The Risen Road - 14h 12m_GoodStop
+FolderName: Norbertle-42121236751__DeadMithra
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-42121236751__DeadMithra
+FolderName: Norbertle-4213123475__Shattered Sanctum - 16h 39m_The goods
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4213123475__Shattered Sanctum - 16h 39m_The goods
+FolderName: Norbertle-4241232750__Joewys foleltyChapel Entrance - 2h 13m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4241232750__Joewys foleltyChapel Entrance - 2h 13m
+FolderName: Norbertle-4251232710__jOEWYSdEATH
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4251232710__jOEWYSdEATH
+FolderName: Norbertle-4261234748__sus
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4261234748__sus
+FolderName: Norbertle-42812314757__OgreFriends
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-42812314757__OgreFriends
+FolderName: Norbertle-42912314713__AutoSave_20
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-42912314713__AutoSave_20
+FolderName: Norbertle-43111230716__AutoSave_17
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-43111230716__AutoSave_17
+FolderName: Norbertle-43111230746__The Risen Road - 8h 46m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-43111230746__The Risen Road - 8h 46m
+FolderName: Norbertle-43121236728__Hmm
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-43121236728__Hmm
+FolderName: Norbertle-4341233718__before
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4341233718__before
+FolderName: Norbertle-43812315739__AutoSave_16
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-43812315739__AutoSave_16
+FolderName: Norbertle-441112314716__AutoSave_23
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-441112314716__AutoSave_23
+FolderName: Norbertle-441112314730__Wilderness - 13h 23m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-441112314730__Wilderness - 13h 23m
+FolderName: Norbertle-4441232075__Dank Crypt - 2h 42m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4441232075__Dank Crypt - 2h 42m
+FolderName: Norbertle-4451231720__AutoSave_11
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4451231720__AutoSave_11
+FolderName: Norbertle-4451232747__QuickSave_10
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4451232747__QuickSave_10
+FolderName: Norbertle-4461232719__Campsite-5h58m_Adam
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4461232719__Campsite-5h58m_Adam
+FolderName: Norbertle-4461234755__Campsite - 7h 58m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4461234755__Campsite - 7h 58m
+FolderName: Norbertle-451233749__QuickSave_12
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-451233749__QuickSave_12
+FolderName: Norbertle-4541230717__AutoSave_1
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4541230717__AutoSave_1
+FolderName: Norbertle-4551231742__Whispering Depths - 4h 36mAdamsFolley
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4551231742__Whispering Depths - 4h 36mAdamsFolley
+FolderName: Norbertle-4581231578__ZeFall
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4581231578__ZeFall
+FolderName: Norbertle-46121235740__Wilderness - 14h 49m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-46121235740__Wilderness - 14h 49m
+FolderName: Norbertle-46131235739__The Hollow - 16h 52m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-46131235739__The Hollow - 16h 52m
+FolderName: Norbertle-464123071__A Nautiloid in Hell - 0h 35m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-464123071__A Nautiloid in Hell - 0h 35m
+FolderName: Norbertle-4651232713__Goblin Camp - 5h 30m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4651232713__Goblin Camp - 5h 30m
+FolderName: Norbertle-47111231727__The Risen Road - 9h 31m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-47111231727__The Risen Road - 9h 31m
+FolderName: Norbertle-47111231745__The Risen Road - 9h 31m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-47111231745__The Risen Road - 9h 31m
+FolderName: Norbertle-47412318731__Wilderness - 0h 52m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-47412318731__Wilderness - 0h 52m
+FolderName: Norbertle-4761232759__Shattered Sanctum - 6h 02m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4761232759__Shattered Sanctum - 6h 02m
+FolderName: Norbertle-47812314737__Blighted Village - 5h 52m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-47812314737__Blighted Village - 5h 52m
+FolderName: Norbertle-47912315731__Defiled Temple - 11h 30m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-47912315731__Defiled Temple - 11h 30m
+FolderName: Norbertle-4812314730__Forest - 5h 10m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4812314730__Forest - 5h 10m
+FolderName: Norbertle-481236711__Emerald Grove - 3h 48m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-481236711__Emerald Grove - 3h 48m
+FolderName: Norbertle-4861233745__QuickSave_15
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4861233745__QuickSave_15
+FolderName: Norbertle-4861233754__Emerald Grove - 7h 02m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4861233754__Emerald Grove - 7h 02m
+FolderName: Norbertle-4881235730__Secluded Cove - 3h 32m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4881235730__Secluded Cove - 3h 32m
+FolderName: Norbertle-4881236759__Underground Passage - 4h 32m_Bear
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4881236759__Underground Passage - 4h 32m_Bear
+FolderName: Norbertle-4891235726__Forest - 9h 05m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4891235726__Forest - 9h 05m
+FolderName: Norbertle-491112315750__Ebonlake Grotto - 14h 20m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-491112315750__Ebonlake Grotto - 14h 20m
+FolderName: Norbertle-49412319727__BeforeFight
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-49412319727__BeforeFight
+FolderName: Norbertle-4941233754__Campsite - 3h 20m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4941233754__Campsite - 3h 20m
+FolderName: Norbertle-4981234759__Secluded Cove - 3h 20m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4981234759__Secluded Cove - 3h 20m
+FolderName: Norbertle-4981235718__Secluded Cove - 3h 33m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-4981235718__Secluded Cove - 3h 33m
+FolderName: Norbertle-501112315712__Ebonlake_smrpg
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-501112315712__Ebonlake_smrpg
+FolderName: Norbertle-50412319752__Chapel Entrance - 1h 51m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-50412319752__Chapel Entrance - 1h 51m
+FolderName: Norbertle-5061232743__Shattered Sanctum - 6h 04m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5061232743__Shattered Sanctum - 6h 04m
+FolderName: Norbertle-5061233713__Emerald Grove - 7h 03m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5061233713__Emerald Grove - 7h 03m
+FolderName: Norbertle-5141231870__Wilderness - 0h 55m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5141231870__Wilderness - 0h 55m
+FolderName: Norbertle-51412319719__AutoSave_9
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-51412319719__AutoSave_9
+FolderName: Norbertle-5181231576__Blighted Village - 6h 53m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5181231576__Blighted Village - 6h 53m
+FolderName: Norbertle-5181234731__Secluded Cove - 3h 22m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5181234731__Secluded Cove - 3h 22m
+FolderName: Norbertle-51912314710__Prepping
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-51912314710__Prepping
+FolderName: Norbertle-5191234740__Goblin Camp - 8h 54m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5191234740__Goblin Camp - 8h 54m
+FolderName: Norbertle-52111230721__AutoSave_18
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-52111230721__AutoSave_18
+FolderName: Norbertle-5241230752__AutoSave_2
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5241230752__AutoSave_2
+FolderName: Norbertle-5271231745__Adam_GroupGame
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5271231745__Adam_GroupGame
+FolderName: Norbertle-5281236714__Underground Passage - 4h 34m_GoodShow
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5281236714__Underground Passage - 4h 34m_GoodShow
+FolderName: Norbertle-529123472__Goblin Camp - 8h 55mGoodum
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-529123472__Goblin Camp - 8h 55mGoodum
+FolderName: Norbertle-53101236741__SweetBabySaysNo
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-53101236741__SweetBabySaysNo
+FolderName: Norbertle-53412318742__Wilderness - 0h 58m Before teh gobbs
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-53412318742__Wilderness - 0h 58m Before teh gobbs
+FolderName: Norbertle-534123274__AutoSave_7
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-534123274__AutoSave_7
+FolderName: Norbertle-5351232711__Goblin Camp - 5h 37m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5351232711__Goblin Camp - 5h 37m
+FolderName: Norbertle-5441231744__AutoSave_5
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5441231744__AutoSave_5
+FolderName: Norbertle-54412318716__AutoSave_5
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-54412318716__AutoSave_5
+FolderName: Norbertle-5451232757__QuickSave_11
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5451232757__QuickSave_11
+FolderName: Norbertle-5491231471__Shattered Sanctum - 10h 38m_SharrGirl
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5491231471__Shattered Sanctum - 10h 38m_SharrGirl
+FolderName: Norbertle-54912315753__Campsite - 8h 04m_smrpg
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-54912315753__Campsite - 8h 04m_smrpg
+FolderName: Norbertle-5491235754__Shattered Sanctum - 9h 12m_zepeeps
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5491235754__Shattered Sanctum - 9h 12m_zepeeps
+FolderName: Norbertle-55121235712__The Hollow - 14h 57m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-55121235712__The Hollow - 14h 57m
+FolderName: Norbertle-55121235751__Goblin Camp - 14h 58m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-55121235751__Goblin Camp - 14h 58m
+FolderName: Norbertle-551233741__QuickSave_13
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-551233741__QuickSave_13
+FolderName: Norbertle-55912314742__Shattered Sanctum - 10h 40m_MrTakl
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-55912314742__Shattered Sanctum - 10h 40m_MrTakl
+FolderName: Norbertle-57121235747__Shattered Sanctum - 15h00m_Merch
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-57121235747__Shattered Sanctum - 15h00m_Merch
+FolderName: Norbertle-57131235736__Hidden Vault - 17h 03m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-57131235736__Hidden Vault - 17h 03m
+FolderName: Norbertle-5761232731__Shattered Sanctum - 6h 11m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5761232731__Shattered Sanctum - 6h 11m
+FolderName: Norbertle-5812314727__Forest - 5h 10m_BeforeOwlbear
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5812314727__Forest - 5h 10m_BeforeOwlbear
+FolderName: Norbertle-5812314731__AutoSave_14
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5812314731__AutoSave_14
+FolderName: Norbertle-58131233717__AutoSave_26
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-58131233717__AutoSave_26
+FolderName: Norbertle-58412318722__AutoSave_6
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-58412318722__AutoSave_6
+FolderName: Norbertle-5881231371__Underground Passage - 5h 03m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5881231371__Underground Passage - 5h 03m
+FolderName: Norbertle-5881233746__The Hollow - 2h 50m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5881233746__The Hollow - 2h 50m
+FolderName: Norbertle-5891235732__Shattered Sanctum - 9h 16m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5891235732__Shattered Sanctum - 9h 16m
+FolderName: Norbertle-59111234721__Underdark - 12h 41m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-59111234721__Underdark - 12h 41m
+FolderName: Norbertle-591236718__Shattered Sanctum - 9h 22mchaoas
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-591236718__Shattered Sanctum - 9h 22mchaoas
+FolderName: Norbertle-5941232731__AutoSave_8
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5941232731__AutoSave_8
+FolderName: Norbertle-5961232742__QuickSave_14
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5961232742__QuickSave_14
+FolderName: Norbertle-59812313754__AutoSave_13
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-59812313754__AutoSave_13
+FolderName: Norbertle-5991231577__Defiled Temple - 11h 32m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-5991231577__Defiled Temple - 11h 32m
+FolderName: Norbertle-6121236718__Shattered Sanctum - 15h 08m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-6121236718__Shattered Sanctum - 15h 08m
+FolderName: Norbertle-641234748__Wilderness - 3h 35m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-641234748__Wilderness - 3h 35m
+FolderName: Norbertle-691233730__Whispering Depths - 7h 11m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-691233730__Whispering Depths - 7h 11m
+FolderName: Norbertle-7131236726__The Risen Road - 17h 12m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-7131236726__The Risen Road - 17h 12m
+FolderName: Norbertle-781234714__The Hollow - 2h 58m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-781234714__The Hollow - 2h 58m
+FolderName: Norbertle-7912314752__Shattered Sanctum - 9h 59m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-7912314752__Shattered Sanctum - 9h 59m
+FolderName: Norbertle-8111231471__Dread Hollow - 12h 47m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-8111231471__Dread Hollow - 12h 47m
+FolderName: Norbertle-8111233713__DanceThenightAway
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-8111233713__DanceThenightAway
+FolderName: Norbertle-8412319737__Emerald Grove - 1h 09m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-8412319737__Emerald Grove - 1h 09m
+FolderName: Norbertle-851232720__ThePit
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-851232720__ThePit
+FolderName: Norbertle-861234746__Wilderness - 7h 22m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-861234746__Wilderness - 7h 22m
+FolderName: Norbertle-881234724__The Hollow - 3h 00m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-881234724__The Hollow - 3h 00m
+FolderName: Norbertle-9412318741__A Nautiloid in Hell - 0h 22m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-9412318741__A Nautiloid in Hell - 0h 22m
+FolderName: Norbertle-941231976__AutoSave_7
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-941231976__AutoSave_7
+FolderName: Norbertle-941234711__QuickSave_6
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-941234711__QuickSave_6
+FolderName: Norbertle-941234731__AutoSave_10
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-941234731__AutoSave_10
+FolderName: Norbertle-9812315722__Whispering Depths - 6h 13m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-9812315722__Whispering Depths - 6h 13m
+FolderName: Tav-12312319750__AutoSave_1
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Tav-12312319750__AutoSave_1
+FolderName: Tav-131231972__AutoSave_0
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Tav-131231972__AutoSave_0
+FolderName: Tav-23312319759__A Nautiloid in Hell - 0h 23m
+Full Path: C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Tav-23312319759__A Nautiloid in Hell - 0h 23m
+
+
+Debug Trace:
+C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story
