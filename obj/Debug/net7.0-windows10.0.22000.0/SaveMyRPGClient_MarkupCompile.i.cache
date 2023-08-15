@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\App.xaml
-11407045341
+3558112707
 
-7419747875
+8-537125071
 20061005300
-MainWindow.xaml;
+MainWindow.xaml;Styles\ButtonStyles.xaml;View\LoginView.xaml;
 
 False
 

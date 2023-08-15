@@ -6,10 +6,12 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\Microsoft.Windows.SDK.NET.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\WinRT.Runtime.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\MainWindow.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\LoginView.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\App.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient_MarkupCompile.cache
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient_MarkupCompile.lref
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\MainWindow.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\LoginView.baml
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.g.resources
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.AssemblyInfoInputs.cache

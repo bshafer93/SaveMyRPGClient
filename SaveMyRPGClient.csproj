@@ -8,4 +8,23 @@
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Images\email-icon.png" />
+    <None Remove="Images\LogoSMRPG.png" />
+    <None Remove="Images\LogoSMRPGSQ.png" />
+    <None Remove="Images\user-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\email-icon.png" />
+    <Resource Include="Images\LogoSMRPG.png" />
+    <Resource Include="Images\LogoSMRPGSQ.png" />
+    <Resource Include="Images\user-icon.png" />
+  </ItemGroup>
+
 </Project>
