@@ -13,9 +13,14 @@ using System.Configuration;
 using System.Text.Json;
 using System.Net.Sockets;
 using System.Threading;
+using SaveMyRPGClient.Model;
+using System.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using Windows.Media.Protection.PlayReady;
 
 namespace SaveMyRPGClient
 {
+
     public class ServerInfo 
     {
         public string Name { get; set; }
@@ -29,9 +34,9 @@ namespace SaveMyRPGClient
         public string ZipDataB64  { get; set; }
     }
 
-public class SMRPG_Client
+    public class SMRPGClient
     {
-
+            
         public const string _ip = "https://savemyrpg.com";
         public const string _ipRaw = "savemyrpg.com";
         public HttpClient _client;
@@ -41,26 +46,21 @@ public class SMRPG_Client
         public string save_prefix = "Adam";
         public string temp_folder_path;
 
-        public SMRPG_Client()
+        public SMRPGClient()
         {
             bg3_save_location = Environment.ExpandEnvironmentVariables(default_path);
             Debug.WriteLine("Save Location: " + bg3_save_location);
+            if (init()) {
+                Console.WriteLine("Login Failed");
+            };
         }
         public bool init() {
             _client = new HttpClient();
             _client.BaseAddress = new Uri(_ip);
-
-
-            /*
-            HttpResponseMessage resp = await _client.GetAsync("/serverinfo");
-
-            if(resp.IsSuccessStatusCode)
+            if (_client == null)
             {
-                string content = await resp.Content.ReadAsStringAsync();
-                Debug.WriteLine(content);
+                return false;
             }
-            */
-
             return true;
         }
 
@@ -182,6 +182,38 @@ public class SMRPG_Client
             
         }
 
+        public async Task<bool> AuthenticateUser(UserModel userModel)
+        {
+            Debug.WriteLine("AUTHENTICATE START");
+            byte[] user_login_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(userModel);
 
+
+            HttpContent user_login = new ByteArrayContent(user_login_info);
+            HttpResponseMessage serverResp =await  _client.PostAsync("/login", user_login);
+
+            serverResp.EnsureSuccessStatusCode();
+            Debug.WriteLine("POST OK!");
+            var jwtHandler = new JwtSecurityTokenHandler();
+            string content = serverResp.Content.ReadAsStringAsync().Result;
+            Debug.WriteLine(content);
+            JwtSecurityToken jwtToken = jwtHandler.ReadJwtToken(serverResp.Content.ReadAsStringAsync().Result);
+
+            Debug.WriteLine(jwtToken.ToString());
+
+            Debug.WriteLine("AUTHENTICATE END");
+
+
+            return true;
+
+        }
+        public void Register(UserModel userModel)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Remove(UserModel userModel)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

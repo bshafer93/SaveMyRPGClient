@@ -20,11 +20,11 @@ namespace SaveMyRPGClient
     /// </summary>
     public partial class MainWindow : Window
     {
-        public SMRPG_Client client;
+        public SMRPGClient client;
         public MainWindow()
         {
             InitializeComponent();
-            client = new SMRPG_Client();
+            client = new SMRPGClient();
             client.init();
 
         }

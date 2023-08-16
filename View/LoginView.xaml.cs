@@ -19,9 +19,11 @@ namespace SaveMyRPGClient.View
     /// </summary>
     public partial class LoginView : Window
     {
+       
         public LoginView()
         {
             InitializeComponent();
+         
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e) 

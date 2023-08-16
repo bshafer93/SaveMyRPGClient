@@ -23,3 +23,15 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.pdb
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.genruntimeconfig.cache
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\ref\SaveMyRPGClient.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\Styles\ButtonStyles.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\GeneratedInternalTypeHelper.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\App.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\Newtonsoft.Json.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.csproj.AssemblyReference.cache
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\MainView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\MainView.baml
