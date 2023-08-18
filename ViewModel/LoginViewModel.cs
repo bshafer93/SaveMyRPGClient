@@ -5,6 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using SaveMyRPGClient;
+using SaveMyRPGClient.Commands;
+using System.Diagnostics;
+using Windows.Graphics.Printing.Workflow;
+using System.Windows.Threading;
+
 namespace SaveMyRPGClient.ViewModel
 {
     public class LoginViewModel : ViewModelBase
@@ -68,53 +73,11 @@ namespace SaveMyRPGClient.ViewModel
             }
         }
 
-        public ICommand LoginCommand { get; }
-        public ICommand RegisterCommand { get; }
-
+        public LoginCommand VMLoginCommand { get; }
         public LoginViewModel()
         {
-            LoginCommand = new ViewModelCommand(ExecuteLoginCommand,CanExecuteLoginCommand);
-            RegisterCommand = new ViewModelCommand(p => ExecuteRegisterCommand("",""), p=>CanExecuteRegisterCommand("", ""));
+            VMLoginCommand = new LoginCommand(this);
         }
 
-
-        private bool CanExecuteLoginCommand(object obj)
-        {
-            bool validData;
-            if (string.IsNullOrWhiteSpace(Username) || Username.Length < 3|| string.IsNullOrWhiteSpace(Email) || Username.Length < 4)
-            {
-                validData = false;
-            }
-            validData = true;
-            return validData;
-        }
-
-        private async void ExecuteLoginCommand(object obj)
-        {
-            ErrorMessage = "Contacting Server...";
-            bool isValidUser = await App.Client.AuthenticateUser(new Model.UserModel(Username, Email));
-
-            ErrorMessage = "Sending...";
-
-            if (isValidUser)
-            {
-                ErrorMessage = "Logged In!";
-                IsViewVisible = false;
-            }
-            else {
-                ErrorMessage = "Invalid Username or Email";
-            }
-
-        }
-
-        private bool CanExecuteRegisterCommand(string username, string email)
-        {
-            throw new NotImplementedException();
-        }
-
-        private void ExecuteRegisterCommand(string username, string email)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

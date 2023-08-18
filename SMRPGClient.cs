@@ -17,6 +17,7 @@ using SaveMyRPGClient.Model;
 using System.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using Windows.Media.Protection.PlayReady;
+using System.Windows.Threading;
 
 namespace SaveMyRPGClient
 {
@@ -187,23 +188,27 @@ namespace SaveMyRPGClient
             Debug.WriteLine("AUTHENTICATE START");
             byte[] user_login_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(userModel);
 
-
             HttpContent user_login = new ByteArrayContent(user_login_info);
-            HttpResponseMessage serverResp =await  _client.PostAsync("/login", user_login);
 
-            serverResp.EnsureSuccessStatusCode();
-            Debug.WriteLine("POST OK!");
-            var jwtHandler = new JwtSecurityTokenHandler();
-            string content = serverResp.Content.ReadAsStringAsync().Result;
-            Debug.WriteLine(content);
-            JwtSecurityToken jwtToken = jwtHandler.ReadJwtToken(serverResp.Content.ReadAsStringAsync().Result);
-
-            Debug.WriteLine(jwtToken.ToString());
-
-            Debug.WriteLine("AUTHENTICATE END");
+            using (var serverResp = await _client.PostAsync("login", user_login)) 
+            { 
+                var msg = await serverResp.Content.ReadAsStringAsync();
+                Debug.WriteLine(msg);
+                return true;
+            }
+               
 
 
             return true;
+            //var jwtHandler = new JwtSecurityTokenHandler();
+            //string content = serverResp.Content.ToString();
+            //Debug.WriteLine(content);
+            //JwtSecurityToken jwtToken = jwtHandler.ReadJwtToken(content.ReadAsStringAsync());
+
+
+
+            Debug.WriteLine("AUTHENTICATE END");
+            return false;
 
         }
         public void Register(UserModel userModel)

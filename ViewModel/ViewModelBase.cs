@@ -7,6 +7,7 @@ using System.ComponentModel;
 
 namespace SaveMyRPGClient.ViewModel
 {
+
     public abstract class ViewModelBase: INotifyPropertyChanged
     {
         
