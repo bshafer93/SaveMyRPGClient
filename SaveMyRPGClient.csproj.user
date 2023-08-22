@@ -13,6 +13,12 @@
     <Compile Update="View\MainView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UserControls\CampaignListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\UserControls\SaveListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -25,6 +31,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\MainView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\CampaignListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\SaveListView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

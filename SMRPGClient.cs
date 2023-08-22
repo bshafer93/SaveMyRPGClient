@@ -46,6 +46,10 @@ namespace SaveMyRPGClient
         public string bg3_save_location;
         public string save_prefix = "Adam";
         public string temp_folder_path;
+        private string token_signature = "";
+
+        public JwtSecurityToken jwt_token;
+        public string TokenSignature { get => token_signature; set => token_signature = value; }
 
         public SMRPGClient()
         {
@@ -65,7 +69,7 @@ namespace SaveMyRPGClient
             return true;
         }
 
-        public async Task<string[]> ListLocalSaves() {
+        public string[] ListLocalSaves() {
 
             string newest_save = new DirectoryInfo(bg3_save_location).GetDirectories().OrderByDescending(t => t.LastWriteTimeUtc).First().FullName;
 
@@ -78,7 +82,7 @@ namespace SaveMyRPGClient
 
         }
 
-        public async Task<string> GetLatestSave(string group_id = "")
+        public string GetLatestSave(string group_id = "")
         {
 
             List<DirectoryInfo> save_list = new DirectoryInfo(bg3_save_location).GetDirectories().OrderByDescending(t => t.LastWriteTimeUtc).ToList();
@@ -125,8 +129,9 @@ namespace SaveMyRPGClient
                 return fullSave;
 
             }
-            catch (HttpRequestException e)
+            catch (HttpRequestException ex)
             {
+                Debug.WriteLine($"Exception: {ex}");
                 return null;
             }
 
@@ -147,8 +152,9 @@ namespace SaveMyRPGClient
                 return serverInfo.Name;
 
             }
-            catch (HttpRequestException e)
+            catch (HttpRequestException ex)
             {
+                Debug.WriteLine($"Exception: {ex}");
                 return null;
             }
 
@@ -185,30 +191,32 @@ namespace SaveMyRPGClient
 
         public async Task<bool> AuthenticateUser(UserModel userModel)
         {
-            Debug.WriteLine("AUTHENTICATE START");
-            byte[] user_login_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(userModel);
+
+            UserModel um = new Model.UserModel(userModel.Username, userModel.Email);
+            byte[] user_login_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(um);
 
             HttpContent user_login = new ByteArrayContent(user_login_info);
+            try
+            {
+                HttpResponseMessage resp = await App.Client._client.PostAsync("/login", user_login);
+                resp.EnsureSuccessStatusCode();
 
-            using (var serverResp = await _client.PostAsync("login", user_login)) 
-            { 
-                var msg = await serverResp.Content.ReadAsStringAsync();
-                Debug.WriteLine(msg);
-                return true;
+                App.Client.TokenSignature = resp.Headers.GetValues("jwt-token").First().ToString();
+                App.Client.jwt_token = new JwtSecurityToken(App.Client.TokenSignature);
+
+                Debug.WriteLine(resp);
+                Debug.WriteLine("Token");
+                Debug.WriteLine("Logged In!");
+
+
             }
-               
-
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
 
             return true;
-            //var jwtHandler = new JwtSecurityTokenHandler();
-            //string content = serverResp.Content.ToString();
-            //Debug.WriteLine(content);
-            //JwtSecurityToken jwtToken = jwtHandler.ReadJwtToken(content.ReadAsStringAsync());
-
-
-
-            Debug.WriteLine("AUTHENTICATE END");
-            return false;
 
         }
         public void Register(UserModel userModel)

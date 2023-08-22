@@ -9,27 +9,28 @@ using SaveMyRPGClient.Commands;
 using System.Diagnostics;
 using Windows.Graphics.Printing.Workflow;
 using System.Windows.Threading;
+using SaveMyRPGClient.Model;
 
 namespace SaveMyRPGClient.ViewModel
 {
     public class LoginViewModel : ViewModelBase
     {
-        private string _username;
-        private string _email;
 
         private string _errorMessage;
         private bool _isViewVisible=true;
+
+        private UserModel _user;
 
         public string Username
         {
             get
             {
-                return _username;
+                return _user.Username;
 
             }
             set
             {
-                _username = value;
+                _user.Username = value;
                 OnPropertyChanged(nameof(Username));
             }
         }
@@ -37,12 +38,12 @@ namespace SaveMyRPGClient.ViewModel
         {
             get
             {
-                return _email;
+                return _user.Email;
 
             }
             set
             {
-                _email = value;
+                _user.Email = value;
                 OnPropertyChanged(nameof(Email));
             }
         }
@@ -76,7 +77,11 @@ namespace SaveMyRPGClient.ViewModel
         public LoginCommand VMLoginCommand { get; }
         public LoginViewModel()
         {
+            _user = new UserModel(Properties.Settings.Default.Username, Properties.Settings.Default.Email);
+
             VMLoginCommand = new LoginCommand(this);
+            Username = Properties.Settings.Default.Username;
+            Email = Properties.Settings.Default.Email;
         }
 
     }

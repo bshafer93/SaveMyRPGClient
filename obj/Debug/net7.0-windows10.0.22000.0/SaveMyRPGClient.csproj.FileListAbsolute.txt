@@ -52,3 +52,8 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\tr\System.ServiceModel.Primitives.resources.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.dll.config
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\CampaignListView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\CampaignListView.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\SaveListView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\SaveListView.baml

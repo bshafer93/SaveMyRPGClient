@@ -1,4 +1,5 @@
 ﻿using SaveMyRPGClient.View;
+using SaveMyRPGClient.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -24,20 +25,33 @@ namespace SaveMyRPGClient
             //SetUpClient
             Client = new SMRPGClient();
 
+            MainView mainView = new MainView();
+
             LoginView loginView = new LoginView();
+            loginView.Close();
+            mainView.Show();
+            mainView.DataContext = new MainViewModel();
+
+            
+
+
+
+            /*
             loginView.Show();
             loginView.IsVisibleChanged += (sender, e) =>
             {
                 if (loginView.IsVisible == false && loginView.IsLoaded)
                 {
-                    var mainView = new MainView();
-                    mainView.Show();
+
                     loginView.Close();
+                    mainView.Show();
                 }
 
             };
-        
-        
+            */
+
+
+
         }
     }
 }
