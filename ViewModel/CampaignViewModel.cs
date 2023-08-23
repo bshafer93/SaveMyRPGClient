@@ -1,4 +1,5 @@
-﻿using SaveMyRPGClient.Model;
+﻿using SaveMyRPGClient.Commands;
+using SaveMyRPGClient.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,8 @@ namespace SaveMyRPGClient.ViewModel
     public class CampaignViewModel
     {
         private readonly GroupModel _group;
-
+        public CampaignListViewModel _clvm;
+        
         public string GroupID => _group.Id;
         public string Name => _group.Name;
         public string HostEmail => _group.Host_Email;
@@ -19,9 +21,12 @@ namespace SaveMyRPGClient.ViewModel
         public string? Player04Email => _group.P4_Email;
         public string? LastSaveHash => _group.Last_Save;
 
-        public CampaignViewModel(GroupModel group)
+        public SelectGroupCommand SelectGroupCMD { get; set; }
+        public CampaignViewModel(GroupModel group, CampaignListViewModel clvm)
         {
             _group = group;
+            _clvm = clvm;
+            SelectGroupCMD = new SelectGroupCommand(this);
         }
     }
 }

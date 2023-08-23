@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="150">
     <StackPanel>
         <ScrollViewer>
-            <ListView ItemsSource="{Binding CampaignList}">
+            <ListView x:Name="groupListView" ItemsSource="{Binding CampaignList}">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="Campaign" Width="auto">
@@ -22,7 +22,7 @@
                                       Background="Purple"
                                       Foreground="White"
                                       Content="{Binding Name}"
-                                      
+                                      Command="{Binding SelectGroupCMD}"
                                       />
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
@@ -31,13 +31,42 @@
                 </ListView.View>
             </ListView>
         </ScrollViewer>
-        <Button x:Name="btnJoinGroup"
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <TextBox x:Name="group_id"
+                             Text="{Binding JoinGroupID,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             FontSize="12"
+                             FontFamily="Arial"
+                             Foreground="Black"
+                             Height="28"
+                             VerticalContentAlignment="Center"
+                             Margin="0,5,0,0"/>
+                <Button x:Name="btnJoinGroup"
+                        Grid.Row="0"
                         Command="{Binding JoinGroupCMD}"
                         Content="Join Group"
+                        Height="20"
                         Background="Purple"
                         Foreground="White"
-                        FontSize="12"
-                        Margin="0,20,0,0"/>
+                        FontSize="10"
+                        Margin="0,5,0,0"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1">
+                <Button x:Name="btnCreateGroup"
+                    Grid.Row="1"
+                    Height="20"
+                    Command="{Binding CreateGroupCMD}"
+                    Content="Create Group"
+                    Background="Purple"
+                    Foreground="White"
+                    FontSize="10"
+                    Margin="0,0,0,0"/>
+            </StackPanel>
+    </Grid>
     </StackPanel>
 
 </UserControl>

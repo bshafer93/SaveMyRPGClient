@@ -31,6 +31,12 @@ namespace SaveMyRPGClient
         public DateTime LoggedAt { get; set; }
     }
 
+    public class JoinCampaignRequest 
+    {
+        public string Username { get; set; }
+        public string Email { get; set; }
+        public string id { get; set; }
+    }
     public class FullSaveFileJson {
 
         public string FolderName  { get; set; }
@@ -346,6 +352,65 @@ namespace SaveMyRPGClient
         public void Register(UserModel userModel)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> JoinCampaign(UserModel um, string group_id) 
+        {
+            JoinCampaignRequest jcr = new JoinCampaignRequest();
+
+            jcr.Username = um.Username;
+            jcr.Email = um.Email;
+            jcr.id = group_id;
+
+            HttpContent jcrJson = new ByteArrayContent(JsonSerializer.SerializeToUtf8Bytes<JoinCampaignRequest>(jcr));
+            try
+            {
+                HttpResponseMessage resp = await App.Client._client.PostAsync("/jc", jcrJson);
+
+                resp.EnsureSuccessStatusCode();
+                var contentString = await resp.Content.ReadAsStringAsync();
+                Debug.WriteLine(contentString);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
+
+        }
+
+        public async Task<GroupModel> RetrieveCampaignInfo(string group_id) 
+        {
+            string group_id_json = "{\"id\":\"" + group_id + "\"}";
+
+            HttpContent gid = new ByteArrayContent(Encoding.ASCII.GetBytes(group_id_json));
+
+            GroupModel joinedCampaigns = new GroupModel();
+
+            try
+            {
+                HttpResponseMessage resp = await _client.PutAsync("/rci", gid);
+
+                resp.EnsureSuccessStatusCode();
+
+                var content = await resp.Content.ReadAsStreamAsync();
+
+                var group = await JsonSerializer.DeserializeAsync<GroupModel>(content,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+                return group;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
+
         }
 
         public void Remove(UserModel userModel)

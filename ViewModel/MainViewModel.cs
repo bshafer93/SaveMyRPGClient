@@ -10,15 +10,7 @@ namespace SaveMyRPGClient.ViewModel
     {
         private bool _isViewVisible=true;
 
-        public ViewModelBase CurrentCampaignListViewModel { get; }
-        public ViewModelBase CurrentSaveListViewModel 
-        {
-            get
-            {
-                CampaignListViewModel cl = (CampaignListViewModel)CurrentCampaignListViewModel;
-                return cl.currentSaveListViewModel;
-            }
-        }
+        public CampaignListViewModel CurrentCampaignListViewModel { get; }
 
     public bool IsViewVisible
         {

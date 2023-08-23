@@ -17,7 +17,7 @@
         <UC:CampaignListView x:Name="campaignListView" Grid.Column="0" DataContext="{Binding CurrentCampaignListViewModel}"/>
 
         <StackPanel Grid.Column="1">
-            <UC:SaveListView x:Name="saveListView" DataContext="{Binding CurrentSaveListViewModel}"/>
+            <UC:SaveListView x:Name="saveListView" DataContext="{Binding CurrentCampaignListViewModel.CurrentSaveListViewModel}"/>
         </StackPanel>
 
 

@@ -11,41 +11,19 @@ namespace SaveMyRPGClient.ViewModel
     public class SaveListViewModel : ViewModelBase
     {
         private readonly ObservableCollection<SaveViewModel> _saveList;
-
+        
         public IEnumerable<SaveViewModel> SavesList => _saveList;
+
+        public string GroupID { get;  set; }
+        public string GroupName { get; set; }
 
         public SaveListViewModel() 
         {
-            _saveList = new ObservableCollection<SaveViewModel>
-            {
-                new SaveViewModel(new SaveModel(
-                new Random().Next().ToString(),
-                new Random().Next().ToString(),
-                "bshafer93@gmail.com",
-                "Norbertle_theHorse14",
-                "myDoc/Norbertle_theHorse",
-                DateTime.Now)),
-
-                new SaveViewModel(new SaveModel(
-                new Random().Next().ToString(),
-                new Random().Next().ToString(),
-                "bshafer93@gmail.com",
-                "Norbertle_theHorse15",
-                "myDoc/Norbertle_theHorse",
-                DateTime.Now)),
-
-
-                new SaveViewModel(new SaveModel(
-                new Random().Next().ToString(),
-                new Random().Next().ToString(),
-                "bshafer93@gmail.com",
-                "Norbertle_theHorsesd",
-                "myDoc/Norbertle_theHorse",
-                DateTime.Now))
-            };
+            _saveList = new ObservableCollection<SaveViewModel>();
         }
 
-        public SaveListViewModel(string group_id) {
+        public SaveListViewModel(string group_id, string group_name) {
+            GroupID = group_id;
             var task = Task.Run(() => App.Client.RetrieveAllCampaignSaves(group_id));
             _saveList = new ObservableCollection<SaveViewModel>();
             task.Wait();
