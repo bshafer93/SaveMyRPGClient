@@ -58,6 +58,7 @@ namespace SaveMyRPGClient.ViewModel
 
         public CampaignListViewModel()
         {
+            
             JoinGroupCMD = new JoinGroupCommand(this);
 
             SaveListViewModelList = new List<SaveListViewModel>();

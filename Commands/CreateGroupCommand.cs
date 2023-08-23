@@ -10,10 +10,10 @@ namespace SaveMyRPGClient.Commands
 {
     public class CreateGroupCommand:AsyncCommand
     {
-        public CampaignViewModel cvm { get; set; }
-        public CreateGroupCommand(CampaignViewModel vm)
+        public CampaignListViewModel clvm { get; set; }
+        public CreateGroupCommand(CampaignListViewModel vm)
         {
-            cvm = vm;
+            clvm = vm;
 
         }
 
@@ -25,9 +25,7 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
-
-
-            Debug.WriteLine("Change to:" + cvm.Name);
+            
 
         }
 

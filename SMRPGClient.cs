@@ -413,6 +413,36 @@ namespace SaveMyRPGClient
 
         }
 
+        public async Task<GroupModel?> CreateCampaign(GroupModel gm)
+        {
+
+            HttpContent gid = new ByteArrayContent(JsonSerializer.SerializeToUtf8Bytes<GroupModel>(gm));
+
+            try
+            {
+                HttpResponseMessage resp = await _client.PutAsync("/cc", gid);
+
+                resp.EnsureSuccessStatusCode();
+                var content = await resp.Content.ReadAsStreamAsync();
+
+                var group = await JsonSerializer.DeserializeAsync<GroupModel>(content,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    });
+
+                return group;
+
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return null;
+            }
+
+        }
+
         public void Remove(UserModel userModel)
         {
             throw new NotImplementedException();

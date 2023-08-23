@@ -26,14 +26,25 @@ namespace SaveMyRPGClient
             Client = new SMRPGClient();
 
             MainView mainView = new MainView();
-
+            CreateGroupView createGroupView = new CreateGroupView();
             LoginView loginView = new LoginView();
+
             loginView.Close();
+            MainViewModel mainViewModel = new MainViewModel();
+            mainView.DataContext = mainViewModel;
             mainView.Show();
-            mainView.DataContext = new MainViewModel();
 
-            
+            createGroupView.DataContext = new CreateGroupViewModel(mainViewModel.CurrentCampaignListViewModel);
 
+            createGroupView.IsVisibleChanged += (sender, e) =>
+            {
+                if (createGroupView.IsVisible == false)
+                {
+                    createGroupView.Show();
+
+                }
+                createGroupView.Close();
+            };
 
 
             /*

@@ -57,3 +57,5 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\CampaignListView.baml
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\SaveListView.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\SaveListView.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\CreateGroupView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\CreateGroupView.baml

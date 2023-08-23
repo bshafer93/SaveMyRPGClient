@@ -13,6 +13,7 @@
     <None Remove="Images\email-icon.png" />
     <None Remove="Images\LogoSMRPG.png" />
     <None Remove="Images\LogoSMRPGSQ.png" />
+    <None Remove="Images\save-icon.png" />
     <None Remove="Images\user-icon.png" />
   </ItemGroup>
 
@@ -32,6 +33,10 @@
     <Resource Include="Images\LogoSMRPG.png" />
     <Resource Include="Images\LogoSMRPGSQ.png" />
     <Resource Include="Images\user-icon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\save-icon.png" />
   </ItemGroup>
 
   <ItemGroup>

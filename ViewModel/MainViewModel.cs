@@ -12,6 +12,7 @@ namespace SaveMyRPGClient.ViewModel
 
         public CampaignListViewModel CurrentCampaignListViewModel { get; }
 
+
     public bool IsViewVisible
         {
             get
