@@ -6,23 +6,38 @@
              xmlns:local="clr-namespace:SaveMyRPGClient.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="150">
-    
-    <ScrollViewer>
-        <ListBox ItemsSource="{Binding CampaignList}">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock FontSize="16"
-                    TextAlignment="Center"
-                    VerticalAlignment="Center"
-                    Background="Purple"
-                    Foreground="White"
-                    Text="{Binding Name}"/>
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
-    </ScrollViewer>
+    <StackPanel>
+        <ScrollViewer>
+            <ListView ItemsSource="{Binding CampaignList}">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Campaign" Width="auto">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
 
+                                    <Button FontSize="12"
+                                      HorizontalContentAlignment="Center"
+                                      VerticalContentAlignment="Center"
+                                      Width="auto"
+                                      Background="Purple"
+                                      Foreground="White"
+                                      Content="{Binding Name}"
+                                      
+                                      />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </ScrollViewer>
+        <Button x:Name="btnJoinGroup"
+                        Command="{Binding JoinGroupCMD}"
+                        Content="Join Group"
+                        Background="Purple"
+                        Foreground="White"
+                        FontSize="12"
+                        Margin="0,20,0,0"/>
+    </StackPanel>
 
 </UserControl>

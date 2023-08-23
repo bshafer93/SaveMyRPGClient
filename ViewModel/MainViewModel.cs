@@ -10,8 +10,8 @@ namespace SaveMyRPGClient.ViewModel
     {
         private bool _isViewVisible=true;
 
-        public ViewModelBase CurrentSaveListViewModel { get; }
         public ViewModelBase CurrentCampaignListViewModel { get; }
+        public ViewModelBase CurrentSaveListViewModel { get; }
 
         public bool IsViewVisible
         {
@@ -28,8 +28,9 @@ namespace SaveMyRPGClient.ViewModel
         }
 
         public MainViewModel() { 
-            CurrentSaveListViewModel = new SaveListViewModel();
             CurrentCampaignListViewModel = new CampaignListViewModel();
+            CampaignListViewModel cl = (CampaignListViewModel)CurrentCampaignListViewModel;
+           CurrentSaveListViewModel =  cl.currentSaveListViewModel;
         }
 
     }

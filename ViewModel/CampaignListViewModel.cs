@@ -4,6 +4,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
+using SaveMyRPGClient.Commands;
 using SaveMyRPGClient.Model;
 namespace SaveMyRPGClient.ViewModel
 {
@@ -13,44 +15,35 @@ namespace SaveMyRPGClient.ViewModel
 
         public IEnumerable<CampaignViewModel> CampaignList => _campaignList;
 
+        public JoinGroupCommand JoinGroupCMD { get; }
 
+        public SelectGroupCommand SelectGroupCMD { get; }
+
+        public SaveListViewModel currentSaveListViewModel { get; set; }
+
+        public List<SaveListViewModel> SaveListViewModelList { get; set; }
 
         public CampaignListViewModel()
         {
-            _campaignList = new ObservableCollection<CampaignViewModel>()
+            SaveListViewModelList = new List<SaveListViewModel>();
+            var task = Task.Run(() => App.Client.RetrieveAllJoinedCampaigns(Properties.Settings.Default.Email));
+
+            task.Wait();
+            var groups = task.Result;
+
+            _campaignList = new ObservableCollection<CampaignViewModel>();
+
+            foreach (var group in groups)
             {
-                new CampaignViewModel(new GroupModel(
-                    new Random().Next().ToString(),
-                    "Hotstuffs",
-                    "bshafer93@gmail.com",
-                    "adamIsAlive@gmail.com",
-                    "",
-                    "",
-                    "asdfghjk34567ugh"
-                    )),
+                _campaignList.Add(new CampaignViewModel(group));
+                SaveListViewModelList.Add(new SaveListViewModel(group.Id));
 
-                new CampaignViewModel(new GroupModel(
-                    new Random().Next().ToString(),
-                    "GnomeLovin",
-                    "adamIsAlive@gmail.com",
-                    "bshafer93@gmail.com",
-                    "groguboss@gmail.com",
-                    "",
-                    "adfa345fgb"
-                    )),
+            }
+            if (SaveListViewModelList.IsNullOrEmpty()) {
+                return;
+            }
+            currentSaveListViewModel = SaveListViewModelList[0];
 
-
-                new CampaignViewModel(new GroupModel(
-                    new Random().Next().ToString(),
-                    "MrTooshiesQuest",
-                    "jakrus34@gmail.com",
-                    "bshafer93@gmail.com",
-                    "",
-                    "",
-                    "asdfh5678adf"
-                    ))
-
-            };
         }
     }
 }

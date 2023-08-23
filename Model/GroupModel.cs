@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,27 +7,43 @@ using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Model
 {
+    [Serializable]
     public class GroupModel
     {
 
-        public string GroupID { get; set; }
+        public string Id { get; set; }
+
+
         public string Name { get; set; }
-        public string HostEmail { get; set; }
-        public string? Player02Email { get; set; }
-        public string? Player03Email { get; set; }
-        public string? Player04Email { get; set; }
-        public string? LastSaveHash { get; set; }
+
+        public string Host_Email { get; set; }
+
+
+        public string? P2_Email { get; set; }
+
+
+        public string? P3_Email { get; set; }
+
+
+        public string? P4_Email { get; set; }
+
+
+        public string? Last_Save { get; set; }
 
 
         public GroupModel(string groupID,string name, string hostEmail, string? P2Email, string? P3Email, string? P4Email,string lastSaveHash)
         { 
-            GroupID = groupID;
+            Id = groupID;
             Name = name;
-            HostEmail = hostEmail;
-            Player02Email = P2Email;
-            Player03Email = P3Email;
-            Player04Email = P4Email;
-            LastSaveHash = lastSaveHash;
+            Host_Email = hostEmail;
+            P2_Email = P2Email;
+            P3_Email = P3Email;
+            P4_Email = P4Email;
+            Last_Save = lastSaveHash;
+        }
+
+        public GroupModel() { 
+        
         }
         
     }

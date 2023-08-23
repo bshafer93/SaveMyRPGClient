@@ -10,11 +10,11 @@ namespace SaveMyRPGClient.ViewModel
     public class SaveViewModel
     {
         private readonly SaveModel _save;
-        public string GroupID => _save.GroupId;
-        public string SaveOwner => _save.SaveOwner;
-        public string FolderName => _save.FolderName;
-        public string FullPath => _save.FullPath;
-        public DateTime DateCreated => _save.DateCreated;
+        public string GroupID => _save.Group_Id;
+        public string SaveOwner => _save.Save_Owner;
+        public string FolderName => _save.Folder_Name;
+        public string CDNPath => _save.CDN_Path;
+        public DateTime DateCreated => _save.Date_Created;
 
         public SaveViewModel(SaveModel save) { 
             

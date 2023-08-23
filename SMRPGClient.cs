@@ -18,6 +18,9 @@ using System.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using Windows.Media.Protection.PlayReady;
 using System.Windows.Threading;
+using SaveMyRPGClient.Model;
+using System.ComponentModel.DataAnnotations;
+using SaveMyRPGClient.View.UserControls;
 
 namespace SaveMyRPGClient
 {
@@ -37,7 +40,7 @@ namespace SaveMyRPGClient
 
     public class SMRPGClient
     {
-            
+
         public const string _ip = "https://savemyrpg.com";
         public const string _ipRaw = "savemyrpg.com";
         public HttpClient _client;
@@ -109,7 +112,7 @@ namespace SaveMyRPGClient
 
         public async Task<FullSaveFileJson> RequestFullSaveFile()
         {
-         
+
             try
             {
                 HttpResponseMessage fullSaveResponse = await _client.GetAsync("/getfullsave");
@@ -135,6 +138,127 @@ namespace SaveMyRPGClient
                 return null;
             }
 
+        }
+
+        public async Task<List<GroupModel>> RetrieveAllJoinedCampaigns(UserModel userModel) {
+            UserModel um = new Model.UserModel(userModel.Username, userModel.Email);
+            byte[] user_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(um);
+
+            HttpContent user = new ByteArrayContent(user_info);
+            List<GroupModel> joinedCampaigns = new List<GroupModel>();
+
+            try
+            {
+                HttpResponseMessage resp = await _client.PutAsync("/rc", user);
+
+                resp.EnsureSuccessStatusCode();
+
+                var content = await resp.Content.ReadAsStreamAsync();
+                var contentString = await resp.Content.ReadAsByteArrayAsync();
+
+                Debug.WriteLine(contentString);
+                /*
+                var groupList = JsonSerializer.Deserialize<List<GroupModel>>(contentString);
+
+                Debug.WriteLine(joinedCampaigns);
+                return joinedCampaigns;
+                */
+                var groupList = await JsonSerializer.DeserializeAsync<List<GroupModel>>(content,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }); ;
+
+                return groupList;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+
+            return null;
+
+        }
+        public async Task<List<GroupModel>> RetrieveAllJoinedCampaigns(string email)
+        {
+            UserModel um = new Model.UserModel("Anon", email);
+            byte[] user_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(um);
+
+            HttpContent user = new ByteArrayContent(user_info);
+            List<GroupModel> joinedCampaigns = new List<GroupModel>();
+
+            try
+            {
+                HttpResponseMessage resp = await _client.PutAsync("/rc", user);
+
+                resp.EnsureSuccessStatusCode();
+
+                var content = await resp.Content.ReadAsStreamAsync();
+                var contentString = await resp.Content.ReadAsByteArrayAsync();
+
+                Debug.WriteLine(contentString);
+                /*
+                var groupList = JsonSerializer.Deserialize<List<GroupModel>>(contentString);
+
+                Debug.WriteLine(joinedCampaigns);
+                return joinedCampaigns;
+                */
+                var groupList = await JsonSerializer.DeserializeAsync<List<GroupModel>>(content,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }); ;
+
+                return groupList;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+
+            return null;
+
+        }
+
+        public async Task<List<SaveModel>> RetrieveAllCampaignSaves(string id) {
+
+            string group_id_json = "{\"id\":\"" + id + "\"}";
+            
+            HttpContent gid = new ByteArrayContent(Encoding.ASCII.GetBytes(group_id_json));
+
+            List<SaveModel> campaignSaves = new List<SaveModel>();
+
+            try
+            {
+                HttpResponseMessage resp = await _client.PutAsync("/cs", gid);
+
+                resp.EnsureSuccessStatusCode();
+
+                var content = await resp.Content.ReadAsStreamAsync();
+                var contentString = await resp.Content.ReadAsByteArrayAsync();
+
+                Debug.WriteLine(contentString);
+
+                var saveList = await JsonSerializer.DeserializeAsync<List<SaveModel>>(content,
+                    new JsonSerializerOptions
+                    {
+                        PropertyNameCaseInsensitive = true
+                    }); ;
+                Debug.WriteLine(saveList);
+                for (int i = 0; i < saveList.Count(); i++){
+                    Debug.WriteLine(saveList[i].Folder_Name);
+                }
+                return saveList;
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+
+            return null;
         }
 
         public async Task<string?> GetServerInfo() {

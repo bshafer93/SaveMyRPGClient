@@ -12,10 +12,10 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition MaxWidth="150"/>
             <ColumnDefinition Width="*"/>
-            
-        </Grid.ColumnDefinitions>
 
+        </Grid.ColumnDefinitions>
         <UC:CampaignListView x:Name="campaignListView" Grid.Column="0" DataContext="{Binding CurrentCampaignListViewModel}"/>
+
         <StackPanel Grid.Column="1">
             <UC:SaveListView x:Name="saveListView" DataContext="{Binding CurrentSaveListViewModel}"/>
         </StackPanel>

@@ -13,6 +13,7 @@ namespace SaveMyRPGClient.ViewModel
         private readonly ObservableCollection<SaveViewModel> _saveList;
 
         public IEnumerable<SaveViewModel> SavesList => _saveList;
+
         public SaveListViewModel() 
         {
             _saveList = new ObservableCollection<SaveViewModel>
@@ -44,6 +45,24 @@ namespace SaveMyRPGClient.ViewModel
             };
         }
 
+        public SaveListViewModel(string group_id) {
+            var task = Task.Run(() => App.Client.RetrieveAllCampaignSaves(group_id));
+            _saveList = new ObservableCollection<SaveViewModel>();
+            task.Wait();
+            var saves = task.Result;
+
+            _saveList = new ObservableCollection<SaveViewModel>();
+
+            foreach (var save in saves)
+            {
+                _saveList.Add(new SaveViewModel(save));
+            }
+
+        }
+
 
     }
+
+
+    
 }
