@@ -43,7 +43,6 @@ namespace SaveMyRPGClient
                     createGroupView.Show();
 
                 }
-                createGroupView.Close();
             };
 
 

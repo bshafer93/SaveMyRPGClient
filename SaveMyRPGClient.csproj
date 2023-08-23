@@ -36,7 +36,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\save-icon.png" />
+    <Resource Include="Images\save-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
