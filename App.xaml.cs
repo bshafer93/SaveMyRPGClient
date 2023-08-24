@@ -26,7 +26,6 @@ namespace SaveMyRPGClient
             Client = new SMRPGClient();
 
             MainView mainView = new MainView();
-            CreateGroupView createGroupView = new CreateGroupView();
             LoginView loginView = new LoginView();
 
             loginView.Close();
@@ -34,6 +33,8 @@ namespace SaveMyRPGClient
             mainView.DataContext = mainViewModel;
             mainView.Show();
 
+
+            /*
             createGroupView.DataContext = new CreateGroupViewModel(mainViewModel.CurrentCampaignListViewModel);
 
             createGroupView.IsVisibleChanged += (sender, e) =>
@@ -44,7 +45,7 @@ namespace SaveMyRPGClient
 
                 }
             };
-
+            */
 
             /*
             loginView.Show();

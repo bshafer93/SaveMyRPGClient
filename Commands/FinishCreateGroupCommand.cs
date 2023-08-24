@@ -3,6 +3,7 @@ using SaveMyRPGClient.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +40,14 @@ namespace SaveMyRPGClient.Commands
             }
 
             CreateGroupVM.ErrorMessage = "Campaign Created!";
-            //ViewModel.addCampaign(didCreate.Id);
+
+            bool didUpload = await App.Client.UploadSaveFile(didCreate, CreateGroupVM.SavePath);
+            if (!didUpload) {
+                CreateGroupVM.ErrorMessage = "Save Upload Failed";
+                return;
+            }
+            CreateGroupVM.ErrorMessage = "Save Uploaded!";
+
         }
     }
 }

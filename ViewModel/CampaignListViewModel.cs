@@ -19,10 +19,26 @@ namespace SaveMyRPGClient.ViewModel
         private SaveListViewModel _currentSLVM;
         private string _join_group_id;
 
+        DialogService _dialogService;
+
+
+        public DialogService DialogCreateGroup 
+        {
+            get 
+            {
+                return _dialogService;
+            }
+            set 
+            { 
+                _dialogService = value; 
+            }
+        
+        }
+
         public IEnumerable<CampaignViewModel> CampaignList => _campaignList;
 
         public JoinGroupCommand JoinGroupCMD { get; }
-        public CreateGroupCommand CreateGroupCMD { get; }
+        public ShowCreateGroupCommand CreateGroupCMD { get; }
 
         public SaveListViewModel CurrentSaveListViewModel
         { 
@@ -58,10 +74,12 @@ namespace SaveMyRPGClient.ViewModel
 
         public CampaignListViewModel()
         {
-            
+            _dialogService = new DialogService(this);
             JoinGroupCMD = new JoinGroupCommand(this);
-
+            CreateGroupCMD = new ShowCreateGroupCommand(this);
             SaveListViewModelList = new List<SaveListViewModel>();
+            
+
             var task = Task.Run(() => App.Client.RetrieveAllJoinedCampaigns(Properties.Settings.Default.Email));
             task.Wait();
             var groups = task.Result;

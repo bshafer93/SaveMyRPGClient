@@ -443,6 +443,42 @@ namespace SaveMyRPGClient
 
         }
 
+        public async Task<bool> UploadSaveFile(GroupModel gm,string full_path)
+        {
+            DirectoryInfo dir_info = new DirectoryInfo(full_path);
+            FileInfo[] file_list = dir_info.Parent.GetFiles();
+            FileInfo file_info = new FileInfo(full_path);
+            string file_name = file_info.Name;
+            string directory_name = dir_info.Parent.Name;
+
+            for (int i = 0; i < 2; i++) {
+                _client.DefaultRequestHeaders.Clear();
+                _client.DefaultRequestHeaders.Add("group_id", gm.Id);
+                _client.DefaultRequestHeaders.Add("file_name", directory_name + "/" + file_list[i].Name);
+                HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(file_list[i].FullName));
+
+
+                try
+                {
+                    HttpResponseMessage resp = await _client.PutAsync("/guu", save_file_raw);
+
+                    resp.EnsureSuccessStatusCode();
+                    var contentString = await resp.Content.ReadAsStringAsync();
+                    Debug.WriteLine(contentString);
+
+
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                    return false;
+                }
+
+            }
+            return true;
+
+        }
+
         public void Remove(UserModel userModel)
         {
             throw new NotImplementedException();
