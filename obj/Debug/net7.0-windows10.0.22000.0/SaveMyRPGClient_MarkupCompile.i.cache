@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\App.xaml
-7-1391142675
+8432126066
 
-37-519504206
+41-1573297941
 210-260396789
-MainWindow.xaml;Styles\ButtonStyles.xaml;View\CreateGroupView.xaml;View\LoginView.xaml;View\MainView.xaml;View\UserControls\CampaignListView.xaml;View\UserControls\SaveListView.xaml;
+MainWindow.xaml;Styles\ButtonStyles.xaml;View\CreateGroupView.xaml;View\JoinGroupView.xaml;View\LoginView.xaml;View\MainView.xaml;View\UserControls\CampaignListView.xaml;View\UserControls\SaveListView.xaml;
 
-False
+True
 

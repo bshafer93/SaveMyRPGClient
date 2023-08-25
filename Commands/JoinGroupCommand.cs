@@ -11,10 +11,10 @@ namespace SaveMyRPGClient.Commands
 {
     public class JoinGroupCommand : AsyncCommand
     {
-        public CampaignListViewModel ViewModel { get; set; }
-        public JoinGroupCommand(CampaignListViewModel vm)
+        public JoinGroupViewModel jcvm { get; set; }
+        public JoinGroupCommand(JoinGroupViewModel vm)
         {
-            ViewModel = vm;
+            jcvm = vm;
         }
 
         public override bool CanExecute()
@@ -25,14 +25,15 @@ namespace SaveMyRPGClient.Commands
         public override async Task ExecuteAsync()
         {
             UserModel um = new UserModel(Properties.Settings.Default.Username, Properties.Settings.Default.Email);
-            bool didJoin = await App.Client.JoinCampaign(um, ViewModel.JoinGroupID);
+
+            bool didJoin = await App.Client.JoinCampaign(um, jcvm.ID);
+
             if (!didJoin)
             {
                 Debug.WriteLine("Failed To Join group");
                 return;
             }
-
-            ViewModel.addCampaign(ViewModel.JoinGroupID);
+            jcvm._clvm.addCampaign(jcvm.ID);
         }
     }
 }

@@ -32,10 +32,8 @@
             BorderBrush='#424858'
             BorderThickness="2"
             Opacity="0.95">
-            
-            
-            
-     <Grid>
+
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition/>

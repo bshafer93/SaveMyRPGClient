@@ -1,0 +1,200 @@
+﻿<Window x:Class="SaveMyRPGClient.View.JoinGroupView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SaveMyRPGClient.View"
+        mc:Ignorable="d"
+        Title="JoinGroupView" Height="450" Width="400"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+        Background="Transparent"
+        AllowsTransparency="True">
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVisibility}"/>
+    </Window.Visibility>
+
+    <Border CornerRadius="12">
+        <Border
+        CornerRadius="10"
+        Background='#1E2126'
+        BorderBrush='#424858'
+        BorderThickness="2"
+        Opacity="0.95">
+
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="5"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="Join Group"
+                       Foreground="DarkGray"
+                       FontSize="10"
+                       FontFamily="Arial"
+                       Grid.Column="0"
+                       VerticalAlignment="Center"
+                       Margin="10,0,0,0"/>
+
+                    <Button x:Name="btnMinimizeWindow"
+                    BorderThickness="0"
+                    Content="-"
+                    Foreground="White"
+                    FontSize="16"
+                    FontFamily="Arial"
+                    Cursor="Hand"
+                    Grid.Column="1"
+                    Click="btnMinimizeWindow_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#5121D1"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="MediumPurple"/>
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="20" Height="20"
+                                CornerRadius="10"
+                                Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button x:Name="btnCloseWindow"
+                    BorderThickness="0"
+                    Content="X"
+                    Foreground="White"
+                    FontSize="16"
+                    FontFamily="Arial"
+                    Cursor="Hand"
+                    Grid.Column="2"
+                    Click="btnCloseWindow_Click">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#5121D1"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="MediumPurple"/>
+
+                                    </Trigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="20" Height="20"
+                                CornerRadius="10"
+                                Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                              HorizontalAlignment="Center"/>
+
+
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </Grid>
+
+                <StackPanel Width="220"
+        Grid.Row="1"
+        Orientation="Vertical"
+        Margin="0,35,0,0">
+
+                    <TextBlock Text="Join a Campaign!"
+           Foreground="LightGray"
+           FontSize="12"
+           FontWeight="Medium"
+           FontFamily="Arial"
+           TextWrapping="Wrap"
+           HorizontalAlignment="Center"
+           Margin="0,15,0,0"
+           Opacity="0.75"/>
+
+                    <TextBlock Text="Campaign ID"
+           Foreground="DarkGray"
+           FontSize="12"
+           FontWeight="Medium"
+           FontFamily="Arial"
+           TextWrapping="Wrap"
+           Margin="0,5,0,0"/>
+
+                    <TextBox x:Name="txtCampaignID"
+             Text="{Binding ID,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+             FontSize="13"
+             FontWeight="Medium"
+             FontFamily="Arial"
+             Foreground="White"
+             CaretBrush="LightGray"
+             BorderBrush="DarkGray"
+             BorderThickness="0,0,0,1"
+             Height="28"
+             VerticalContentAlignment="Center"
+             Margin="0,5,0,0"
+             Padding="24,0,0,0">
+
+                        <TextBox.Background>
+                            <ImageBrush ImageSource="/Images/swords-icon.png"
+                        Stretch="None"
+                        AlignmentX="Left"
+                        />
+                        </TextBox.Background>
+                    </TextBox>
+                    <TextBlock Text="{Binding ErrorMessage}"
+           Foreground="Red"
+           FontSize="12"
+           FontWeight="Medium"
+           FontFamily="Arial"
+           TextWrapping="Wrap"
+           Margin="0,5,0,0"/>
+
+                    <Button x:Name="btnJoin"
+        Command="{Binding JoinGroupCMD}"
+        BorderThickness="0"
+        Content="Join Campaign"
+        Foreground="White"
+        FontSize="12"
+        FontFamily="Arial"
+        Cursor="Hand"
+        Grid.Column="2"
+        Margin="0,50,0,0"
+        Style="{StaticResource largeButton}">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height="40"
+                    CornerRadius="20"
+                    Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </Border>
+</Window>

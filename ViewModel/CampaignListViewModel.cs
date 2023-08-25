@@ -20,6 +20,7 @@ namespace SaveMyRPGClient.ViewModel
         private string _join_group_id;
 
         DialogService _dialogService;
+        ShowJoinGroupService _joinGroupService;
 
 
         public DialogService DialogCreateGroup 
@@ -35,9 +36,21 @@ namespace SaveMyRPGClient.ViewModel
         
         }
 
+        public ShowJoinGroupService ShowJoinGroupSRV
+        {
+            get
+            {
+                return _joinGroupService;
+            }
+            set
+            {
+                _joinGroupService = value;
+            }
+        }
+
         public IEnumerable<CampaignViewModel> CampaignList => _campaignList;
 
-        public JoinGroupCommand JoinGroupCMD { get; }
+        public ShowJoinGroupCommand ShowJoinGroupCMD { get; }
         public ShowCreateGroupCommand CreateGroupCMD { get; }
 
         public SaveListViewModel CurrentSaveListViewModel
@@ -53,20 +66,6 @@ namespace SaveMyRPGClient.ViewModel
             }
         }
 
-        public string JoinGroupID
-        {
-            get
-            {
-                return _join_group_id;
-
-            }
-            set
-            {
-                _join_group_id = value;
-                OnPropertyChanged(nameof(JoinGroupID));
-            }
-        }
-
 
         public List<SaveListViewModel> SaveListViewModelList { get; set; }
 
@@ -75,7 +74,9 @@ namespace SaveMyRPGClient.ViewModel
         public CampaignListViewModel()
         {
             _dialogService = new DialogService(this);
-            JoinGroupCMD = new JoinGroupCommand(this);
+            _joinGroupService = new ShowJoinGroupService(this);
+            ShowJoinGroupCMD = new ShowJoinGroupCommand(this);
+
             CreateGroupCMD = new ShowCreateGroupCommand(this);
             SaveListViewModelList = new List<SaveListViewModel>();
             

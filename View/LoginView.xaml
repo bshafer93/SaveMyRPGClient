@@ -38,8 +38,7 @@
             <Grid.RowDefinitions>
                     <RowDefinition Height="30"/>
                     <RowDefinition/>
-
-                </Grid.RowDefinitions>
+             </Grid.RowDefinitions>
 
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
@@ -227,13 +226,10 @@
                                     <ContentPresenter VerticalAlignment="Center"
                                                   HorizontalAlignment="Center"/>
 
-
                                 </Border>
                             </ControlTemplate>
                         </Button.Template>
                     </Button>
-                
-                
                 </StackPanel>
         </Grid>
             </Border>

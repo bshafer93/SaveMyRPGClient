@@ -8,11 +8,20 @@
              d:DesignHeight="450" d:DesignWidth="800">
     
     
-    <ScrollViewer>
-        <ListView ItemsSource="{Binding SavesList}">
+    <ScrollViewer Background="Transparent">
+        <ListView ItemsSource="{Binding SavesList}" Background="Transparent">
+            <ListView.Resources>
+                <Style TargetType="GridViewColumnHeader">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderBrush" Value="Black"/>
+                </Style>
+            </ListView.Resources>
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="White"/>
                 </Style>
             </ListView.ItemContainerStyle>
             <ListView.View>
@@ -25,7 +34,7 @@
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    
+
                     <GridViewColumn Header="Date">
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
@@ -51,8 +60,40 @@
                     </GridViewColumn>
                     <GridViewColumn Header="Image">
                     </GridViewColumn>
+                    
+                    <GridViewColumn Header="">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                            <Button x:Name="btnUploadSave"
+                               BorderThickness="0"
+                               Content="Join Group"
+                               Foreground="White"
+                               FontSize="12"
+                               FontFamily="Arial"
+                               Cursor="Hand"
+                               Margin="0,5,0,0"
+                               Style="{StaticResource uploadButton}">
+                             
+                                <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <Border Width="120" Height="20"
+                                   CornerRadius="10"
+                                   Background="{TemplateBinding Background}">
+                                                <ContentPresenter VerticalAlignment="Center"
+                                                 HorizontalAlignment="Center"/>
+                                            </Border>
+
+                                        </ControlTemplate>
+                                    
+                                </Button.Template>
+                            </Button>
+                        </DataTemplate>
+                       </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
                 </GridView>
             </ListView.View>
+
         </ListView>
+
     </ScrollViewer>
 </UserControl>

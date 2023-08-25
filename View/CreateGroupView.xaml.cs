@@ -41,7 +41,7 @@ namespace SaveMyRPGClient.View
 
         private void btnCloseWindow_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            this.Close();
         }
     }
 }

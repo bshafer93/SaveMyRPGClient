@@ -10,11 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\download-icon.png" />
     <None Remove="Images\email-icon.png" />
+    <None Remove="Images\folderopen-icon.png" />
     <None Remove="Images\LogoSMRPG.png" />
     <None Remove="Images\LogoSMRPGSQ.png" />
     <None Remove="Images\save-icon.png" />
+    <None Remove="Images\settings-icon.png" />
+    <None Remove="Images\swords-icon.png" />
     <None Remove="Images\sync-icon.png" />
+    <None Remove="Images\upload-icon.png" />
     <None Remove="Images\user-icon.png" />
   </ItemGroup>
 
@@ -30,10 +35,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\download-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\email-icon.png" />
+    <Resource Include="Images\folderopen-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\LogoSMRPG.png" />
     <Resource Include="Images\LogoSMRPGSQ.png" />
+    <Resource Include="Images\settings-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\swords-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\sync-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\upload-icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\user-icon.png" />

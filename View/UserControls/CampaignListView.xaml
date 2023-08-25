@@ -6,29 +6,48 @@
              xmlns:local="clr-namespace:SaveMyRPGClient.View.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="150">
-    <StackPanel>
-        <ScrollViewer>
-            <ListView x:Name="groupListView" ItemsSource="{Binding CampaignList}">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Campaign" Width="auto">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-
-                                    <Button FontSize="12"
-                                      HorizontalContentAlignment="Center"
+    
+    <StackPanel Background="Transparent">
+        <ScrollViewer Background="Transparent">
+            <ListView x:Name="groupListView" ItemsSource="{Binding CampaignList}" Background="Transparent">
+                <ListView.Resources>
+                    <Style TargetType="GridViewColumnHeader">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="BorderBrush" Value="Black"/>
+                    </Style>
+                </ListView.Resources>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="White"/>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Button FontSize="12"
+                                      HorizontalContentAlignment="Left"
                                       VerticalContentAlignment="Center"
                                       Width="auto"
-                                      Background="Purple"
+                                      Background="#5121D1"
                                       Foreground="White"
                                       Content="{Binding Name}"
-                                      Command="{Binding SelectGroupCMD}"
-                                      />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                    </GridView>
-                </ListView.View>
+                                      Command="{Binding SelectGroupCMD}">
+                            <Button.Template>
+                                <ControlTemplate TargetType="Button">
+                                    <Border Width="150" Height="20"
+                                    CornerRadius="10"
+                                    Background="{TemplateBinding Background}">
+                                        <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Left"
+                                                          Margin="5,0,0,0"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Button.Template>
+                        </Button>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
             </ListView>
         </ScrollViewer>
         <Grid>
@@ -37,36 +56,57 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0">
-                <TextBox x:Name="group_id"
-                             Text="{Binding JoinGroupID,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
-                             FontSize="12"
-                             FontFamily="Arial"
-                             Foreground="Black"
-                             Height="28"
-                             VerticalContentAlignment="Center"
-                             Margin="0,5,0,0"/>
                 <Button x:Name="btnJoinGroup"
-                        Grid.Row="0"
-                        Command="{Binding JoinGroupCMD}"
+                        Command="{Binding ShowJoinGroupCMD}"
+                        BorderThickness="0"
                         Content="Join Group"
-                        Height="20"
-                        Background="Purple"
                         Foreground="White"
-                        FontSize="10"
-                        Margin="0,5,0,0"/>
+                        FontSize="12"
+                        FontFamily="Arial"
+                        Cursor="Hand"
+                        Grid.Row="0"
+                        Margin="0,5,0,0"
+                        Style="{StaticResource largeButton}">
+                    
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="120" Height="20"
+                                    CornerRadius="10"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </StackPanel>
             
             <StackPanel Grid.Row="1">
-                <ToggleButton x:Name="btnCreateGroup"
+                <Button x:Name="btnCreateGroup"
                     Grid.Row="1"
                     Height="20"
                     Command="{Binding CreateGroupCMD}"
+                    BorderThickness="0"
                     Content="Create Group"
-                    Background="Purple"
                     Foreground="White"
-                    FontSize="10"
-                    Margin="0,0,0,0"/>
-                
+                    FontSize="12"
+                    FontFamily="Arial"
+                    Cursor="Hand"
+                    Margin="0,5,0,0"
+                    Style="{StaticResource largeButton}">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border Width="120" Height="20"
+                                    CornerRadius="10"
+                                    Background="{TemplateBinding Background}">
+                                <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"/>
+
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+                </Button>
             </StackPanel>
     </Grid>
     </StackPanel>
