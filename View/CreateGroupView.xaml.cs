@@ -34,6 +34,11 @@ namespace SaveMyRPGClient.View
             }
         }
 
+        private void btnMinimizeWindow_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
         private void btnCloseWindow_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown();

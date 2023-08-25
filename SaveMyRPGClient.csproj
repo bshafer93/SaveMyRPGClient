@@ -14,6 +14,7 @@
     <None Remove="Images\LogoSMRPG.png" />
     <None Remove="Images\LogoSMRPGSQ.png" />
     <None Remove="Images\save-icon.png" />
+    <None Remove="Images\sync-icon.png" />
     <None Remove="Images\user-icon.png" />
   </ItemGroup>
 
@@ -32,6 +33,9 @@
     <Resource Include="Images\email-icon.png" />
     <Resource Include="Images\LogoSMRPG.png" />
     <Resource Include="Images\LogoSMRPGSQ.png" />
+    <Resource Include="Images\sync-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\user-icon.png" />
   </ItemGroup>
 
