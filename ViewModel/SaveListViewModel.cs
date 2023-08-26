@@ -1,4 +1,5 @@
-﻿using SaveMyRPGClient.Model;
+﻿using SaveMyRPGClient.Commands;
+using SaveMyRPGClient.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,7 +12,7 @@ namespace SaveMyRPGClient.ViewModel
     public class SaveListViewModel : ViewModelBase
     {
         private readonly ObservableCollection<SaveViewModel> _saveList;
-        
+        public UploadSaveCommand UploadSaveCMD { get; set; }
         public IEnumerable<SaveViewModel> SavesList => _saveList;
 
         public string GroupID { get;  set; }
@@ -20,12 +21,14 @@ namespace SaveMyRPGClient.ViewModel
         public SaveListViewModel() 
         {
             _saveList = new ObservableCollection<SaveViewModel>();
+            UploadSaveCMD = new UploadSaveCommand(this);
         }
 
         public SaveListViewModel(string group_id, string group_name) {
             GroupID = group_id;
+            UploadSaveCMD = new UploadSaveCommand(this);
+
             var task = Task.Run(() => App.Client.RetrieveAllCampaignSaves(group_id));
-            _saveList = new ObservableCollection<SaveViewModel>();
             task.Wait();
             var saves = task.Result;
 
@@ -36,6 +39,20 @@ namespace SaveMyRPGClient.ViewModel
                 _saveList.Add(new SaveViewModel(save));
             }
 
+
+        }
+
+
+        public async Task<bool> SyncSaves() 
+        {
+            _saveList.Clear();
+            var saves = await App.Client.RetrieveAllCampaignSaves(GroupID);
+
+            foreach (var save in saves)
+            {
+                _saveList.Add(new SaveViewModel(save));
+            }
+            return true;
         }
 
 

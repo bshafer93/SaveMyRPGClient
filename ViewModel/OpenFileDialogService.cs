@@ -18,7 +18,6 @@ namespace SaveMyRPGClient.ViewModel
         }
         public string OpenFileDialog()
         {
-
             var fileDialogWindow = new OpenFileDialog();
             fileDialogWindow.ShowDialog();
 

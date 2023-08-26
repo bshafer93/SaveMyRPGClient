@@ -11,17 +11,55 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="uploadIconImage" x:Shared="false" Resources="/Images/upload-icon.png"/>
 
     <Style x:Key="uploadButton" TargetType="Button">
-        <Setter Property="Background" Value="#462AD8"/>
-        <Setter Property="Content" Value="{StaticResource uploadIconImage}"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/Images/upload-icon.png"
+                                        Stretch="None"
+                                        AlignmentX="Center"/>
+            </Setter.Value>
+        </Setter>
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
                 <Setter Property="Background" Value="#28AEED"/>
             </Trigger>
         </Style.Triggers>
         
+    </Style>
+
+    <Style x:Key="syncSavesButton" TargetType="Button">
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/Images/sync-icon.png"
+                                        Stretch="None"
+                                        AlignmentX="Center"/>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#28AEED"/>
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
+    <Style x:Key="downloadSaveButton" TargetType="Button">
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/Images/download-icon.png"
+                                        Stretch="None"
+                                        AlignmentX="Center"/>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="#28AEED"/>
+            </Trigger>
+        </Style.Triggers>
+
     </Style>
 
 </ResourceDictionary>

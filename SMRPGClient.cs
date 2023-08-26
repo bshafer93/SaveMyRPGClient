@@ -443,20 +443,17 @@ namespace SaveMyRPGClient
 
         }
 
-        public async Task<bool> UploadSaveFile(GroupModel gm,string full_path)
+        public async Task<bool> UploadSaveFile(string group_id, string full_path,string save_folder_name,string save_name,string? save_owner)
         {
-            DirectoryInfo dir_info = new DirectoryInfo(full_path);
-            FileInfo[] file_list = dir_info.Parent.GetFiles();
-            FileInfo file_info = new FileInfo(full_path);
-            string file_name = file_info.Name;
-            string directory_name = dir_info.Parent.Name;
 
-            for (int i = 0; i < 2; i++) {
-                _client.DefaultRequestHeaders.Clear();
-                _client.DefaultRequestHeaders.Add("group_id", gm.Id);
-                _client.DefaultRequestHeaders.Add("file_name", directory_name + "/" + file_list[i].Name);
-                HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(file_list[i].FullName));
+            string save_owner_email = save_owner != null ? save_owner.ToString() : Properties.Settings.Default.Email;
 
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("email", save_owner_email);
+            _client.DefaultRequestHeaders.Add("group_id", group_id);
+            _client.DefaultRequestHeaders.Add("save_folder_name",save_folder_name);
+            _client.DefaultRequestHeaders.Add("file_name", save_name);
+            HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(full_path));
 
                 try
                 {
@@ -474,7 +471,43 @@ namespace SaveMyRPGClient
                     return false;
                 }
 
-            }
+            
+            return true;
+
+        }
+
+        public async Task<bool> UploadSaveImage(string group_id, string full_path)
+        {
+
+
+            FileInfo file = new FileInfo(full_path);
+
+            string file_name = file.Name;
+            string directory_name = file.Directory.Name;
+
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("email", Properties.Settings.Default.Email);
+            _client.DefaultRequestHeaders.Add("group_id", group_id);
+            _client.DefaultRequestHeaders.Add("file_name", directory_name + "/" + file_name);
+
+            HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(file.FullName));
+
+                try
+                {
+                    HttpResponseMessage resp = await _client.PutAsync("/usm", save_file_raw);
+
+                    resp.EnsureSuccessStatusCode();
+                    var contentString = await resp.Content.ReadAsStringAsync();
+                    Debug.WriteLine(contentString);
+
+
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine(ex);
+                    return false;
+                }
+
             return true;
 
         }
