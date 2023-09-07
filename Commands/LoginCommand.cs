@@ -33,7 +33,7 @@ namespace SaveMyRPGClient.Commands
         public override async Task ExecuteAsync()
         {
             ViewModel.ErrorMessage = "Contacting Server...";
-            UserModel um = new Model.UserModel(ViewModel.Username, ViewModel.Email);
+            UserModel um = new Model.UserModel(ViewModel.Password, ViewModel.Email);
 
             bool isAuthenticated = await App.Client.AuthenticateUser(um);
             if (!isAuthenticated)

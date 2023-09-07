@@ -147,7 +147,7 @@ namespace SaveMyRPGClient
         }
 
         public async Task<List<GroupModel>> RetrieveAllJoinedCampaigns(UserModel userModel) {
-            UserModel um = new Model.UserModel(userModel.Username, userModel.Email);
+            UserModel um = new Model.UserModel(userModel.Password, userModel.Email);
             byte[] user_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(um);
 
             HttpContent user = new ByteArrayContent(user_info);
@@ -322,13 +322,15 @@ namespace SaveMyRPGClient
         public async Task<bool> AuthenticateUser(UserModel userModel)
         {
 
-            UserModel um = new Model.UserModel(userModel.Username, userModel.Email);
+            UserModel um = new Model.UserModel(userModel.Password, userModel.Email);
             byte[] user_login_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(um);
 
-            HttpContent user_login = new ByteArrayContent(user_login_info);
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("email", userModel.Email);
+            _client.DefaultRequestHeaders.Add("pwd", userModel.Password);
             try
             {
-                HttpResponseMessage resp = await App.Client._client.PostAsync("/login", user_login);
+                HttpResponseMessage resp = await App.Client._client.GetAsync("/login");
                 resp.EnsureSuccessStatusCode();
 
                 App.Client.TokenSignature = resp.Headers.GetValues("jwt-token").First().ToString();
@@ -349,16 +351,35 @@ namespace SaveMyRPGClient
             return true;
 
         }
-        public void Register(UserModel userModel)
+        public async Task<bool> Register(UserModel userModel)
         {
-            throw new NotImplementedException();
+            UserModel um = new Model.UserModel(userModel.Password, userModel.Email);
+            byte[] user_login_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(um);
+
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("email", userModel.Email);
+            _client.DefaultRequestHeaders.Add("pwd", userModel.Password);
+            try
+            {
+                HttpResponseMessage resp = await App.Client._client.GetAsync("/ru");
+                resp.EnsureSuccessStatusCode();
+                Debug.WriteLine(resp);
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
+
+            return true;
         }
 
         public async Task<bool> JoinCampaign(UserModel um, string group_id) 
         {
             JoinCampaignRequest jcr = new JoinCampaignRequest();
 
-            jcr.Username = um.Username;
+            jcr.Username = um.Email;
             jcr.Email = um.Email;
             jcr.id = group_id;
 

@@ -28,26 +28,11 @@ namespace SaveMyRPGClient
             MainView mainView = new MainView();
             LoginView loginView = new LoginView();
 
-            loginView.Close();
+
             MainViewModel mainViewModel = new MainViewModel();
             mainView.DataContext = mainViewModel;
-            mainView.Show();
 
 
-            /*
-            createGroupView.DataContext = new CreateGroupViewModel(mainViewModel.CurrentCampaignListViewModel);
-
-            createGroupView.IsVisibleChanged += (sender, e) =>
-            {
-                if (createGroupView.IsVisible == false)
-                {
-                    createGroupView.Show();
-
-                }
-            };
-            */
-
-            /*
             loginView.Show();
             loginView.IsVisibleChanged += (sender, e) =>
             {
@@ -59,7 +44,7 @@ namespace SaveMyRPGClient
                 }
 
             };
-            */
+            
 
 
 

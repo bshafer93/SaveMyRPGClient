@@ -61,3 +61,5 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\CreateGroupView.baml
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\JoinGroupView.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\JoinGroupView.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\Microsoft.WindowsAPICodePack.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\Microsoft.WindowsAPICodePack.Shell.dll

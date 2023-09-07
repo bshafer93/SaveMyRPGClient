@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using Microsoft.Win32;
+using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace SaveMyRPGClient.Commands
 {
@@ -28,18 +29,20 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
-            var save_path = new CommonOpenFileDialog();
-            save_path.IsFolder
-         
-            if (save_path.IsNullOrEmpty()) { return; }
+            
+            var folder_dialog = new CommonOpenFileDialog();
+            folder_dialog.IsFolderPicker = true;
+            CommonFileDialogResult save_path = folder_dialog.ShowDialog();
 
-            if (File.Exists(save_path)) {
+            if (save_path.ToString().Length < 1) { return; }
+
+            if (File.Exists(save_path.ToString())) {
                 Debug.WriteLine("Choose Save Folder and not file...");
                 return;
             }
 
 
-            DirectoryInfo dirInfo = new DirectoryInfo(save_path);
+            DirectoryInfo dirInfo = new DirectoryInfo(save_path.ToString());
 
             FileInfo[] files = dirInfo.GetFiles();
 

@@ -21,17 +21,17 @@ namespace SaveMyRPGClient.ViewModel
 
         private UserModel _user;
 
-        public string Username
+        public string Password
         {
             get
             {
-                return _user.Username;
+                return _user.Password;
 
             }
             set
             {
-                _user.Username = value;
-                OnPropertyChanged(nameof(Username));
+                _user.Password = value;
+                OnPropertyChanged(nameof(Password));
             }
         }
         public string Email
@@ -75,12 +75,15 @@ namespace SaveMyRPGClient.ViewModel
         }
 
         public LoginCommand VMLoginCommand { get; }
+        public RegisterCommand VMRegisterCommand { get; }
         public LoginViewModel()
         {
             _user = new UserModel(Properties.Settings.Default.Username, Properties.Settings.Default.Email);
 
             VMLoginCommand = new LoginCommand(this);
-            Username = Properties.Settings.Default.Username;
+            VMRegisterCommand = new RegisterCommand(this);
+
+            Password = "";
             Email = Properties.Settings.Default.Email;
         }
 

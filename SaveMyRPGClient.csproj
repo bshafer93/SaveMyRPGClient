@@ -15,6 +15,7 @@
     <None Remove="Images\folderopen-icon.png" />
     <None Remove="Images\LogoSMRPG.png" />
     <None Remove="Images\LogoSMRPGSQ.png" />
+    <None Remove="Images\password-icon.png" />
     <None Remove="Images\save-icon.png" />
     <None Remove="Images\settings-icon.png" />
     <None Remove="Images\swords-icon.png" />
@@ -32,6 +33,7 @@
     <PackageReference Include="AsyncAwaitBestPractices.MVVM" Version="6.0.6" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.0.0-preview2" />
     <PackageReference Include="System.ServiceModel.Primitives" Version="6.0.0" />
+    <PackageReference Include="WindowsAPICodePack-Shell" Version="1.1.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -44,6 +46,9 @@
     </Resource>
     <Resource Include="Images\LogoSMRPG.png" />
     <Resource Include="Images\LogoSMRPGSQ.png" />
+    <Resource Include="Images\password-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\settings-icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
