@@ -32,9 +32,10 @@ namespace SaveMyRPGClient.Commands
             
             var folder_dialog = new CommonOpenFileDialog();
             folder_dialog.IsFolderPicker = true;
-            CommonFileDialogResult save_path = folder_dialog.ShowDialog();
+            folder_dialog.ShowDialog();
+            string save_path = folder_dialog.FileName;
 
-            if (save_path.ToString().Length < 1) { return; }
+            if (save_path.Length < 1) { return; }
 
             if (File.Exists(save_path.ToString())) {
                 Debug.WriteLine("Choose Save Folder and not file...");

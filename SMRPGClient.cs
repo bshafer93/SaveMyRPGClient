@@ -87,10 +87,6 @@ namespace SaveMyRPGClient
             return Directory.GetDirectories(bg3_save_location);
         }
 
-        public async void CompressSave(string save_path) {
-
-        }
-
         public string GetLatestSave(string group_id = "")
         {
 
@@ -105,7 +101,6 @@ namespace SaveMyRPGClient
 
             return latest_save;
         }
-
 
         public async Task<List<GroupModel>> RetrieveAllJoinedCampaigns(UserModel userModel) {
             _client.DefaultRequestHeaders.Clear();
@@ -292,6 +287,29 @@ namespace SaveMyRPGClient
             return true;
 
         }
+        public async Task<bool> AuthenticateUserToken()
+        {
+
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
+            _client.DefaultRequestHeaders.Add("email", Properties.Settings.Default.Email);
+            try
+            {
+                HttpResponseMessage resp = await App.Client._client.GetAsync("/login");
+                resp.EnsureSuccessStatusCode();
+                Debug.WriteLine("Logged In!");
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
+
+            return true;
+
+        }
+
         public async Task<bool> Register(UserModel userModel)
         {
             UserModel um = new Model.UserModel(userModel.Password, userModel.Email);
@@ -441,6 +459,40 @@ namespace SaveMyRPGClient
                 }
 
             
+            return true;
+
+        }
+
+        public async Task<bool> DownloadSaveFile(string group_id, string full_path, string save_folder_name, string save_name, string? save_owner)
+        {
+
+            string save_owner_email = save_owner != null ? save_owner.ToString() : Properties.Settings.Default.Email;
+
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
+            _client.DefaultRequestHeaders.Add("email", save_owner_email);
+            _client.DefaultRequestHeaders.Add("group_id", group_id);
+            _client.DefaultRequestHeaders.Add("save_folder_name", save_folder_name);
+            _client.DefaultRequestHeaders.Add("file_name", save_name);
+            HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(full_path));
+
+            try
+            {
+                HttpResponseMessage resp = await _client.PutAsync("/guu", save_file_raw);
+
+                resp.EnsureSuccessStatusCode();
+                var contentString = await resp.Content.ReadAsStringAsync();
+                Debug.WriteLine(contentString);
+
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
+
+
             return true;
 
         }

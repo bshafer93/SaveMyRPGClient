@@ -13,6 +13,8 @@ namespace SaveMyRPGClient.ViewModel
     {
         private readonly ObservableCollection<SaveViewModel> _saveList;
         public UploadSaveCommand UploadSaveCMD { get; set; }
+
+        public SyncSaveCommand SyncSaveCMD { get; set; }
         public IEnumerable<SaveViewModel> SavesList => _saveList;
 
         public string GroupID { get;  set; }

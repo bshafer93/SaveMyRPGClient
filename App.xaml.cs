@@ -20,13 +20,15 @@ namespace SaveMyRPGClient
 
         public static SMRPGClient Client { get => client; set => client = value; }
 
-        protected void ApplicationStart(object sender, StartupEventArgs e)
+        public void ApplicationStart(object sender, StartupEventArgs e)
         {
             //SetUpClient
             Client = new SMRPGClient();
 
-            
+
             LoginView loginView = new LoginView();
+            LoginViewModel loginVM = new LoginViewModel();
+            loginView.DataContext = loginVM;
 
             loginView.Show();
             loginView.IsVisibleChanged += (sender, e) =>
@@ -41,9 +43,8 @@ namespace SaveMyRPGClient
                 }
 
             };
-            
 
-
+            loginVM.CheckUserSettingsLogin();
 
         }
     }

@@ -18,7 +18,7 @@ namespace SaveMyRPGClient.ViewModel
 
         private string _errorMessage;
         private bool _isViewVisible=true;
-        private bool _rememberUser = false;
+        private bool _rememberUser;
 
         private UserModel _user;
 
@@ -99,10 +99,22 @@ namespace SaveMyRPGClient.ViewModel
 
             Password = "";
             Email = Properties.Settings.Default.Email;
+            RememberUser = Properties.Settings.Default.RememberLogin;
 
-            if (Properties.Settings.Default.RememberLogin)
-            { 
-                //HERE TODO
+        }
+
+        public void CheckUserSettingsLogin() {
+
+            if (Properties.Settings.Default.RememberLogin && Properties.Settings.Default.JwtTokenString.Length > 0)
+            {
+                var task = Task.Run(() => App.Client.AuthenticateUserToken());
+                task.Wait();
+                if (task.Result)
+                {
+                    IsViewVisible = false;
+                }
+                Properties.Settings.Default.RememberLogin = false;
+                ErrorMessage = "Login Session Expired. Please Login again.";
             }
         }
 

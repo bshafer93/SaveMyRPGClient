@@ -22,7 +22,7 @@ namespace SaveMyRPGClient.ViewModel
         private bool _isViewVisible = true;
         private CampaignListViewModel _clvm;
         public FinishCreateGroupCommand FinishCreateGroupCMD { get; }
-        public OpenFileDialogCommand OpenFileDialogCMD { get; }
+        public OpenFolderDialogCommand OpenFolderDialogCMD { get; }
         public CampaignListViewModel CampaignListVM {
             get 
             {
@@ -105,11 +105,12 @@ namespace SaveMyRPGClient.ViewModel
 
         public CreateGroupViewModel(CampaignListViewModel clvm)
         {
-            OpenFileDialogCMD = new OpenFileDialogCommand(this);
+            OpenFolderDialogCMD = new OpenFolderDialogCommand(this);
             _clvm = clvm;
             _errorMessage = "";
             _group = new GroupModel();
             _save_path = "";
+            HostEmail = Properties.Settings.Default.Email;
             FinishCreateGroupCMD = new FinishCreateGroupCommand(this);
         }
     }
