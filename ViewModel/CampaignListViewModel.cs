@@ -101,6 +101,30 @@ namespace SaveMyRPGClient.ViewModel
 
         }
 
+        public void updateCampaignView() {
+
+            var task = Task.Run(() => App.Client.RetrieveAllJoinedCampaigns(Properties.Settings.Default.Email));
+            task.Wait();
+            var groups = task.Result;
+
+            _campaignList.Clear();
+            SaveListViewModelList.Clear();
+
+            foreach (var group in groups)
+            {
+                _campaignList.Add(new CampaignViewModel(group, this));
+
+                SaveListViewModelList.Add(new SaveListViewModel(group.Id, group.Name));
+
+            }
+            if (SaveListViewModelList.IsNullOrEmpty())
+            {
+                return;
+            }
+            CurrentSaveListViewModel = SaveListViewModelList[0];
+
+        }
+
         public void changeCampaignView(string group_id) 
         {
             CurrentSaveListViewModel = SaveListViewModelList.Find((SaveListViewModel a) => a.GroupID == group_id);

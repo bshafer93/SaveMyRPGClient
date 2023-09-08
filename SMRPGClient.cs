@@ -106,47 +106,10 @@ namespace SaveMyRPGClient
             return latest_save;
         }
 
-        public async Task<SaveFileChunk> RequestSaveChunk() {
-
-            HttpResponseMessage response = await _client.GetAsync("/getchunk");
-            response.EnsureSuccessStatusCode();
-            byte[] chunk = await response.Content.ReadAsByteArrayAsync();
-            SaveFileChunk c = SaveFileChunk.Deserialize(chunk);
-            return c;
-
-        }
-
-        public async Task<FullSaveFileJson> RequestFullSaveFile()
-        {
-
-            try
-            {
-                HttpResponseMessage fullSaveResponse = await _client.GetAsync("/getfullsave");
-                fullSaveResponse.EnsureSuccessStatusCode();
-                byte[] content = await fullSaveResponse.Content.ReadAsByteArrayAsync();
-
-                FullSaveFileJson fullSave = JsonSerializer.Deserialize<FullSaveFileJson>(content);
-
-                Console.WriteLine($"Name: {fullSave.FolderName}");
-                Console.WriteLine($"LoggedAt: {fullSave.FolderSize}");
-                byte[] zip_file_decode = Convert.FromBase64String(fullSave.ZipDataB64);
-                string zip_path = "C:\\Users\\brent\\Documents\\Programming\\SaveMyRPGClient\\bg_temp_saves\\" + fullSave.FolderName;
-                string folder_path = "C:\\Users\\brent\\Documents\\Programming\\SaveMyRPGClient\\bg_save_extracts\\Norbertle-31112316728_smrpg";
-                File.WriteAllBytes(zip_path, zip_file_decode);
-                System.IO.Directory.CreateDirectory(folder_path);
-                ZipFile.ExtractToDirectory(zip_path, folder_path);
-                return fullSave;
-
-            }
-            catch (HttpRequestException ex)
-            {
-                Debug.WriteLine($"Exception: {ex}");
-                return null;
-            }
-
-        }
 
         public async Task<List<GroupModel>> RetrieveAllJoinedCampaigns(UserModel userModel) {
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
             UserModel um = new Model.UserModel(userModel.Password, userModel.Email);
             byte[] user_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(um);
 
@@ -188,6 +151,9 @@ namespace SaveMyRPGClient
         }
         public async Task<List<GroupModel>> RetrieveAllJoinedCampaigns(string email)
         {
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
+
             UserModel um = new Model.UserModel("Anon", email);
             byte[] user_info = JsonSerializer.SerializeToUtf8Bytes<UserModel>(um);
 
@@ -229,6 +195,8 @@ namespace SaveMyRPGClient
         }
 
         public async Task<List<SaveModel>> RetrieveAllCampaignSaves(string id) {
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
 
             string group_id_json = "{\"id\":\"" + id + "\"}";
             
@@ -268,7 +236,8 @@ namespace SaveMyRPGClient
         }
 
         public async Task<string?> GetServerInfo() {
-
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
 
             try
             {
@@ -292,33 +261,6 @@ namespace SaveMyRPGClient
 
         }
 
-        public void EstablishFileLink() {
-            Debug.WriteLine($"Start File Sync");
-            TcpClient client = new TcpClient();
-
-            client.ConnectAsync(_ipRaw, 8100).Wait();
-
-            NetworkStream stream = client.GetStream();
-
-            new Thread(() =>
-            {
-                Debug.WriteLine($"Writing to server...");
-                var sBuf = Encoding.UTF8.GetBytes("Getting Down And JIggy!");
-                stream.Write(sBuf, 0, sBuf.Length);
-            }).Start();
-            Thread.Sleep(500);
-            new Thread(() =>
-            {
-                Debug.WriteLine($"Reading from server...");
-                byte[] buf = new byte[512012];
-                int bytesRecv = stream.Read(buf, 0, buf.Length);
-
-                Debug.WriteLine($"Received {bytesRecv} bytes");
-            }).Start();
-
-            
-        }
-
         public async Task<bool> AuthenticateUser(UserModel userModel)
         {
 
@@ -334,10 +276,9 @@ namespace SaveMyRPGClient
                 resp.EnsureSuccessStatusCode();
 
                 App.Client.TokenSignature = resp.Headers.GetValues("jwt-token").First().ToString();
+                Properties.Settings.Default.JwtTokenString = resp.Headers.GetValues("jwt-token").First().ToString();
+                Properties.Settings.Default.Save();
                 App.Client.jwt_token = new JwtSecurityToken(App.Client.TokenSignature);
-
-                Debug.WriteLine(resp);
-                Debug.WriteLine("Token");
                 Debug.WriteLine("Logged In!");
 
 
@@ -377,6 +318,9 @@ namespace SaveMyRPGClient
 
         public async Task<bool> JoinCampaign(UserModel um, string group_id) 
         {
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
+
             JoinCampaignRequest jcr = new JoinCampaignRequest();
 
             jcr.Username = um.Email;
@@ -403,6 +347,8 @@ namespace SaveMyRPGClient
 
         public async Task<GroupModel> RetrieveCampaignInfo(string group_id) 
         {
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
             string group_id_json = "{\"id\":\"" + group_id + "\"}";
 
             HttpContent gid = new ByteArrayContent(Encoding.ASCII.GetBytes(group_id_json));
@@ -436,7 +382,8 @@ namespace SaveMyRPGClient
 
         public async Task<GroupModel?> CreateCampaign(GroupModel gm)
         {
-
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
             HttpContent gid = new ByteArrayContent(JsonSerializer.SerializeToUtf8Bytes<GroupModel>(gm));
 
             try
@@ -470,6 +417,7 @@ namespace SaveMyRPGClient
             string save_owner_email = save_owner != null ? save_owner.ToString() : Properties.Settings.Default.Email;
 
             _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
             _client.DefaultRequestHeaders.Add("email", save_owner_email);
             _client.DefaultRequestHeaders.Add("group_id", group_id);
             _client.DefaultRequestHeaders.Add("save_folder_name",save_folder_name);
@@ -507,6 +455,7 @@ namespace SaveMyRPGClient
             string directory_name = file.Directory.Name;
 
             _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
             _client.DefaultRequestHeaders.Add("email", Properties.Settings.Default.Email);
             _client.DefaultRequestHeaders.Add("group_id", group_id);
             _client.DefaultRequestHeaders.Add("file_name", directory_name + "/" + file_name);
@@ -533,9 +482,5 @@ namespace SaveMyRPGClient
 
         }
 
-        public void Remove(UserModel userModel)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

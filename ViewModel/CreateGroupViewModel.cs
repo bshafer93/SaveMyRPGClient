@@ -99,6 +99,10 @@ namespace SaveMyRPGClient.ViewModel
             }
         }
 
+        public void updateCampaignListView() {
+            _clvm.updateCampaignView();
+        }
+
         public CreateGroupViewModel(CampaignListViewModel clvm)
         {
             OpenFileDialogCMD = new OpenFileDialogCommand(this);

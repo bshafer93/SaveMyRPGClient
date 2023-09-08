@@ -32,6 +32,7 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
+
             ViewModel.ErrorMessage = "Contacting Server...";
             UserModel um = new Model.UserModel(ViewModel.Password, ViewModel.Email);
 
@@ -42,7 +43,12 @@ namespace SaveMyRPGClient.Commands
                 Debug.WriteLine("Invalid Username or Email");
             }
             ViewModel.ErrorMessage = "Logged In!";
+            if(ViewModel.RememberUser)
+            {
+                Properties.Settings.Default.RememberLogin = true;
+            }
             Properties.Settings.Default.JwtTokenString = App.Client.TokenSignature;
+            Properties.Settings.Default.Email = ViewModel.Email;
             Properties.Settings.Default.Save();
             ViewModel.IsViewVisible = false;
 

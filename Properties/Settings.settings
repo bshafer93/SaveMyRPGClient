@@ -17,5 +17,8 @@
     <Setting Name="Email" Type="System.String" Scope="User">
       <Value Profile="(Default)">bshafer93@gmail.com</Value>
     </Setting>
+    <Setting Name="RememberLogin" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

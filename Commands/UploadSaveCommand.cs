@@ -41,7 +41,7 @@ namespace SaveMyRPGClient.Commands
                 return;
             }
 
-
+            
             DirectoryInfo dirInfo = new DirectoryInfo(save_path.ToString());
 
             FileInfo[] files = dirInfo.GetFiles();

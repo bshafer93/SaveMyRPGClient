@@ -28,12 +28,13 @@ namespace SaveMyRPGClient.Commands
 
             UserModel um = new Model.UserModel(ViewModel.Password, ViewModel.Email);
 
-            bool isRegistered = await App.Client.AuthenticateUser(um);
+            bool isRegistered = await App.Client.Register(um);
 
             if (!isRegistered)
             {
                 ViewModel.ErrorMessage = "Registration Failed";
                 Debug.WriteLine("Registration Failed!");
+                return;
             }
             ViewModel.ErrorMessage = "Registered!";
 

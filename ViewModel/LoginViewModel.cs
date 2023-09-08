@@ -18,8 +18,22 @@ namespace SaveMyRPGClient.ViewModel
 
         private string _errorMessage;
         private bool _isViewVisible=true;
+        private bool _rememberUser = false;
 
         private UserModel _user;
+
+        public bool RememberUser
+        {
+            get
+            { 
+                return _rememberUser; 
+            } 
+            set 
+            { 
+                _rememberUser = value;
+              OnPropertyChanged(nameof(RememberUser));
+            }        
+        }
 
         public string Password
         {
@@ -85,6 +99,11 @@ namespace SaveMyRPGClient.ViewModel
 
             Password = "";
             Email = Properties.Settings.Default.Email;
+
+            if (Properties.Settings.Default.RememberLogin)
+            { 
+                //HERE TODO
+            }
         }
 
     }

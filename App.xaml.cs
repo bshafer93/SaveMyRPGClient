@@ -25,20 +25,17 @@ namespace SaveMyRPGClient
             //SetUpClient
             Client = new SMRPGClient();
 
-            MainView mainView = new MainView();
+            
             LoginView loginView = new LoginView();
-
-
-            MainViewModel mainViewModel = new MainViewModel();
-            mainView.DataContext = mainViewModel;
-
 
             loginView.Show();
             loginView.IsVisibleChanged += (sender, e) =>
             {
                 if (loginView.IsVisible == false && loginView.IsLoaded)
                 {
-
+                    MainView mainView = new MainView();
+                    MainViewModel mainViewModel = new MainViewModel();
+                    mainView.DataContext = mainViewModel;
                     loginView.Close();
                     mainView.Show();
                 }

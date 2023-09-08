@@ -30,11 +30,10 @@ namespace SaveMyRPGClient.Commands
             GroupModel gm = new GroupModel();
             gm.Name = CreateGroupVM.Name;
             gm.Host_Email = CreateGroupVM.HostEmail;
-            Debug.WriteLine("Save: " + CreateGroupVM.SavePath);
 
-            GroupModel didCreate = await App.Client.CreateCampaign(gm);
+            GroupModel new_gm = await App.Client.CreateCampaign(gm);
 
-            if (didCreate == null)
+            if (new_gm == null)
             {
                 CreateGroupVM.ErrorMessage = "Failed To create campaign...";
                 Debug.WriteLine("Failed To create campaign...");
@@ -42,6 +41,8 @@ namespace SaveMyRPGClient.Commands
             }
 
             CreateGroupVM.ErrorMessage = "Campaign Created!";
+
+
 
             string save_path = CreateGroupVM.SavePath;
 
@@ -66,9 +67,9 @@ namespace SaveMyRPGClient.Commands
                     string directory_name = dirInfo.Name;
                     string file01_name = file.Name;
                     save.Save_Owner = Properties.Settings.Default.Email;
-                    save.Group_Id = gm.Id;
+                    save.Group_Id = new_gm.Id;
                     save.Hash = SHA256.HashData(File.ReadAllBytes(file.FullName)).ToString();
-                    save.CDN_Path = gm.Id + "/" + directory_name + "/" + file01_name;
+                    save.CDN_Path = new_gm.Id + "/" + directory_name + "/" + file01_name;
                     save.Date_Created = new FileInfo(file.FullName).CreationTime;
 
                     bool didUpload = await App.Client.UploadSaveFile(save.Group_Id, file.FullName, directory_name, file01_name, save.Save_Owner);
@@ -82,7 +83,7 @@ namespace SaveMyRPGClient.Commands
                 }
                 else
                 {
-                    bool didUpload = await App.Client.UploadSaveImage(gm.Id, file.FullName);
+                    bool didUpload = await App.Client.UploadSaveImage(new_gm.Id, file.FullName);
 
                     if (!didUpload)
                     {
@@ -94,6 +95,7 @@ namespace SaveMyRPGClient.Commands
 
             }
 
+            CreateGroupVM.updateCampaignListView();
         }
     }
 }
