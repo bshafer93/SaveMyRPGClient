@@ -26,7 +26,8 @@ namespace SaveMyRPGClient.ViewModel
         public System.Windows.Media.ImageSource ImageURL {
             get
             {
-                return (System.Windows.Media.ImageSource)new ImageSourceConverter().ConvertFromString(CDNPath.Replace("https://ny.storage.bunnycdn.com", "https://savemyrpg.b-cdn.net").Replace(".lsv", ".WebP"));
+                
+                return new BitmapImage(new Uri(@"C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-391212315822__AutoSave_83\AutoSave_83.WebP"));
             }
 
         }

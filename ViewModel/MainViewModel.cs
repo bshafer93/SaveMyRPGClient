@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaveMyRPGClient.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,8 @@ namespace SaveMyRPGClient.ViewModel
         private bool _isViewVisible=true;
 
         public CampaignListViewModel CurrentCampaignListViewModel { get; }
-
+        public ShowSettingsService _showSettingsService;
+        public ShowSettingsCommand ShowSettingsCMD { get; }
 
     public bool IsViewVisible
         {
@@ -29,6 +31,8 @@ namespace SaveMyRPGClient.ViewModel
 
         public MainViewModel() { 
             CurrentCampaignListViewModel = new CampaignListViewModel();
+            ShowSettingsCMD = new ShowSettingsCommand(this);
+            _showSettingsService = new ShowSettingsService();
         }
 
     }

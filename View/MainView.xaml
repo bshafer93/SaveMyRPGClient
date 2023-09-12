@@ -40,7 +40,7 @@
                         <ColumnDefinition Width="25"/>
                         <ColumnDefinition Width="5"/>
                     </Grid.ColumnDefinitions>
-
+                    
                     <Menu
                     Background='Transparent'
                     Foreground="DarkGray"
@@ -50,9 +50,11 @@
                     VerticalAlignment="Center"
                     Margin="10,0,0,0">
                         
-                        <MenuItem Header="Menu">
+                        <MenuItem Header="Menu" >
                             <MenuItem Header="Add Campaign"/>
-                            <MenuItem Header="Settings"/>
+                            <MenuItem Header="Settings" Command="{Binding ShowSettingsCMD}"/>
+                            <Separator />
+                            <MenuItem Header="Exit" Click="btnCloseWindow_Click"/>
                         </MenuItem>
 
                     </Menu>

@@ -69,8 +69,8 @@
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-
                         <GridViewColumn Header="">
+
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button x:Name="btnDownloadSave"
@@ -78,15 +78,13 @@
                                BorderThickness="0"
                                Margin="5,0,5,0"
                                Style="{StaticResource downloadSaveButton}">
-                                    </Button>
-                                </DataTemplate>
+                               </Button>
+                               </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
                     </GridView>
                 </ListView.View>
-
             </ListView>
-
         </ScrollViewer>
         
         <Grid Grid.Row="1" HorizontalAlignment="Center">

@@ -26,12 +26,12 @@ namespace SaveMyRPGClient.ViewModel
         {
             get
             { 
-                return _rememberUser; 
+                return Properties.Settings.Default.RememberLogin; 
             } 
             set 
-            { 
-                _rememberUser = value;
-              OnPropertyChanged(nameof(RememberUser));
+            {
+                Properties.Settings.Default.RememberLogin = value;
+              OnPropertyChanged(nameof(Properties.Settings.Default.RememberLogin));
             }        
         }
 
@@ -113,8 +113,10 @@ namespace SaveMyRPGClient.ViewModel
                 {
                     IsViewVisible = false;
                 }
-                Properties.Settings.Default.RememberLogin = false;
-                ErrorMessage = "Login Session Expired. Please Login again.";
+                else {
+                    Properties.Settings.Default.RememberLogin = false;
+                    ErrorMessage = "Login Session Expired. Please Login again.";
+                }
             }
         }
 

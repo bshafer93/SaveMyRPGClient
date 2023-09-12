@@ -34,6 +34,7 @@ namespace SaveMyRPGClient.Commands
                 return;
             }
             jcvm._clvm.addCampaign(jcvm.ID);
+            jcvm.ErrorMessage = "Joined group successfully";
         }
     }
 }
