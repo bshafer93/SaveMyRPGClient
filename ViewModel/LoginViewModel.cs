@@ -40,7 +40,6 @@ namespace SaveMyRPGClient.ViewModel
             get
             {
                 return _user.Password;
-
             }
             set
             {

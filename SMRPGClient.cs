@@ -21,6 +21,7 @@ using System.Windows.Threading;
 using SaveMyRPGClient.Model;
 using System.ComponentModel.DataAnnotations;
 using SaveMyRPGClient.View.UserControls;
+using System.Windows.Shapes;
 
 namespace SaveMyRPGClient
 {
@@ -463,38 +464,18 @@ namespace SaveMyRPGClient
 
         }
 
-        public async Task<bool> DownloadSaveFile(string group_id, string full_path, string save_folder_name, string save_name, string? save_owner)
+        public async Task DownloadSaveFile(string folder_name,string baseSaveName, string url)
         {
-
-            string save_owner_email = save_owner != null ? save_owner.ToString() : Properties.Settings.Default.Email;
-
-            _client.DefaultRequestHeaders.Clear();
-            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
-            _client.DefaultRequestHeaders.Add("email", save_owner_email);
-            _client.DefaultRequestHeaders.Add("group_id", group_id);
-            _client.DefaultRequestHeaders.Add("save_folder_name", save_folder_name);
-            _client.DefaultRequestHeaders.Add("file_name", save_name);
-            HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(full_path));
-
-            try
+            using (var s = await _client.GetStreamAsync(new Uri(url)))
             {
-                HttpResponseMessage resp = await _client.PutAsync("/guu", save_file_raw);
+                Directory.CreateDirectory(Properties.Settings.Default.SavePath + "\\" + folder_name);
 
-                resp.EnsureSuccessStatusCode();
-                var contentString = await resp.Content.ReadAsStringAsync();
-                Debug.WriteLine(contentString);
-
-
+                using (var fs = new FileStream(Properties.Settings.Default.SavePath + "\\" + folder_name + "\\" + baseSaveName, FileMode.OpenOrCreate))
+                {
+                    await s.CopyToAsync(fs);
+                }
             }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-                return false;
-            }
-
-
-            return true;
-
+            
         }
 
         public async Task<bool> UploadSaveImage(string group_id, string full_path)

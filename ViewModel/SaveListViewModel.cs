@@ -3,9 +3,12 @@ using SaveMyRPGClient.Model;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.Graphics.Capture;
 
 namespace SaveMyRPGClient.ViewModel
 {
@@ -39,6 +42,10 @@ namespace SaveMyRPGClient.ViewModel
             foreach (var save in saves)
             {
                 _saveList.Add(new SaveViewModel(save));
+
+                if (_saveList.Last().IsLocal) {
+                    Debug.WriteLine(save.Folder_Name + " Is saved locally");
+                }
             }
 
 

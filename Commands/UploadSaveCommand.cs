@@ -9,8 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
-using Microsoft.Win32;
-using Microsoft.WindowsAPICodePack.Dialogs;
 
 namespace SaveMyRPGClient.Commands
 {
@@ -29,11 +27,15 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
-            
-            var folder_dialog = new CommonOpenFileDialog();
-            folder_dialog.IsFolderPicker = true;
-            folder_dialog.ShowDialog();
-            string save_path = folder_dialog.FileName;
+            System.Windows.Forms.FolderBrowserDialog openFileDlg = new System.Windows.Forms.FolderBrowserDialog();
+            var result = openFileDlg.ShowDialog();
+            string save_path = "";
+
+            if (result.ToString() != string.Empty)
+            {
+                save_path = openFileDlg.SelectedPath;
+                
+            }
 
             if (save_path.Length < 1) { return; }
 
