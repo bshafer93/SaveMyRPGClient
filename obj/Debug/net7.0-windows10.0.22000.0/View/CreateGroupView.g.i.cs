@@ -95,7 +95,7 @@ namespace SaveMyRPGClient.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SaveMyRPGClient;V1.0.0.0;component/view/creategroupview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SaveMyRPGClient;component/view/creategroupview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\CreateGroupView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

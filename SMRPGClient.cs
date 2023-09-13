@@ -18,7 +18,6 @@ using System.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using Windows.Media.Protection.PlayReady;
 using System.Windows.Threading;
-using SaveMyRPGClient.Model;
 using System.ComponentModel.DataAnnotations;
 using SaveMyRPGClient.View.UserControls;
 using System.Windows.Shapes;

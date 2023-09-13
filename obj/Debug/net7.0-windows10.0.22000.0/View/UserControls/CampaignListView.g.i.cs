@@ -78,7 +78,7 @@ namespace SaveMyRPGClient.View.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/SaveMyRPGClient;V1.0.0.0;component/view/usercontrols/campaignlistview.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/SaveMyRPGClient;component/view/usercontrols/campaignlistview.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\View\UserControls\CampaignListView.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
