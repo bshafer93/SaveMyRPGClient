@@ -135,7 +135,21 @@
             <UC:CampaignListView x:Name="campaignListView" Grid.Row="1" Grid.Column="0" DataContext="{Binding CurrentCampaignListViewModel}"/>
             <StackPanel Grid.Column="1" Grid.Row="1">
                 <UC:SaveListView x:Name="saveListView" DataContext="{Binding CurrentCampaignListViewModel.CurrentSaveListViewModel}"/>
-            </StackPanel>
+                        <TextBlock Width="40" Height="40">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Setter Property="Background">
+                                        <Setter.Value>
+                                            <ImageBrush ImageSource="/Images/loadingspinner-icon.png"
+                                        Stretch="None"
+                                        AlignmentX="Center"/>
+                                        </Setter.Value>
+                                    </Setter>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+
+                </StackPanel>
 
 
         </Grid>

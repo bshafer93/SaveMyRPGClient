@@ -27,14 +27,14 @@
     <Compile Update="View\UserControls\CampaignListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\UserControls\LoadingSpinnerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\UserControls\SaveListView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="MainWindow.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Styles\ButtonStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -54,6 +54,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\UserControls\CampaignListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\UserControls\LoadingSpinnerView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\UserControls\SaveListView.xaml">

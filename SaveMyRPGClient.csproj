@@ -16,6 +16,7 @@
     <None Remove="Images\email-icon.png" />
     <None Remove="Images\folderopen-icon.png" />
     <None Remove="Images\imagenotfound.webp" />
+    <None Remove="Images\loadingspinner-icon.gif" />
     <None Remove="Images\LogoSMRPG.png" />
     <None Remove="Images\LogoSMRPGSQ.png" />
     <None Remove="Images\password-icon.png" />
@@ -29,7 +30,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="CustomControls\" />
     <Folder Include="TaskExtensions\" />
   </ItemGroup>
 
@@ -46,6 +46,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\imagenotfound.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\loadingspinner-icon.gif">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\LogoSMRPG.png" />

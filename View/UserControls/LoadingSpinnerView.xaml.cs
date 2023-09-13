@@ -13,20 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SaveMyRPGClient
+namespace SaveMyRPGClient.View.UserControls
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for LoadingSpinnerView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class LoadingSpinnerView : UserControl
     {
-        public SMRPGClient client;
-        public MainWindow()
+        public LoadingSpinnerView()
         {
             InitializeComponent();
-            client = new SMRPGClient();
-            client.init();
-
         }
     }
 }

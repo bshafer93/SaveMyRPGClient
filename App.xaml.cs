@@ -18,15 +18,12 @@ namespace SaveMyRPGClient
     /// </summary>
     public partial class App : Application
     {
-        private static SMRPGClient client;
+        private static SMRPGClient client= new SMRPGClient();
 
         public static SMRPGClient Client { get => client; set => client = value; }
 
         public void ApplicationStart(object sender, StartupEventArgs e)
         {
-            //SetUpClient
-            Client = new SMRPGClient();
-
 
             LoginView loginView = new LoginView();
             LoginViewModel loginVM = new LoginViewModel();
