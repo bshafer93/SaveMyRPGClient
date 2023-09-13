@@ -10,11 +10,11 @@ none
 false
 TRACE;RELEASE;NET;NET7_0;NETCOREAPP
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\App.xaml
-4906410500
+9-1230628645
 
-131669573781
-2061647772942
-MainWindow.xaml;Styles\ButtonStyles.xaml;View\LoginView.xaml;View\MainView.xaml;
+49-2116635150
+214840526837
+MainWindow.xaml;Styles\ButtonStyles.xaml;View\CreateGroupView.xaml;View\JoinGroupView.xaml;View\LoginView.xaml;View\MainView.xaml;View\SettingsView.xaml;View\UserControls\CampaignListView.xaml;View\UserControls\SaveListView.xaml;
 
 False
 

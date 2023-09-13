@@ -7,7 +7,6 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-wind
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\Microsoft.IdentityModel.Logging.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\Microsoft.IdentityModel.Tokens.dll
-C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\Newtonsoft.Json.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\Microsoft.CSharp.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\Microsoft.VisualBasic.Core.dll
@@ -494,3 +493,14 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-wind
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\SaveMyRPGClient.pdb
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\SaveMyRPGClient.genruntimeconfig.cache
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\ref\SaveMyRPGClient.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\SaveMyRPGClient.dll.config
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\CreateGroupView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\JoinGroupView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\SettingsView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\UserControls\CampaignListView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\UserControls\SaveListView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\CreateGroupView.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\JoinGroupView.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\SettingsView.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\UserControls\CampaignListView.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\x64\Release\net7.0-windows10.0.22000.0\win-x64\View\UserControls\SaveListView.baml

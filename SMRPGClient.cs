@@ -62,6 +62,7 @@ namespace SaveMyRPGClient
 
         public SMRPGClient()
         {
+            
             bg3_save_location = Environment.ExpandEnvironmentVariables(default_path);
             Debug.WriteLine("Save Location: " + bg3_save_location);
             if (init()) {

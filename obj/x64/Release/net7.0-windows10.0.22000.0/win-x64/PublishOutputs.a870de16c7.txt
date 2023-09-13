@@ -2,6 +2,7 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-wind
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\SaveMyRPGClient.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\SaveMyRPGClient.deps.json
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\SaveMyRPGClient.runtimeconfig.json
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\SaveMyRPGClient.dll.config
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\SaveMyRPGClient.pdb
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\Microsoft.CSharp.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\Microsoft.VisualBasic.Core.dll
@@ -468,5 +469,4 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-wind
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\Microsoft.IdentityModel.Logging.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\Microsoft.IdentityModel.Tokens.dll
-C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\Newtonsoft.Json.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\System.IdentityModel.Tokens.Jwt.dll

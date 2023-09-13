@@ -4,9 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using Windows.ApplicationModel.UserDataTasks.DataProvider;
 
 namespace SaveMyRPGClient
@@ -46,6 +48,16 @@ namespace SaveMyRPGClient
 
             loginVM.CheckUserSettingsLogin();
 
+        }
+        private void Application_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+        {
+            /*
+            var exception = e.Exception;
+            using (StreamWriter outputFile = new StreamWriter("C:\\Users\\brent\\Desktop\\smrpg_log.txt"))
+            {
+                    outputFile.WriteLine(exception.ToString());
+            }
+            */
         }
     }
 }

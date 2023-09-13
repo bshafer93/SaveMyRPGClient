@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SaveMyRPGClient": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

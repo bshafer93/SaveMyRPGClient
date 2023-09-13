@@ -2,11 +2,8 @@
   "version": 3,
   "targets": {
     "net7.0-windows10.0.22000": {
-      "Microsoft.IdentityModel.Abstractions/7.0.0-preview2": {
+      "Microsoft.IdentityModel.Abstractions/7.0.0": {
         "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.3"
-        },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
             "related": ".xml"
@@ -18,11 +15,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/7.0.0-preview2": {
+      "Microsoft.IdentityModel.JsonWebTokens/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "7.0.0-preview2",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.IdentityModel.Tokens": "7.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -35,11 +31,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Logging/7.0.0-preview2": {
+      "Microsoft.IdentityModel.Logging/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "7.0.0-preview2",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.IdentityModel.Abstractions": "7.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Logging.dll": {
@@ -52,11 +47,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Tokens/7.0.0-preview2": {
+      "Microsoft.IdentityModel.Tokens/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Logging": "7.0.0-preview2",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.IdentityModel.Logging": "7.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
@@ -69,25 +63,11 @@
           }
         }
       },
-      "Newtonsoft.Json/13.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "System.IdentityModel.Tokens.Jwt/7.0.0-preview2": {
+      "System.IdentityModel.Tokens.Jwt/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "7.0.0-preview2",
-          "Microsoft.IdentityModel.Tokens": "7.0.0-preview2",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.IdentityModel.JsonWebTokens": "7.0.0",
+          "Microsoft.IdentityModel.Tokens": "7.0.0"
         },
         "compile": {
           "lib/net6.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -102,11 +82,8 @@
       }
     },
     "net7.0-windows10.0.22000/win-x64": {
-      "Microsoft.IdentityModel.Abstractions/7.0.0-preview2": {
+      "Microsoft.IdentityModel.Abstractions/7.0.0": {
         "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "13.0.3"
-        },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Abstractions.dll": {
             "related": ".xml"
@@ -118,11 +95,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.JsonWebTokens/7.0.0-preview2": {
+      "Microsoft.IdentityModel.JsonWebTokens/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Tokens": "7.0.0-preview2",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.IdentityModel.Tokens": "7.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll": {
@@ -135,11 +111,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Logging/7.0.0-preview2": {
+      "Microsoft.IdentityModel.Logging/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Abstractions": "7.0.0-preview2",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.IdentityModel.Abstractions": "7.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Logging.dll": {
@@ -152,11 +127,10 @@
           }
         }
       },
-      "Microsoft.IdentityModel.Tokens/7.0.0-preview2": {
+      "Microsoft.IdentityModel.Tokens/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.Logging": "7.0.0-preview2",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.IdentityModel.Logging": "7.0.0"
         },
         "compile": {
           "lib/net6.0/Microsoft.IdentityModel.Tokens.dll": {
@@ -169,25 +143,11 @@
           }
         }
       },
-      "Newtonsoft.Json/13.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net6.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "System.IdentityModel.Tokens.Jwt/7.0.0-preview2": {
+      "System.IdentityModel.Tokens.Jwt/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.IdentityModel.JsonWebTokens": "7.0.0-preview2",
-          "Microsoft.IdentityModel.Tokens": "7.0.0-preview2",
-          "Newtonsoft.Json": "13.0.3"
+          "Microsoft.IdentityModel.JsonWebTokens": "7.0.0",
+          "Microsoft.IdentityModel.Tokens": "7.0.0"
         },
         "compile": {
           "lib/net6.0/System.IdentityModel.Tokens.Jwt.dll": {
@@ -203,10 +163,10 @@
     }
   },
   "libraries": {
-    "Microsoft.IdentityModel.Abstractions/7.0.0-preview2": {
-      "sha512": "vSNxQjAtlIZZJCfSQ+eQINb5KFoKR7hfpmexWSC90NW86acSBKbQJFFxEgTcm/6Ii4dn6OPyZwsU39lpg8IGzQ==",
+    "Microsoft.IdentityModel.Abstractions/7.0.0": {
+      "sha512": "7iSWSRR72VKeonFdfDi43Lvkca98Y0F3TmmWhRSuHbkjk/IKUSO0Qd272LQFZpi5eDNQNbUXy3o4THXhOAU6cw==",
       "type": "package",
-      "path": "microsoft.identitymodel.abstractions/7.0.0-preview2",
+      "path": "microsoft.identitymodel.abstractions/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -222,14 +182,14 @@
         "lib/net8.0/Microsoft.IdentityModel.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Abstractions.xml",
-        "microsoft.identitymodel.abstractions.7.0.0-preview2.nupkg.sha512",
+        "microsoft.identitymodel.abstractions.7.0.0.nupkg.sha512",
         "microsoft.identitymodel.abstractions.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.JsonWebTokens/7.0.0-preview2": {
-      "sha512": "eXECJxxuMEV4dVXONTxO9tMqCGvWUrlOehrJv7fDv51t7PdqWxl9vkhywprOm2YZqF7kM4c0zsQyF8CBNUIHdA==",
+    "Microsoft.IdentityModel.JsonWebTokens/7.0.0": {
+      "sha512": "N+hUPsFZs+IhlMU+qmX8NnYVB9uMxVdcWoPIhKo4oHDR/yuIFh19SVZeFby15cm8S9yedynOcfs7TU5oDCheZw==",
       "type": "package",
-      "path": "microsoft.identitymodel.jsonwebtokens/7.0.0-preview2",
+      "path": "microsoft.identitymodel.jsonwebtokens/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -245,14 +205,14 @@
         "lib/net8.0/Microsoft.IdentityModel.JsonWebTokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
-        "microsoft.identitymodel.jsonwebtokens.7.0.0-preview2.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.7.0.0.nupkg.sha512",
         "microsoft.identitymodel.jsonwebtokens.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Logging/7.0.0-preview2": {
-      "sha512": "x0yyA7hR2yOhE7n5rQD2UiglTMU2s5Cdu8I656wo6mOv7Hzo6F+V9ruB+zfqKp8I6U3ZpNqnvgrfJguGwn2ZWw==",
+    "Microsoft.IdentityModel.Logging/7.0.0": {
+      "sha512": "6I35Kt2/PQZAyUYLo3+QgT/LubZ5/4Ojelkbyo8KKdDgjMbVocAx2B3P5V7iMCz+rsAe/RLr6ql87QKnHtI+aw==",
       "type": "package",
-      "path": "microsoft.identitymodel.logging/7.0.0-preview2",
+      "path": "microsoft.identitymodel.logging/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -268,14 +228,14 @@
         "lib/net8.0/Microsoft.IdentityModel.Logging.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
-        "microsoft.identitymodel.logging.7.0.0-preview2.nupkg.sha512",
+        "microsoft.identitymodel.logging.7.0.0.nupkg.sha512",
         "microsoft.identitymodel.logging.nuspec"
       ]
     },
-    "Microsoft.IdentityModel.Tokens/7.0.0-preview2": {
-      "sha512": "Ll3x3EkKWhawl3Ygwp3D0NSMxGgkaZKG2tg4Z7KVBeQukxWwjdMOptWWHAApb2ygqGpZLSep9nWnFNAdbtlAoQ==",
+    "Microsoft.IdentityModel.Tokens/7.0.0": {
+      "sha512": "dxYqmmFLsjBQZ6F6a4XDzrZ1CTxBRFVigJvWiNtXiIsT6UlYMxs9ONMaGx9XKzcxmcgEQ2ADuCqKZduz0LR9Hw==",
       "type": "package",
-      "path": "microsoft.identitymodel.tokens/7.0.0-preview2",
+      "path": "microsoft.identitymodel.tokens/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -291,44 +251,14 @@
         "lib/net8.0/Microsoft.IdentityModel.Tokens.xml",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
-        "microsoft.identitymodel.tokens.7.0.0-preview2.nupkg.sha512",
+        "microsoft.identitymodel.tokens.7.0.0.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
       ]
     },
-    "Newtonsoft.Json/13.0.3": {
-      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+    "System.IdentityModel.Tokens.Jwt/7.0.0": {
+      "sha512": "3OpN2iJf8lxpzVeFeeZSLtR3co6uKBs3VudS3PkkgdX5WF9fqqdhRMYf7WbkxqWQP/9RpoFbD3RimhfJe3hlQQ==",
       "type": "package",
-      "path": "newtonsoft.json/13.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "README.md",
-        "lib/net20/Newtonsoft.Json.dll",
-        "lib/net20/Newtonsoft.Json.xml",
-        "lib/net35/Newtonsoft.Json.dll",
-        "lib/net35/Newtonsoft.Json.xml",
-        "lib/net40/Newtonsoft.Json.dll",
-        "lib/net40/Newtonsoft.Json.xml",
-        "lib/net45/Newtonsoft.Json.dll",
-        "lib/net45/Newtonsoft.Json.xml",
-        "lib/net6.0/Newtonsoft.Json.dll",
-        "lib/net6.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.0/Newtonsoft.Json.dll",
-        "lib/netstandard1.0/Newtonsoft.Json.xml",
-        "lib/netstandard1.3/Newtonsoft.Json.dll",
-        "lib/netstandard1.3/Newtonsoft.Json.xml",
-        "lib/netstandard2.0/Newtonsoft.Json.dll",
-        "lib/netstandard2.0/Newtonsoft.Json.xml",
-        "newtonsoft.json.13.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "packageIcon.png"
-      ]
-    },
-    "System.IdentityModel.Tokens.Jwt/7.0.0-preview2": {
-      "sha512": "eBWS3IRIGOmRwS0DW74X4+QPy97yTxqPIqjsHOrDpO+nnRgbjBME7dURgHQBn4S0MM6AF+kwTPaFvKyzlnPa4w==",
-      "type": "package",
-      "path": "system.identitymodel.tokens.jwt/7.0.0-preview2",
+      "path": "system.identitymodel.tokens.jwt/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -344,14 +274,14 @@
         "lib/net8.0/System.IdentityModel.Tokens.Jwt.xml",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
         "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
-        "system.identitymodel.tokens.jwt.7.0.0-preview2.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.7.0.0.nupkg.sha512",
         "system.identitymodel.tokens.jwt.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-windows10.0.22000": [
-      "System.IdentityModel.Tokens.Jwt >= 7.0.0-preview2"
+      "System.IdentityModel.Tokens.Jwt >= 7.0.0"
     ]
   },
   "packageFolders": {
@@ -401,7 +331,7 @@
         "dependencies": {
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",
-            "version": "[7.0.0-preview2, )"
+            "version": "[7.0.0, )"
           }
         },
         "imports": [
@@ -440,7 +370,7 @@
           "Microsoft.Windows.SDK.NET.Ref": {
             "privateAssets": "all"
           },
-          "Microsoft.WindowsDesktop.App.WPF": {
+          "Microsoft.WindowsDesktop.App": {
             "privateAssets": "none"
           }
         },

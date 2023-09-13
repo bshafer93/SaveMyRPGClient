@@ -47,7 +47,7 @@
           "dependencies": {
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[7.0.0-preview2, )"
+              "version": "[7.0.0, )"
             }
           },
           "imports": [
@@ -86,7 +86,7 @@
             "Microsoft.Windows.SDK.NET.Ref": {
               "privateAssets": "all"
             },
-            "Microsoft.WindowsDesktop.App.WPF": {
+            "Microsoft.WindowsDesktop.App": {
               "privateAssets": "none"
             }
           },

@@ -34,20 +34,24 @@ namespace SaveMyRPGClient.Commands
         {
 
             ViewModel.ErrorMessage = "Contacting Server...";
-            UserModel um = new Model.UserModel(ViewModel.Password, ViewModel.Email);
-
-            bool isAuthenticated = await App.Client.AuthenticateUser(um);
-            if (!isAuthenticated)
-            {
-                ViewModel.ErrorMessage = "Invalid Username or Email";
-                Debug.WriteLine("Invalid Username or Email");
-            }
-            ViewModel.ErrorMessage = "Logged In!";
 
             Properties.Settings.Default.RememberLogin = ViewModel.RememberUser;
             Properties.Settings.Default.JwtTokenString = App.Client.TokenSignature;
             Properties.Settings.Default.Email = ViewModel.Email;
             Properties.Settings.Default.Save();
+
+            UserModel um = new Model.UserModel(ViewModel.Password, ViewModel.Email);
+
+            bool isAuthenticated = await App.Client.AuthenticateUser(um);
+
+
+            if (!isAuthenticated)
+            {
+                ViewModel.ErrorMessage = "Invalid Username or Email";
+                Debug.WriteLine("Invalid Username or Email");
+                return;
+            }
+            ViewModel.ErrorMessage = "Logged In!";
             ViewModel.IsViewVisible = false;
 
         }

@@ -8,6 +8,7 @@
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <Platforms>AnyCPU;x64</Platforms>
     <UseWindowsForms>True</UseWindowsForms>
+    <StartupObject>SaveMyRPGClient.App</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

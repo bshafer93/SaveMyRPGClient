@@ -25,8 +25,8 @@ namespace SaveMyRPGClient.ViewModel
         public bool RememberUser
         {
             get
-            { 
-                return Properties.Settings.Default.RememberLogin; 
+            {
+                return Properties.Settings.Default.RememberLogin;
             } 
             set 
             {

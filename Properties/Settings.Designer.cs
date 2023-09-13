@@ -25,7 +25,7 @@ namespace SaveMyRPGClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
         public string Setting {
             get {
                 return ((string)(this["Setting"]));
@@ -37,7 +37,7 @@ namespace SaveMyRPGClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("1qwe")]
         public string JwtTokenString {
             get {
                 return ((string)(this["JwtTokenString"]));
@@ -49,7 +49,7 @@ namespace SaveMyRPGClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("...")]
         public string SavePath {
             get {
                 return ((string)(this["SavePath"]));
@@ -61,7 +61,7 @@ namespace SaveMyRPGClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Bert")]
+        [global::System.Configuration.DefaultSettingValueAttribute("b")]
         public string Username {
             get {
                 return ((string)(this["Username"]));
@@ -73,7 +73,7 @@ namespace SaveMyRPGClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("bshafer93@gmail.com")]
+        [global::System.Configuration.DefaultSettingValueAttribute("youremail@getwreckedbynickycom")]
         public string Email {
             get {
                 return ((string)(this["Email"]));
@@ -85,6 +85,7 @@ namespace SaveMyRPGClient.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
         public bool RememberLogin {
             get {
                 return ((bool)(this["RememberLogin"]));
