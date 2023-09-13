@@ -105,7 +105,7 @@ namespace SaveMyRPGClient.ViewModel
                     string imgPath = System.IO.Directory.GetFiles(Properties.Settings.Default.SavePath + "\\" + FolderName, "*.WebP")[0];
                     return new BitmapImage(new Uri(imgPath));
                 }
-                return new BitmapImage(new Uri(@"C:\Users\brent\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story\Norbertle-391212315822__AutoSave_83\AutoSave_83.WebP"));
+                return new BitmapImage(new Uri("Images\\imagenotfound.webp"));
             }
 
         }

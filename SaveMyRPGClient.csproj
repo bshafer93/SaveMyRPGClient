@@ -15,6 +15,7 @@
     <None Remove="Images\download-icon.png" />
     <None Remove="Images\email-icon.png" />
     <None Remove="Images\folderopen-icon.png" />
+    <None Remove="Images\imagenotfound.webp" />
     <None Remove="Images\LogoSMRPG.png" />
     <None Remove="Images\LogoSMRPGSQ.png" />
     <None Remove="Images\password-icon.png" />
@@ -42,6 +43,9 @@
     </Resource>
     <Resource Include="Images\email-icon.png" />
     <Resource Include="Images\folderopen-icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\imagenotfound.webp">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\LogoSMRPG.png" />

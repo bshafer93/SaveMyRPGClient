@@ -25,23 +25,18 @@ using System.Windows.Shapes;
 namespace SaveMyRPGClient
 {
 
-    public class ServerInfo 
-    {
-        public string Name { get; set; }
-        public DateTime LoggedAt { get; set; }
-    }
 
-    public class JoinCampaignRequest 
+    public class JoinCampaignRequest
     {
         public string Username { get; set; }
         public string Email { get; set; }
         public string id { get; set; }
-    }
-    public class FullSaveFileJson {
 
-        public string FolderName  { get; set; }
-        public Int64 FolderSize   { get; set; }
-        public string ZipDataB64  { get; set; }
+        public JoinCampaignRequest(string username,string email,string Id) {
+            Username = username;
+            Email = email;
+            id = Id;
+        }
     }
 
     public class SMRPGClient
@@ -52,58 +47,44 @@ namespace SaveMyRPGClient
         public HttpClient _client;
 
         public string default_path = @"%USERPROFILE%\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story";
-        public string bg3_save_location;
-        public string save_prefix = "Adam";
-        public string temp_folder_path;
         private string token_signature = "";
 
-        public JwtSecurityToken jwt_token;
+        public JwtSecurityToken? jwt_token;
         public string TokenSignature { get => token_signature; set => token_signature = value; }
 
         public SMRPGClient()
         {
-            
-            bg3_save_location = Environment.ExpandEnvironmentVariables(default_path);
-            Debug.WriteLine("Save Location: " + bg3_save_location);
-            if (init()) {
+
+            Properties.Settings.Default.SavePath = (Properties.Settings.Default.SavePath != "...") ?
+                Properties.Settings.Default.SavePath :
+                Environment.ExpandEnvironmentVariables(default_path);
+
+            Debug.WriteLine("Save Location: " + Properties.Settings.Default.SavePath);
+            _client = new HttpClient();
+            _client.BaseAddress = new Uri(_ip);
+            //TO DO ERROR HANDLING
+            if (init())
+            {
                 Console.WriteLine("Login Failed");
             };
         }
-        public bool init() {
-            _client = new HttpClient();
-            _client.BaseAddress = new Uri(_ip);
-            if (_client == null)
-            {
-                return false;
-            }
-            return true;
+        public bool init()
+        {
+            return (_client != null);
         }
 
-        public string[] ListLocalSaves() {
+        public string[] ListLocalSaves()
+        {
 
-            string newest_save = new DirectoryInfo(bg3_save_location).GetDirectories().OrderByDescending(t => t.LastWriteTimeUtc).First().FullName;
+            string newest_save = new DirectoryInfo(Properties.Settings.Default.SavePath).GetDirectories().OrderByDescending(t => t.LastWriteTimeUtc).First().FullName;
 
             Debug.WriteLine(newest_save);
 
-            return Directory.GetDirectories(bg3_save_location);
+            return Directory.GetDirectories(Properties.Settings.Default.SavePath);
         }
 
-        public string GetLatestSave(string group_id = "")
+        public async Task<List<GroupModel>?> RetrieveAllJoinedCampaigns(UserModel userModel)
         {
-
-            List<DirectoryInfo> save_list = new DirectoryInfo(bg3_save_location).GetDirectories().OrderByDescending(t => t.LastWriteTimeUtc).ToList();
-
-            string latest_save = save_list.First().FullName;
-
-
-            latest_save = save_list.Find(s => s.FullName.EndsWith(group_id)).FullName;
-
-            Debug.WriteLine($"Latest Save: {latest_save}");
-
-            return latest_save;
-        }
-
-        public async Task<List<GroupModel>> RetrieveAllJoinedCampaigns(UserModel userModel) {
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
             UserModel um = new Model.UserModel(userModel.Password, userModel.Email);
@@ -122,12 +103,6 @@ namespace SaveMyRPGClient
                 var contentString = await resp.Content.ReadAsByteArrayAsync();
 
                 Debug.WriteLine(contentString);
-                /*
-                var groupList = JsonSerializer.Deserialize<List<GroupModel>>(contentString);
-
-                Debug.WriteLine(joinedCampaigns);
-                return joinedCampaigns;
-                */
                 var groupList = await JsonSerializer.DeserializeAsync<List<GroupModel>>(content,
                     new JsonSerializerOptions
                     {
@@ -145,7 +120,7 @@ namespace SaveMyRPGClient
             return null;
 
         }
-        public async Task<List<GroupModel>> RetrieveAllJoinedCampaigns(string email)
+        public async Task<List<GroupModel>?> RetrieveAllJoinedCampaigns(string email)
         {
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
@@ -165,13 +140,6 @@ namespace SaveMyRPGClient
                 var content = await resp.Content.ReadAsStreamAsync();
                 var contentString = await resp.Content.ReadAsByteArrayAsync();
 
-                Debug.WriteLine(contentString);
-                /*
-                var groupList = JsonSerializer.Deserialize<List<GroupModel>>(contentString);
-
-                Debug.WriteLine(joinedCampaigns);
-                return joinedCampaigns;
-                */
                 var groupList = await JsonSerializer.DeserializeAsync<List<GroupModel>>(content,
                     new JsonSerializerOptions
                     {
@@ -190,12 +158,13 @@ namespace SaveMyRPGClient
 
         }
 
-        public async Task<List<SaveModel>> RetrieveAllCampaignSaves(string id) {
+        public async Task<List<SaveModel>?> RetrieveAllCampaignSaves(string id)
+        {
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
 
             string group_id_json = "{\"id\":\"" + id + "\"}";
-            
+
             HttpContent gid = new ByteArrayContent(Encoding.ASCII.GetBytes(group_id_json));
 
             List<SaveModel> campaignSaves = new List<SaveModel>();
@@ -209,17 +178,12 @@ namespace SaveMyRPGClient
                 var content = await resp.Content.ReadAsStreamAsync();
                 var contentString = await resp.Content.ReadAsByteArrayAsync();
 
-                Debug.WriteLine(contentString);
-
                 var saveList = await JsonSerializer.DeserializeAsync<List<SaveModel>>(content,
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true
                     }); ;
-                Debug.WriteLine(saveList);
-                for (int i = 0; i < saveList.Count(); i++){
-                    Debug.WriteLine(saveList[i].Folder_Name);
-                }
+                
                 return saveList;
 
             }
@@ -229,32 +193,6 @@ namespace SaveMyRPGClient
             }
 
             return null;
-        }
-
-        public async Task<string?> GetServerInfo() {
-            _client.DefaultRequestHeaders.Clear();
-            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
-
-            try
-            {
-                HttpResponseMessage serverInfoResp = await _client.GetAsync("/serverinfo");
-                serverInfoResp.EnsureSuccessStatusCode();
-                byte[] content = await serverInfoResp.Content.ReadAsByteArrayAsync();
-
-                ServerInfo serverInfo = JsonSerializer.Deserialize<ServerInfo>(content);
-                Debug.WriteLine($"Name: {serverInfo.Name}");
-                Debug.WriteLine($"LoggedAt: {serverInfo.LoggedAt}");
-                return serverInfo.Name;
-
-            }
-            catch (HttpRequestException ex)
-            {
-                Debug.WriteLine($"Exception: {ex}");
-                return null;
-            }
-
-         
-
         }
 
         public async Task<bool> AuthenticateUser(UserModel userModel)
@@ -310,7 +248,6 @@ namespace SaveMyRPGClient
             return true;
 
         }
-
         public async Task<bool> Register(UserModel userModel)
         {
             UserModel um = new Model.UserModel(userModel.Password, userModel.Email);
@@ -335,16 +272,12 @@ namespace SaveMyRPGClient
             return true;
         }
 
-        public async Task<bool> JoinCampaign(UserModel um, string group_id) 
+        public async Task<bool> JoinCampaign(UserModel um, string group_id)
         {
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
 
-            JoinCampaignRequest jcr = new JoinCampaignRequest();
-
-            jcr.Username = um.Email;
-            jcr.Email = um.Email;
-            jcr.id = group_id;
+            JoinCampaignRequest jcr = new JoinCampaignRequest(um.Email, um.Email, group_id);
 
             HttpContent jcrJson = new ByteArrayContent(JsonSerializer.SerializeToUtf8Bytes<JoinCampaignRequest>(jcr));
             try
@@ -363,16 +296,13 @@ namespace SaveMyRPGClient
             }
 
         }
-
-        public async Task<GroupModel> RetrieveCampaignInfo(string group_id) 
+        public async Task<GroupModel?> RetrieveCampaignInfo(string group_id)
         {
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
             string group_id_json = "{\"id\":\"" + group_id + "\"}";
 
             HttpContent gid = new ByteArrayContent(Encoding.ASCII.GetBytes(group_id_json));
-
-            GroupModel joinedCampaigns = new GroupModel();
 
             try
             {
@@ -398,7 +328,6 @@ namespace SaveMyRPGClient
             }
 
         }
-
         public async Task<GroupModel?> CreateCampaign(GroupModel gm)
         {
             _client.DefaultRequestHeaders.Clear();
@@ -429,8 +358,7 @@ namespace SaveMyRPGClient
             }
 
         }
-
-        public async Task<bool> UploadSaveFile(string group_id, string full_path,string save_folder_name,string save_name,string? save_owner)
+        public async Task<bool> UploadSaveFile(string group_id, string full_path, string save_folder_name, string save_name, string? save_owner)
         {
 
             string save_owner_email = save_owner != null ? save_owner.ToString() : Properties.Settings.Default.Email;
@@ -439,32 +367,32 @@ namespace SaveMyRPGClient
             _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
             _client.DefaultRequestHeaders.Add("email", save_owner_email);
             _client.DefaultRequestHeaders.Add("group_id", group_id);
-            _client.DefaultRequestHeaders.Add("save_folder_name",save_folder_name);
+            _client.DefaultRequestHeaders.Add("save_folder_name", save_folder_name);
             _client.DefaultRequestHeaders.Add("file_name", save_name);
             HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(full_path));
 
-                try
-                {
-                    HttpResponseMessage resp = await _client.PutAsync("/guu", save_file_raw);
+            try
+            {
+                HttpResponseMessage resp = await _client.PutAsync("/guu", save_file_raw);
 
-                    resp.EnsureSuccessStatusCode();
-                    var contentString = await resp.Content.ReadAsStringAsync();
-                    Debug.WriteLine(contentString);
+                resp.EnsureSuccessStatusCode();
+                var contentString = await resp.Content.ReadAsStringAsync();
+                Debug.WriteLine(contentString);
 
 
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex);
-                    return false;
-                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
 
-            
+
             return true;
 
         }
 
-        public async Task DownloadSaveFile(string folder_name,string baseSaveName, string url)
+        public async Task DownloadSaveFile(string folder_name, string baseSaveName, string url)
         {
             using (var s = await _client.GetStreamAsync(new Uri(url)))
             {
@@ -475,17 +403,34 @@ namespace SaveMyRPGClient
                     await s.CopyToAsync(fs);
                 }
             }
-            
+
         }
 
         public async Task<bool> UploadSaveImage(string group_id, string full_path)
         {
+            FileInfo file;
+            string file_name;
+            string directory_name;
 
+            try
+            {
+                file = new FileInfo(full_path);
+                file_name = file.Name;
+            }
+            catch (Exception ex) 
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
 
-            FileInfo file = new FileInfo(full_path);
-
-            string file_name = file.Name;
-            string directory_name = file.Directory.Name;
+            if (file.Directory == null)
+            {
+                return false;
+            }
+            else
+            {
+                directory_name = file.Directory.Name;
+            }
 
             _client.DefaultRequestHeaders.Clear();
             _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
@@ -495,21 +440,21 @@ namespace SaveMyRPGClient
 
             HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(file.FullName));
 
-                try
-                {
-                    HttpResponseMessage resp = await _client.PutAsync("/usm", save_file_raw);
+            try
+            {
+                HttpResponseMessage resp = await _client.PutAsync("/usm", save_file_raw);
 
-                    resp.EnsureSuccessStatusCode();
-                    var contentString = await resp.Content.ReadAsStringAsync();
-                    Debug.WriteLine(contentString);
+                resp.EnsureSuccessStatusCode();
+                var contentString = await resp.Content.ReadAsStringAsync();
+                Debug.WriteLine(contentString);
 
 
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex);
-                    return false;
-                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
 
             return true;
 

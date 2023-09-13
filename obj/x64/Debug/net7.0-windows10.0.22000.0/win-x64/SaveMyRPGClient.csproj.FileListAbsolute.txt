@@ -22,7 +22,6 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Debug\net7.0-window
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Debug\net7.0-windows10.0.22000.0\win-x64\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Debug\net7.0-windows10.0.22000.0\win-x64\Microsoft.IdentityModel.Logging.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Debug\net7.0-windows10.0.22000.0\win-x64\Microsoft.IdentityModel.Tokens.dll
-C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Debug\net7.0-windows10.0.22000.0\win-x64\Newtonsoft.Json.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Debug\net7.0-windows10.0.22000.0\win-x64\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Debug\net7.0-windows10.0.22000.0\win-x64\Microsoft.CSharp.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Debug\net7.0-windows10.0.22000.0\win-x64\Microsoft.VisualBasic.Core.dll

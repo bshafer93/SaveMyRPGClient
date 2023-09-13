@@ -469,5 +469,4 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\win-x64\msixpublish\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\win-x64\msixpublish\Microsoft.IdentityModel.Logging.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\win-x64\msixpublish\Microsoft.IdentityModel.Tokens.dll
-C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\win-x64\msixpublish\Newtonsoft.Json.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\Debug\net7.0-windows10.0.22000.0\win-x64\msixpublish\System.IdentityModel.Tokens.Jwt.dll
