@@ -1,4 +1,5 @@
-﻿using SaveMyRPGClient.Model;
+﻿using Microsoft.IdentityModel.Tokens;
+using SaveMyRPGClient.Model;
 using SaveMyRPGClient.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,13 @@ namespace SaveMyRPGClient.Commands
 
         public override bool CanExecute()
         {
+            if(jcvm.ID.IsNullOrEmpty())
+            {
+                jcvm.ErrorMessage = "Group ID field is empty.";
+                return false;
+            
+            }
+
             return true;
         }
 
@@ -26,15 +34,18 @@ namespace SaveMyRPGClient.Commands
         {
             UserModel um = new UserModel(Properties.Settings.Default.Username, Properties.Settings.Default.Email);
 
-            bool didJoin = await App.Client.JoinCampaign(um, jcvm.ID);
-
-            if (!didJoin)
+            if (!await App.Client.JoinCampaign(um, jcvm.ID))
             {
+                jcvm.ErrorMessage = "Failed To Join group";
                 Debug.WriteLine("Failed To Join group");
-                return;
             }
-            jcvm._clvm.addCampaign(jcvm.ID);
-            jcvm.ErrorMessage = "Joined group successfully";
+            else
+            { 
+                jcvm.ErrorMessage = "Joined group successfully"; 
+                await jcvm._clvm.addCampaign(jcvm.ID);
+            }
+            
+            
         }
     }
 }

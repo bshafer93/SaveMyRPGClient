@@ -21,6 +21,8 @@ using System.Windows.Threading;
 using System.ComponentModel.DataAnnotations;
 using SaveMyRPGClient.View.UserControls;
 using System.Windows.Shapes;
+using System.Runtime;
+using System.Security.Cryptography;
 
 namespace SaveMyRPGClient
 {
@@ -226,6 +228,49 @@ namespace SaveMyRPGClient
             return true;
 
         }
+
+        public async Task<bool> UploadSaveFolder(string save_folder_path,string group_id) 
+        {
+            DirectoryInfo dirInfo = new DirectoryInfo(save_folder_path);
+            FileInfo[] files = dirInfo.GetFiles();
+
+            foreach (FileInfo file in files)
+            {
+                if (file.Extension.EndsWith("lsv"))
+                {
+                    SaveModel save = new SaveModel();
+                    string directory_name = dirInfo.Name;
+                    string file01_name = file.Name;
+                    save.Save_Owner = Properties.Settings.Default.Email;
+                    save.Group_Id = group_id;
+                    save.Hash = SHA256.HashData(File.ReadAllBytes(file.FullName)).ToString();
+                    save.CDN_Path = group_id + "/" + directory_name + "/" + file01_name;
+                    save.Date_Created = new FileInfo(file.FullName).CreationTime;
+
+                    bool didUpload = await App.Client.UploadSaveFile(save.Group_Id, file.FullName, directory_name, file01_name, save.Save_Owner);
+
+                    if (!didUpload)
+                    {
+                        Debug.WriteLine("Upload Failed");
+                        return false;
+                    }
+
+                }
+                else
+                {
+                    bool didUpload = await App.Client.UploadSaveImage(group_id, file.FullName);
+
+                    if (!didUpload)
+                    {
+                        Debug.WriteLine("Upload Failed");
+                        return false;
+                    }
+
+                }
+
+            }
+            return true;
+        }
         public async Task<bool> AuthenticateUserToken()
         {
 
@@ -392,18 +437,27 @@ namespace SaveMyRPGClient
 
         }
 
-        public async Task DownloadSaveFile(string folder_name, string baseSaveName, string url)
+        public async Task<bool> DownloadSaveFile(string folder_name, string baseSaveName, string url)
         {
-            using (var s = await _client.GetStreamAsync(new Uri(url)))
+            try
             {
-                Directory.CreateDirectory(Properties.Settings.Default.SavePath + "\\" + folder_name);
-
-                using (var fs = new FileStream(Properties.Settings.Default.SavePath + "\\" + folder_name + "\\" + baseSaveName, FileMode.OpenOrCreate))
+                using (var s = await _client.GetStreamAsync(new Uri(url)))
                 {
-                    await s.CopyToAsync(fs);
+                    Directory.CreateDirectory(Properties.Settings.Default.SavePath + "\\" + folder_name);
+
+                    using (var fs = new FileStream(Properties.Settings.Default.SavePath + "\\" + folder_name + "\\" + baseSaveName, FileMode.OpenOrCreate))
+                    {
+                        await s.CopyToAsync(fs);
+                    }
                 }
             }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
 
+            return true;
         }
 
         public async Task<bool> UploadSaveImage(string group_id, string full_path)

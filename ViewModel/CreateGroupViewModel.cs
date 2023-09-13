@@ -99,8 +99,8 @@ namespace SaveMyRPGClient.ViewModel
             }
         }
 
-        public void updateCampaignListView() {
-            _clvm.updateCampaignView();
+        public async Task updateCampaignListView() {
+            await _clvm.updateCampaignView();
         }
 
         public CreateGroupViewModel(CampaignListViewModel clvm)

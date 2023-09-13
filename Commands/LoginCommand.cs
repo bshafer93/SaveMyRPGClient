@@ -12,6 +12,7 @@ using System.Net.Http;
 namespace SaveMyRPGClient.Commands
 
 {
+    using Microsoft.IdentityModel.Tokens;
     using SaveMyRPGClient.Model;
     using System.IdentityModel.Tokens.Jwt;
     using System.Net.Http.Headers;
@@ -27,11 +28,31 @@ namespace SaveMyRPGClient.Commands
 
         public override bool CanExecute()
         {
+
             return true;
         }
 
         public override async Task ExecuteAsync()
         {
+            if (Properties.Settings.Default.RememberLogin && Properties.Settings.Default.JwtTokenString.IsNullOrEmpty())
+            {
+                ViewModel.ErrorMessage = "Invalid Token Please Login";
+                Properties.Settings.Default.RememberLogin = false;
+                Properties.Settings.Default.Save();
+                return;
+            }
+
+            if (ViewModel.Email.IsNullOrEmpty())
+            {
+                ViewModel.ErrorMessage = "Email field is empty...";
+                return;
+            }
+
+            if (ViewModel.Password.IsNullOrEmpty())
+            {
+                ViewModel.ErrorMessage = "Password field is empty...";
+                return;
+            }
 
             ViewModel.ErrorMessage = "Contacting Server...";
 
@@ -48,9 +69,9 @@ namespace SaveMyRPGClient.Commands
             if (!isAuthenticated)
             {
                 ViewModel.ErrorMessage = "Invalid Username or Email";
-                Debug.WriteLine("Invalid Username or Email");
                 return;
             }
+
             ViewModel.ErrorMessage = "Logged In!";
             ViewModel.IsViewVisible = false;
 

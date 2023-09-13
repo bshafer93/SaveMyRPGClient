@@ -30,9 +30,15 @@ namespace SaveMyRPGClient.Commands
             string pullURLLSV = SaveVM.CDNPath.Replace("https://ny.storage.bunnycdn.com/savemyrpg", "https://savemyrpg.b-cdn.net");
             string pullURLImg = pullURLLSV.Replace(".lsv", ".WebP");
 
-            await App.Client.DownloadSaveFile(SaveVM.FolderName, BaseSaveName + ".lsv", pullURLLSV);
-            await App.Client.DownloadSaveFile(SaveVM.FolderName, BaseSaveName + ".WebP", pullURLImg);
+            bool save_ok = await App.Client.DownloadSaveFile(SaveVM.FolderName, BaseSaveName + ".lsv", pullURLLSV);
+            bool img_ok = await App.Client.DownloadSaveFile(SaveVM.FolderName, BaseSaveName + ".WebP", pullURLImg);
 
+            if (!save_ok || !img_ok)
+            {
+                Debug.WriteLine("Save failed to download.");
+                SaveVM.IsLocal = false;
+                return;
+            }
             SaveVM.IsLocal = true;
         }
     }

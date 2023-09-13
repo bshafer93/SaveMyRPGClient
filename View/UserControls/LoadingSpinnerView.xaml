@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SaveMyRPGClient.View.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="30" d:DesignWidth="30">
+             d:DesignHeight="40" d:DesignWidth="40">
     <Grid>
-        <MediaElement Source="Images/ajax-loader.gif" LoadedBehavior="Play" Visibility="Visible" />
+        <MediaElement  MediaEnded="gif_MediaEnded" x:Name="gif" Source="/Images/loadingspinner-icon.gif" LoadedBehavior="Play"/>
     </Grid>
 </UserControl>

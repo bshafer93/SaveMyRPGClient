@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Commands
 {
-    public class ShowCreateGroupCommand:AsyncCommand
+    public class ShowCreateGroupCommand : AsyncCommand
     {
         public CampaignListViewModel clvm { get; set; }
         public ShowCreateGroupCommand(CampaignListViewModel vm)
         {
             clvm = vm;
-
         }
 
         public override bool CanExecute()
@@ -25,7 +24,7 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
-            
+
             clvm.DialogCreateGroup.ShowDialog();
 
         }
