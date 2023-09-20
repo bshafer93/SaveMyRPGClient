@@ -1,18 +1,11 @@
-﻿using Microsoft.IdentityModel.Tokens;
-using SaveMyRPGClient.Model;
-using SaveMyRPGClient.ViewModel;
-using System;
-using System.IO;
-using System.Collections.Generic;
+﻿using SaveMyRPGClient.ViewModel;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
+using System.IO;
 using System.Threading.Tasks;
-using System.Security.Cryptography;
 
 namespace SaveMyRPGClient.Commands
 {
-    public class UploadSaveCommand:AsyncCommand
+    public class UploadSaveCommand : AsyncCommand
     {
         public SaveListViewModel SaveListVM { get; set; }
         public UploadSaveCommand(SaveListViewModel slvm)
@@ -34,19 +27,20 @@ namespace SaveMyRPGClient.Commands
             if (result.ToString() != string.Empty)
             {
                 save_path = openFileDlg.SelectedPath;
-                
+
             }
 
             if (save_path.Length < 1) { return; }
 
-            if (File.Exists(save_path.ToString())) {
+            if (File.Exists(save_path.ToString()))
+            {
                 Debug.WriteLine("Choose Save Folder and not file...");
                 return;
             }
 
-           bool didUpload = await App.Client.UploadSaveFolder(save_path, SaveListVM.GroupID);
-           
-            if(!didUpload)
+            bool didUpload = await App.Client.UploadSaveFolder(save_path, SaveListVM.GroupID);
+
+            if (!didUpload)
             {
                 Debug.WriteLine("Save Failed to Upload");
             }

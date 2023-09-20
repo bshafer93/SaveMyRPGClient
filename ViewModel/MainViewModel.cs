@@ -1,21 +1,16 @@
 ﻿using SaveMyRPGClient.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.ViewModel
 {
-    public class MainViewModel:ViewModelBase
+    public class MainViewModel : ViewModelBase
     {
-        private bool _isViewVisible=true;
+        private bool _isViewVisible = true;
 
         public CampaignListViewModel CurrentCampaignListViewModel { get; }
         public ShowSettingsService _showSettingsService;
         public ShowSettingsCommand ShowSettingsCMD { get; }
 
-    public bool IsViewVisible
+        public bool IsViewVisible
         {
             get
             {
@@ -29,7 +24,8 @@ namespace SaveMyRPGClient.ViewModel
             }
         }
 
-        public MainViewModel() { 
+        public MainViewModel()
+        {
             CurrentCampaignListViewModel = new CampaignListViewModel();
             ShowSettingsCMD = new ShowSettingsCommand(this);
             _showSettingsService = new ShowSettingsService();

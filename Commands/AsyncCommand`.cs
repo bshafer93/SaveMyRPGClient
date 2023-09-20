@@ -2,13 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Configuration;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
-using SaveMyRPGClient.Commands;
 namespace SaveMyRPGClient.Commands
 {
 
@@ -20,12 +15,12 @@ namespace SaveMyRPGClient.Commands
         Task ExecuteAsync(T parameter);
     }
 
-    public class AsyncCommand<T>: IAsyncCommand<T>
+    public class AsyncCommand<T> : IAsyncCommand<T>
     {
         private readonly ObservableCollection<Task> runningTasks;
         public IEnumerable<Task> RunningTasks { get => runningTasks; }
-        protected AsyncCommand() 
-        { 
+        protected AsyncCommand()
+        {
             runningTasks = new ObservableCollection<Task>();
             runningTasks.CollectionChanged += OnRunningTasksChanged;
         }
@@ -35,20 +30,20 @@ namespace SaveMyRPGClient.Commands
             CommandManager.InvalidateRequerySuggested();
         }
 
-        public event EventHandler CanExecuteChanged 
+        public event EventHandler CanExecuteChanged
         {
             add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;
-        
+
         }
 
-         bool ICommand.CanExecute(object? parameter)
+        bool ICommand.CanExecute(object? parameter)
         {
             return CanExecute((T)parameter);
         }
-         async void ICommand.Execute(object? parameter)
+        async void ICommand.Execute(object? parameter)
         {
-           Task runningTask = ExecuteAsync((T)parameter);
+            Task runningTask = ExecuteAsync((T)parameter);
 
             runningTasks.Add(runningTask);
             try

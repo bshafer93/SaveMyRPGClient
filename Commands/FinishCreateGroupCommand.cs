@@ -1,18 +1,12 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using SaveMyRPGClient.Model;
 using SaveMyRPGClient.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Commands
 {
-    public class FinishCreateGroupCommand: AsyncCommand
+    public class FinishCreateGroupCommand : AsyncCommand
     {
         public CreateGroupViewModel CreateGroupVM { get; set; }
         public FinishCreateGroupCommand(CreateGroupViewModel cgvm)

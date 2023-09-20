@@ -233,7 +233,7 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-wind
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\hostfxr.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\hostpolicy.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\mscordaccore.dll
-C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\mscordaccore_amd64_amd64_7.0.1023.36312.dll
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\mscordaccore_amd64_amd64_7.0.1123.42427.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\mscordbi.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\mscorrc.dll
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\bin\x64\Release\net7.0-windows10.0.22000.0\win-x64\msixpublish\msquic.dll

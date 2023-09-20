@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using SaveMyRPGClient;
-using SaveMyRPGClient.Commands;
-using System.Diagnostics;
-using Windows.Graphics.Printing.Workflow;
-using System.Windows.Threading;
+﻿using SaveMyRPGClient.Commands;
 using SaveMyRPGClient.Model;
+using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.ViewModel
 {
@@ -17,7 +8,7 @@ namespace SaveMyRPGClient.ViewModel
     {
 
         private string _errorMessage;
-        private bool _isViewVisible=true;
+        private bool _isViewVisible = true;
         private bool _rememberUser;
 
         private UserModel _user;
@@ -27,12 +18,12 @@ namespace SaveMyRPGClient.ViewModel
             get
             {
                 return Properties.Settings.Default.RememberLogin;
-            } 
-            set 
+            }
+            set
             {
                 Properties.Settings.Default.RememberLogin = value;
-              OnPropertyChanged(nameof(Properties.Settings.Default.RememberLogin));
-            }        
+                OnPropertyChanged(nameof(Properties.Settings.Default.RememberLogin));
+            }
         }
 
         public string Password
@@ -102,7 +93,8 @@ namespace SaveMyRPGClient.ViewModel
 
         }
 
-        public void CheckUserSettingsLogin() {
+        public void CheckUserSettingsLogin()
+        {
 
             if (Properties.Settings.Default.RememberLogin && Properties.Settings.Default.JwtTokenString.Length > 0)
             {
@@ -112,7 +104,8 @@ namespace SaveMyRPGClient.ViewModel
                 {
                     IsViewVisible = false;
                 }
-                else {
+                else
+                {
                     Properties.Settings.Default.RememberLogin = false;
                     ErrorMessage = "Login Session Expired. Please Login again.";
                 }

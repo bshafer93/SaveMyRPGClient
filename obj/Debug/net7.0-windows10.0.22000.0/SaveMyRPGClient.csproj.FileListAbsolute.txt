@@ -19,6 +19,7 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\MainView.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\SettingsView.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\CampaignListView.g.cs
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\LoadingSpinnerView.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\SaveListView.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\App.g.cs
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\GeneratedInternalTypeHelper.g.cs
@@ -31,6 +32,7 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\MainView.baml
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\SettingsView.baml
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\CampaignListView.baml
+C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\LoadingSpinnerView.baml
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\SaveListView.baml
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.g.resources
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.GeneratedMSBuildEditorConfig.editorconfig
@@ -43,5 +45,3 @@ C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.pdb
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\SaveMyRPGClient.genruntimeconfig.cache
 C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\ref\SaveMyRPGClient.dll
-C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\LoadingSpinnerView.g.cs
-C:\Users\brent\Documents\Programming\SaveMyRPGClient\obj\Debug\net7.0-windows10.0.22000.0\View\UserControls\LoadingSpinnerView.baml

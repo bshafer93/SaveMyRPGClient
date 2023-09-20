@@ -1,15 +1,9 @@
-﻿using Microsoft.IdentityModel.Tokens;
-using SaveMyRPGClient.Commands;
-using SaveMyRPGClient.Model;
-using System;
+﻿using SaveMyRPGClient.Commands;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using Windows.Graphics.Capture;
 
 namespace SaveMyRPGClient.ViewModel
 {
@@ -20,10 +14,11 @@ namespace SaveMyRPGClient.ViewModel
 
         public IEnumerable<SaveViewModel> SavesList => _saveList;
 
-        public string GroupID { get;  set; }
+        public string GroupID { get; set; }
         public string GroupName { get; set; }
 
-        public SaveListViewModel(string group_id, string group_name) {
+        public SaveListViewModel(string group_id, string group_name)
+        {
             GroupID = group_id;
             UploadSaveCMD = new UploadSaveCommand(this);
             GroupName = group_name;
@@ -40,14 +35,15 @@ namespace SaveMyRPGClient.ViewModel
             {
                 _saveList.Add(new SaveViewModel(save));
 
-                if (_saveList.Last().IsLocal) {
+                if (_saveList.Last().IsLocal)
+                {
                     Debug.WriteLine(save.Folder_Name + " Is saved locally");
                 }
             }
         }
 
 
-        public async Task<bool> SyncSaves() 
+        public async Task<bool> SyncSaves()
         {
             _saveList.Clear();
             var saves = await App.Client.RetrieveAllCampaignSaves(GroupID);
@@ -64,5 +60,5 @@ namespace SaveMyRPGClient.ViewModel
     }
 
 
-    
+
 }

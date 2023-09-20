@@ -1,13 +1,9 @@
 ﻿using SaveMyRPGClient.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Commands
 {
-    public class ShowSettingsCommand: AsyncCommand
+    public class ShowSettingsCommand : AsyncCommand
     {
 
         public MainViewModel mvm { get; set; }

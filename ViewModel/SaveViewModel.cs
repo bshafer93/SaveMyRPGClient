@@ -1,19 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SaveMyRPGClient.Commands;
 using SaveMyRPGClient.Model;
-using static System.Net.WebRequestMethods;
+using System;
+using System.IO;
 using System.Windows.Media.Imaging;
-using Microsoft.Win32;
-using System.Windows.Controls;
-using System.Windows.Media;
-using System.Diagnostics;
-using System.Windows.Shapes;
-using SaveMyRPGClient.Commands;
-using Windows.System;
 
 namespace SaveMyRPGClient.ViewModel
 {
@@ -98,10 +87,12 @@ namespace SaveMyRPGClient.ViewModel
 
         public DownloadSaveCommand DownloadSaveCMD { get; set; }
 
-        public System.Windows.Media.ImageSource ImageURL {
+        public System.Windows.Media.ImageSource ImageURL
+        {
             get
             {
-                if (IsLocal) {
+                if (IsLocal)
+                {
                     string imgPath = System.IO.Directory.GetFiles(Properties.Settings.Default.SavePath + "\\" + FolderName, "*.WebP")[0];
                     return new BitmapImage(new Uri(imgPath));
                 }
@@ -110,12 +101,13 @@ namespace SaveMyRPGClient.ViewModel
 
         }
 
-        public SaveViewModel(SaveModel save) { 
-            
+        public SaveViewModel(SaveModel save)
+        {
+
             _save = save;
 
             IsLocal = Directory.Exists(Properties.Settings.Default.SavePath + "\\" + FolderName);
-            
+
             DownloadSaveCMD = new DownloadSaveCommand(this);
         }
     }

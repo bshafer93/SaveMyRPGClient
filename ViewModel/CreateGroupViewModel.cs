@@ -1,15 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using SaveMyRPGClient;
-using SaveMyRPGClient.Commands;
-using System.Diagnostics;
-using Windows.Graphics.Printing.Workflow;
-using System.Windows.Threading;
+﻿using SaveMyRPGClient.Commands;
 using SaveMyRPGClient.Model;
+using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.ViewModel
 {
@@ -23,8 +14,9 @@ namespace SaveMyRPGClient.ViewModel
         private CampaignListViewModel _clvm;
         public FinishCreateGroupCommand FinishCreateGroupCMD { get; }
         public OpenFolderDialogCommand OpenFolderDialogCMD { get; }
-        public CampaignListViewModel CampaignListVM {
-            get 
+        public CampaignListViewModel CampaignListVM
+        {
+            get
             {
                 return _clvm;
             }
@@ -99,7 +91,8 @@ namespace SaveMyRPGClient.ViewModel
             }
         }
 
-        public async Task updateCampaignListView() {
+        public async Task updateCampaignListView()
+        {
             await _clvm.updateCampaignView();
         }
 

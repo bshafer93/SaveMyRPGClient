@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SaveMyRPGClient.Model
+﻿namespace SaveMyRPGClient.Model
 {
     public class UserModel
     {
@@ -12,7 +6,8 @@ namespace SaveMyRPGClient.Model
         public string Email { get; set; }
 
 
-        public UserModel(string password, string email) { 
+        public UserModel(string password, string email)
+        {
             this.Password = password;
             Email = email;
         }

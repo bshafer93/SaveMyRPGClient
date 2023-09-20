@@ -1,28 +1,16 @@
 ﻿using SaveMyRPGClient.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Threading;
-using System.Text.Json;
-using System.Net.Http;
 
 namespace SaveMyRPGClient.Commands
 
 {
     using Microsoft.IdentityModel.Tokens;
     using SaveMyRPGClient.Model;
-    using System.IdentityModel.Tokens.Jwt;
-    using System.Net.Http.Headers;
-    using System.Reflection.Metadata.Ecma335;
-    using System.Text.Json;
     public class LoginCommand : AsyncCommand
     {
         public LoginViewModel ViewModel { get; set; }
-        public LoginCommand(LoginViewModel vm) 
-        { 
+        public LoginCommand(LoginViewModel vm)
+        {
             ViewModel = vm;
         }
 

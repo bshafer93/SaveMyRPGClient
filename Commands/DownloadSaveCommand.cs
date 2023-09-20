@@ -1,16 +1,11 @@
-﻿using SaveMyRPGClient.Model;
-using SaveMyRPGClient.ViewModel;
+﻿using SaveMyRPGClient.ViewModel;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Commands
 {
-    public class DownloadSaveCommand: AsyncCommand
+    public class DownloadSaveCommand : AsyncCommand
     {
         public SaveViewModel SaveVM { get; set; }
         public DownloadSaveCommand(SaveViewModel slvm)

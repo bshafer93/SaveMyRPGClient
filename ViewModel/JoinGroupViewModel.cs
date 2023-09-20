@@ -1,11 +1,4 @@
 ﻿using SaveMyRPGClient.Commands;
-using SaveMyRPGClient.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.ViewModel
 {
@@ -14,14 +7,15 @@ namespace SaveMyRPGClient.ViewModel
 
         private string _id;
         public CampaignListViewModel _clvm;
-        public JoinGroupCommand JoinGroupCMD {get;}
+        public JoinGroupCommand JoinGroupCMD { get; }
         private string _errorMessage;
         private bool _isViewVisible = true;
-        public JoinGroupViewModel(CampaignListViewModel clvm) {
-      
+        public JoinGroupViewModel(CampaignListViewModel clvm)
+        {
+
             _clvm = clvm;
             JoinGroupCMD = new JoinGroupCommand(this);
-        
+
         }
 
         public string ErrorMessage

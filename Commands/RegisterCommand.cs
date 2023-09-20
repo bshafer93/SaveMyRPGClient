@@ -1,16 +1,11 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using SaveMyRPGClient.Model;
 using SaveMyRPGClient.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Commands
 {
-    public class RegisterCommand: AsyncCommand
+    public class RegisterCommand : AsyncCommand
     {
         public LoginViewModel ViewModel { get; set; }
         public RegisterCommand(LoginViewModel vm)

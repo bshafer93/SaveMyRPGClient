@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Model
 {
@@ -30,8 +26,8 @@ namespace SaveMyRPGClient.Model
         public string? Last_Save { get; set; }
 
 
-        public GroupModel(string groupID,string name, string hostEmail, string? P2Email, string? P3Email, string? P4Email,string lastSaveHash)
-        { 
+        public GroupModel(string groupID, string name, string hostEmail, string? P2Email, string? P3Email, string? P4Email, string lastSaveHash)
+        {
             Id = groupID;
             Name = name;
             Host_Email = hostEmail;
@@ -41,9 +37,10 @@ namespace SaveMyRPGClient.Model
             Last_Save = lastSaveHash;
         }
 
-        public GroupModel() { 
-        
+        public GroupModel()
+        {
+
         }
-        
+
     }
 }

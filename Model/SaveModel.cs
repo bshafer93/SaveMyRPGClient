@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Model
 {
@@ -29,12 +25,13 @@ namespace SaveMyRPGClient.Model
             Folder_Name = folderName;
             Date_Created = date;
             CDN_Path = cdnPath;
-            
+
         }
 
 
-        public SaveModel() { 
-        
+        public SaveModel()
+        {
+
         }
     }
 }

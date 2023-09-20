@@ -1,9 +1,4 @@
 ﻿using SaveMyRPGClient.Commands;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.ViewModel
 {
@@ -12,7 +7,8 @@ namespace SaveMyRPGClient.ViewModel
         private string _errorMessage;
         private bool _isViewVisible = true;
         public SaveSettingsCommand SaveSettingsCMD { get; }
-        public SettingsViewModel() {
+        public SettingsViewModel()
+        {
             SaveSettingsCMD = new SaveSettingsCommand(this);
         }
 
@@ -53,7 +49,7 @@ namespace SaveMyRPGClient.ViewModel
                 OnPropertyChanged(nameof(SavePath));
             }
         }
-        public string JwtTokenString 
+        public string JwtTokenString
         {
             get
             {

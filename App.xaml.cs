@@ -1,15 +1,8 @@
 ﻿using SaveMyRPGClient.View;
 using SaveMyRPGClient.ViewModel;
-using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
 using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
-using Windows.ApplicationModel.UserDataTasks.DataProvider;
 
 namespace SaveMyRPGClient
 {
@@ -18,13 +11,13 @@ namespace SaveMyRPGClient
     /// </summary>
     public partial class App : Application
     {
-        private static SMRPGClient client= new SMRPGClient();
+        private static SMRPGClient client = new SMRPGClient();
 
         public static SMRPGClient Client { get => client; set => client = value; }
 
         public void ApplicationStart(object sender, StartupEventArgs e)
         {
-
+            this.DispatcherUnhandledException += new DispatcherUnhandledExceptionEventHandler(Application_DispatcherUnhandledException);
             LoginView loginView = new LoginView();
             LoginViewModel loginVM = new LoginViewModel();
             loginView.DataContext = loginVM;
@@ -48,13 +41,9 @@ namespace SaveMyRPGClient
         }
         private void Application_DispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
         {
-            /*
-            var exception = e.Exception;
-            using (StreamWriter outputFile = new StreamWriter("C:\\Users\\brent\\Desktop\\smrpg_log.txt"))
-            {
-                    outputFile.WriteLine(exception.ToString());
-            }
-            */
+            System.Windows.MessageBox.Show(string.Format("An error occured: {0}", e.Exception.Message), "Error");
+            e.Handled = true;
+            
         }
     }
 }

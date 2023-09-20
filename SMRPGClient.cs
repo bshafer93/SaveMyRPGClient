@@ -1,28 +1,15 @@
-﻿using System;
+﻿using SaveMyRPGClient.Model;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO;
-using System.IO.Compression;
-using System.Net;
-using System.Net.Http;
 using System.Diagnostics;
-using System.Windows.Media.Animation;
-using System.Configuration;
-using System.Text.Json;
-using System.Net.Sockets;
-using System.Threading;
-using SaveMyRPGClient.Model;
-using System.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
-using Windows.Media.Protection.PlayReady;
-using System.Windows.Threading;
-using System.ComponentModel.DataAnnotations;
-using SaveMyRPGClient.View.UserControls;
-using System.Windows.Shapes;
-using System.Runtime;
+using System.IO;
+using System.Linq;
+using System.Net.Http;
 using System.Security.Cryptography;
+using System.Text;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace SaveMyRPGClient
 {
@@ -34,7 +21,8 @@ namespace SaveMyRPGClient
         public string Email { get; set; }
         public string id { get; set; }
 
-        public JoinCampaignRequest(string username,string email,string Id) {
+        public JoinCampaignRequest(string username, string email, string Id)
+        {
             Username = username;
             Email = email;
             id = Id;
@@ -185,7 +173,7 @@ namespace SaveMyRPGClient
                     {
                         PropertyNameCaseInsensitive = true
                     }); ;
-                
+
                 return saveList;
 
             }
@@ -229,7 +217,7 @@ namespace SaveMyRPGClient
 
         }
 
-        public async Task<bool> UploadSaveFolder(string save_folder_path,string group_id) 
+        public async Task<bool> UploadSaveFolder(string save_folder_path, string group_id)
         {
             DirectoryInfo dirInfo = new DirectoryInfo(save_folder_path);
             FileInfo[] files = dirInfo.GetFiles();
@@ -471,7 +459,7 @@ namespace SaveMyRPGClient
                 file = new FileInfo(full_path);
                 file_name = file.Name;
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 Debug.WriteLine(ex);
                 return false;

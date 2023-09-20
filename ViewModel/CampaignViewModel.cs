@@ -1,10 +1,5 @@
 ﻿using SaveMyRPGClient.Commands;
 using SaveMyRPGClient.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.ViewModel
 {
@@ -12,7 +7,7 @@ namespace SaveMyRPGClient.ViewModel
     {
         private readonly GroupModel _group;
         public CampaignListViewModel _clvm;
-        
+
         public string GroupID => _group.Id;
         public string Name => _group.Name;
         public string HostEmail => _group.Host_Email;
