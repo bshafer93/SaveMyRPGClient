@@ -8,7 +8,7 @@ namespace SaveMyRPGClient.ViewModel
 {
     public class SaveViewModel : ViewModelBase
     {
-        private readonly SaveModel _save;
+        public readonly SaveModel _save;
         public SaveListViewModel SaveListVM { get; set; }
         private bool _isLocal;
         public DownloadSaveCommand DownloadSaveCMD { get; set; }
@@ -70,6 +70,19 @@ namespace SaveMyRPGClient.ViewModel
             {
                 _save.Date_Created = value;
                 OnPropertyChanged(nameof(DateCreated));
+            }
+        }
+
+        public string Comment
+        {
+            get
+            {
+                return _save.Comment;
+            }
+            set
+            {
+                _save.Comment = value;
+                OnPropertyChanged(nameof(Comment));
             }
         }
 

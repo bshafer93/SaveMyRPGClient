@@ -1,4 +1,5 @@
-﻿using SaveMyRPGClient.Model;
+﻿using Microsoft.IdentityModel.Tokens;
+using SaveMyRPGClient.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -10,6 +11,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace SaveMyRPGClient
 {
@@ -234,8 +236,9 @@ namespace SaveMyRPGClient
                     save.Hash = SHA256.HashData(File.ReadAllBytes(file.FullName)).ToString();
                     save.CDN_Path = group_id + "/" + directory_name + "/" + file01_name;
                     save.Date_Created = new FileInfo(file.FullName).CreationTime;
+                    save.Comment = "Uploaded on:" + DateTime.Now.ToString();
 
-                    bool didUpload = await App.Client.UploadSaveFile(save.Group_Id, file.FullName, directory_name, file01_name, save.Save_Owner);
+                    bool didUpload = await App.Client.UploadSaveFile(save.Group_Id, file.FullName, directory_name, file01_name, save.Save_Owner,save.Comment);
 
                     if (!didUpload)
                     {
@@ -361,6 +364,29 @@ namespace SaveMyRPGClient
             }
 
         }
+
+        public async Task<bool> UpdateSaveComment(SaveModel save)
+        {
+
+            _client.DefaultRequestHeaders.Clear();
+            _client.DefaultRequestHeaders.Add("jwt-token", Properties.Settings.Default.JwtTokenString);
+            _client.DefaultRequestHeaders.Add("hash", save.Hash);
+            _client.DefaultRequestHeaders.Add("comment", save.Comment);
+
+            try
+            {
+                HttpResponseMessage resp = await _client.GetAsync("/scu");
+
+                resp.EnsureSuccessStatusCode();
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+                return false;
+            }
+            return true;
+        }
         public async Task<GroupModel?> CreateCampaign(GroupModel gm)
         {
             _client.DefaultRequestHeaders.Clear();
@@ -391,7 +417,7 @@ namespace SaveMyRPGClient
             }
 
         }
-        public async Task<bool> UploadSaveFile(string group_id, string full_path, string save_folder_name, string save_name, string? save_owner)
+        public async Task<bool> UploadSaveFile(string group_id, string full_path, string save_folder_name, string save_name, string? save_owner, string? comment)
         {
 
             string save_owner_email = save_owner != null ? save_owner.ToString() : Properties.Settings.Default.Email;
@@ -402,6 +428,7 @@ namespace SaveMyRPGClient
             _client.DefaultRequestHeaders.Add("group_id", group_id);
             _client.DefaultRequestHeaders.Add("save_folder_name", save_folder_name);
             _client.DefaultRequestHeaders.Add("file_name", save_name);
+            _client.DefaultRequestHeaders.Add("comment", (comment != null) ? comment: "Default Comment...");
             HttpContent save_file_raw = new ByteArrayContent(File.ReadAllBytes(full_path));
 
             try

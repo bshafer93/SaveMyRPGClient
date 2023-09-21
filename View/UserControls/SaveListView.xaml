@@ -27,7 +27,14 @@
                         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
                         <Setter Property="Background" Value="Transparent"/>
                         <Setter Property="Foreground" Value="White"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Transparent" />
+                                <Setter Property="BorderThickness" Value="0" />
+                            </Trigger>
+                        </Style.Triggers>
                     </Style>
+                    
                 </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView ColumnHeaderToolTip="Saves Information">
@@ -58,7 +65,14 @@
                         <GridViewColumn Header="Comment" Width="auto">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
-                                    <TextBlock Text="This is a Comment"/>
+                                    <TextBox Text="{Binding Comment,Mode=TwoWay}"
+                                             Background="Transparent"
+                                             Foreground="White"
+                                             BorderThickness="0"
+                                             TextWrapping="Wrap"
+                                             Height="Auto"
+                                             TextAlignment="Left"
+                                             VerticalContentAlignment="Top"/>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>

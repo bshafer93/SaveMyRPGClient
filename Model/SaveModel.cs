@@ -10,6 +10,7 @@ namespace SaveMyRPGClient.Model
         public string Folder_Name { get; set; }
         public string CDN_Path { get; set; }
         public DateTime Date_Created { get; set; }
+        public string Comment { get; set; }
 
         public SaveModel(
              string hash,
@@ -17,7 +18,8 @@ namespace SaveMyRPGClient.Model
              string saveOwner,
              string folderName,
              string cdnPath,
-             DateTime date)
+             DateTime date,
+             string comment)
         {
             Hash = hash;
             Group_Id = groupId;
@@ -25,7 +27,7 @@ namespace SaveMyRPGClient.Model
             Folder_Name = folderName;
             Date_Created = date;
             CDN_Path = cdnPath;
-
+            Comment = comment;
         }
 
 

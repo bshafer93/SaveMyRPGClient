@@ -21,6 +21,20 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
+            
+            if (SaveListVM.SavesList.Count() > 0){
+                SaveListVM.StatusMessage = "Uploading Comments...";
+                foreach (var save in SaveListVM.SavesList)
+                {
+                    bool didUpdate = await App.Client.UpdateSaveComment(save._save);
+                    if (didUpdate) { SaveListVM.StatusMessage = "Comment for " + save._save.Folder_Name + " Updated"; }
+                }
+                SaveListVM.StatusMessage = "Comments Uploaded";
+
+            }
+
+
+
             SaveListVM.StatusMessage = "Syncing Save now...";
             var saves = await App.Client.RetrieveAllCampaignSaves(SaveListVM.GroupID);
 
