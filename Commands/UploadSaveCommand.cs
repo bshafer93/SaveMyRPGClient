@@ -20,6 +20,7 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
+            SaveListVM.StatusMessage = "Uploading Save...";
             System.Windows.Forms.FolderBrowserDialog openFileDlg = new System.Windows.Forms.FolderBrowserDialog();
             var result = openFileDlg.ShowDialog();
             string save_path = "";
@@ -35,6 +36,7 @@ namespace SaveMyRPGClient.Commands
             if (File.Exists(save_path.ToString()))
             {
                 Debug.WriteLine("Choose Save Folder and not file...");
+                SaveListVM.StatusMessage = "Choose Save Folder and not file...";
                 return;
             }
 
@@ -43,8 +45,9 @@ namespace SaveMyRPGClient.Commands
             if (!didUpload)
             {
                 Debug.WriteLine("Save Failed to Upload");
+                SaveListVM.StatusMessage = "Failed to upload save...";
             }
-
+            SaveListVM.StatusMessage = "Upload Successful!";
         }
     }
 }

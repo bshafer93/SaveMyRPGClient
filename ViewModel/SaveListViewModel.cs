@@ -9,10 +9,27 @@ namespace SaveMyRPGClient.ViewModel
 {
     public class SaveListViewModel : ViewModelBase
     {
-        private readonly ObservableCollection<SaveViewModel> _saveList;
+        public  ObservableCollection<SaveViewModel> _saveList;
         public UploadSaveCommand UploadSaveCMD { get; set; }
+        public SyncSaveCommand SyncSavesCMD { get; set; }
+        private string _statusMessage;
+
+        public string StatusMessage
+        {
+            get
+            {
+                return _statusMessage;
+            }
+            set
+            {
+                _statusMessage = value;
+                OnPropertyChanged(nameof(StatusMessage));
+            }
+        
+        }
 
         public IEnumerable<SaveViewModel> SavesList => _saveList;
+
 
         public string GroupIDLabel 
         { 
@@ -32,6 +49,8 @@ namespace SaveMyRPGClient.ViewModel
         {
             GroupID = group_id;
             UploadSaveCMD = new UploadSaveCommand(this);
+            SyncSavesCMD = new SyncSaveCommand(this);
+            
             GroupName = group_name;
 
             var task = Task.Run(() => App.Client.RetrieveAllCampaignSaves(group_id));
@@ -44,7 +63,7 @@ namespace SaveMyRPGClient.ViewModel
 
             foreach (var save in saves)
             {
-                _saveList.Add(new SaveViewModel(save));
+                _saveList.Add(new SaveViewModel(save, this));
 
                 if (_saveList.Last().IsLocal)
                 {
@@ -52,21 +71,6 @@ namespace SaveMyRPGClient.ViewModel
                 }
             }
         }
-
-
-        public async Task<bool> SyncSaves()
-        {
-            _saveList.Clear();
-            var saves = await App.Client.RetrieveAllCampaignSaves(GroupID);
-            if (saves == null) return false;
-
-            foreach (var save in saves)
-            {
-                _saveList.Add(new SaveViewModel(save));
-            }
-            return true;
-        }
-
 
     }
 

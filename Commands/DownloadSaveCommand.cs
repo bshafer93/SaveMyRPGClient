@@ -20,6 +20,7 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
+            SaveVM.SaveListVM.StatusMessage = "Downloading Save Now";
             string BaseSaveName = SaveVM.FolderName.Split("__", StringSplitOptions.RemoveEmptyEntries)[1];
 
             string pullURLLSV = SaveVM.CDNPath.Replace("https://ny.storage.bunnycdn.com/savemyrpg", "https://savemyrpg.b-cdn.net");
@@ -31,10 +32,12 @@ namespace SaveMyRPGClient.Commands
             if (!save_ok || !img_ok)
             {
                 Debug.WriteLine("Save failed to download.");
+                SaveVM.SaveListVM.StatusMessage = "Save Failed to Download";
                 SaveVM.IsLocal = false;
                 return;
             }
             SaveVM.IsLocal = true;
+            SaveVM.SaveListVM.StatusMessage =$"Save {BaseSaveName} Downloaded!";
         }
     }
 }

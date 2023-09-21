@@ -9,6 +9,7 @@ namespace SaveMyRPGClient.ViewModel
     public class SaveViewModel : ViewModelBase
     {
         private readonly SaveModel _save;
+        public SaveListViewModel SaveListVM { get; set; }
         private bool _isLocal;
         public DownloadSaveCommand DownloadSaveCMD { get; set; }
         public string GroupID
@@ -102,10 +103,11 @@ namespace SaveMyRPGClient.ViewModel
 
         }
 
-        public SaveViewModel(SaveModel save)
+        public SaveViewModel(SaveModel save,SaveListViewModel _saveListVM)
         {
 
             _save = save;
+            SaveListVM = _saveListVM;
 
             IsLocal = Directory.Exists(Properties.Settings.Default.SavePath + "\\" + FolderName);
 

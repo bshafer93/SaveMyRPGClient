@@ -1,4 +1,7 @@
 ﻿using SaveMyRPGClient.ViewModel;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.Commands
@@ -18,7 +21,18 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
-            //bool didDownload = await App.Client.UploadSaveImage(SaveListVM.GroupID, file.FullName);
+            SaveListVM.StatusMessage = "Syncing Save now...";
+            var saves = await App.Client.RetrieveAllCampaignSaves(SaveListVM.GroupID);
+
+            SaveListVM._saveList = new ObservableCollection<SaveViewModel>();
+
+            if (saves == null) return;
+
+            foreach (var save in saves)
+            {
+                SaveListVM._saveList.Add(new SaveViewModel(save, SaveListVM));
+            }
+            SaveListVM.StatusMessage = "Sync Save Successful";
         }
     }
 }
