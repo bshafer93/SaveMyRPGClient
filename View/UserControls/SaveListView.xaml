@@ -121,9 +121,24 @@
         <Grid Grid.Row="1" HorizontalAlignment="Center">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="30"/>
             </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0"
+                       IsReadOnly="True"
+                       BorderThickness="0"
+                       Background="Transparent"
+                       Foreground="White"
+                       Margin="0,0,20,0"
+                       >
+                <TextBox.Text>
+                    <MultiBinding StringFormat=" {0}: {1}">
+                        <Binding Path="GroupIDLabel"/>
+                        <Binding Path="GroupID"/>
+                    </MultiBinding>
+                </TextBox.Text>
+            </TextBox>
             <Button x:Name="btnUploadSave"
-                           Grid.Column="0"
+                           Grid.Column="1"
                            Cursor="Hand"
                            BorderThickness="0"
                            Margin="0,0,0,0"

@@ -23,6 +23,7 @@ namespace SaveMyRPGClient
             loginView.DataContext = loginVM;
 
             loginView.Show();
+
             loginView.IsVisibleChanged += (sender, e) =>
             {
                 if (loginView.IsVisible == false && loginView.IsLoaded)

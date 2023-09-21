@@ -14,6 +14,17 @@ namespace SaveMyRPGClient.ViewModel
 
         public IEnumerable<SaveViewModel> SavesList => _saveList;
 
+        public string GroupIDLabel 
+        { 
+            get 
+            { 
+                return "Group ID"; 
+            } 
+            set
+            { 
+
+            } 
+        }
         public string GroupID { get; set; }
         public string GroupName { get; set; }
 

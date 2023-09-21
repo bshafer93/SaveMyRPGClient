@@ -10,6 +10,7 @@ namespace SaveMyRPGClient.ViewModel
     {
         private readonly SaveModel _save;
         private bool _isLocal;
+        public DownloadSaveCommand DownloadSaveCMD { get; set; }
         public string GroupID
         {
             get
@@ -80,12 +81,11 @@ namespace SaveMyRPGClient.ViewModel
             set
             {
                 _isLocal = value;
-
                 OnPropertyChanged(nameof(IsLocal));
             }
         }
 
-        public DownloadSaveCommand DownloadSaveCMD { get; set; }
+        
 
         public System.Windows.Media.ImageSource ImageURL
         {
@@ -98,6 +98,7 @@ namespace SaveMyRPGClient.ViewModel
                 }
                 return new BitmapImage(new Uri("Images\\imagenotfound.webp"));
             }
+
 
         }
 
