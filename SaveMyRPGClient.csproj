@@ -9,6 +9,7 @@
     <Platforms>AnyCPU;x64</Platforms>
     <UseWindowsForms>True</UseWindowsForms>
     <StartupObject>SaveMyRPGClient.App</StartupObject>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,10 +28,6 @@
     <None Remove="Images\sync-icon.png" />
     <None Remove="Images\upload-icon.png" />
     <None Remove="Images\user-icon.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="TaskExtensions\" />
   </ItemGroup>
 
   <ItemGroup>

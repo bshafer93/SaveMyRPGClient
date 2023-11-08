@@ -6,13 +6,7 @@ using System.Linq;
 
 namespace SaveMyRPGClient
 {
-    public struct SaveFile
-    {
-        public string FolderName { get; set; }
-        public string LSV_Name { get; set; }
-        public string Pic_Path { get; set; }
 
-    }
     public struct SaveFileChunk
     {
 
@@ -29,18 +23,6 @@ namespace SaveMyRPGClient
             Data = new byte[ChunkSize];
             Array.Copy(chunk, 12, Data, 0, ChunkSize);
         }
-        public SaveFileChunk()
-        {
-            Data = new byte[1];
-        }
-
-        public void PrintSaveChunkInfo()
-        {
-            Console.WriteLine($"Total Chunks: {TotalChunks}");
-            Console.WriteLine($"Chunk Number: {ChunkNumber}");
-            Console.WriteLine($"Chunk Size:  {ChunkSize}");
-
-        }
 
         public byte[] Serialize()
         {
@@ -52,36 +34,12 @@ namespace SaveMyRPGClient
             return chunk;
         }
 
-        static public SaveFileChunk Deserialize(byte[] chunk)
-        {
-            SaveFileChunk sfc = new SaveFileChunk(chunk);
-            return sfc;
-
-        }
-
-        static public byte[] Serialize(SaveFileChunk sfc)
-        {
-            return sfc.Serialize();
-        }
-
 
     }
     public class SaveFileManager
     {
         static public string default_path = @"C:\%USERPROFILE%\AppData\Local\Larian Studios\Baldur's Gate 3\PlayerProfiles\Public\Savegames\Story";
         static public List<DirectoryInfo> saves_list;
-        SaveFileManager()
-        {
-            string[] save_folders = SaveFileManager.ListAllSaves();
-            for (int i = 0; i < save_folders.Length; i++)
-            {
-                saves_list.Add(new DirectoryInfo(save_folders[i]));
-                Debug.WriteLine($"FolderName: {saves_list.Last().Name}");
-                Debug.WriteLine($"Full Path: {saves_list.Last().FullName}");
-                Debug.WriteLine($"Created: {saves_list.Last().CreationTimeUtc}");
-                Debug.WriteLine($"Last Modified: {saves_list.Last().LastWriteTimeUtc}");
-            }
-        }
 
         static public string[] ListAllSaves()
         {

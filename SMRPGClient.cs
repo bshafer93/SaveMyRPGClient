@@ -42,6 +42,7 @@ namespace SaveMyRPGClient
         private string token_signature = "";
 
         public JwtSecurityToken? jwt_token;
+
         public string TokenSignature { get => token_signature; set => token_signature = value; }
 
         public SMRPGClient()
@@ -63,16 +64,6 @@ namespace SaveMyRPGClient
         public bool init()
         {
             return (_client != null);
-        }
-
-        public string[] ListLocalSaves()
-        {
-
-            string newest_save = new DirectoryInfo(Properties.Settings.Default.SavePath).GetDirectories().OrderByDescending(t => t.LastWriteTimeUtc).First().FullName;
-
-            Debug.WriteLine(newest_save);
-
-            return Directory.GetDirectories(Properties.Settings.Default.SavePath);
         }
 
         public async Task<List<GroupModel>?> RetrieveAllJoinedCampaigns(UserModel userModel)
