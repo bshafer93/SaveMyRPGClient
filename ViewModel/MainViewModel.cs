@@ -5,8 +5,20 @@ namespace SaveMyRPGClient.ViewModel
     public class MainViewModel : ViewModelBase
     {
         private bool _isViewVisible = true;
+        private CampaignListViewModel _campaignListViewModel;
 
-        public CampaignListViewModel CurrentCampaignListViewModel { get; }
+        public CampaignListViewModel CurrentCampaignListViewModel {
+            get
+            {
+
+                return _campaignListViewModel;
+            }
+            set
+            {
+                _campaignListViewModel = value;
+                OnPropertyChanged(nameof(CurrentCampaignListViewModel));
+            }
+        }
         public ShowSettingsService _showSettingsService;
         public ShowSettingsCommand ShowSettingsCMD { get; }
 

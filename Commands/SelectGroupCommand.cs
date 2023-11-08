@@ -6,7 +6,7 @@ namespace SaveMyRPGClient.Commands
 {
     public class SelectGroupCommand : AsyncCommand
     {
-        public CampaignViewModel cvm { get; set; }
+        public CampaignViewModel cvm { get; }
         public SelectGroupCommand(CampaignViewModel vm)
         {
             cvm = vm;
@@ -21,7 +21,7 @@ namespace SaveMyRPGClient.Commands
 
         public override async Task ExecuteAsync()
         {
-            cvm._clvm.changeCampaignView(cvm.GroupID);
+            cvm._clvm.changeCampaignView(cvm);
 
             Debug.WriteLine("Change to:" + cvm.Name);
 

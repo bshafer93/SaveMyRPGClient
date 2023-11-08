@@ -53,6 +53,7 @@ namespace SaveMyRPGClient.Commands
             }
 
             CreateGroupVM.ErrorMessage = "Campaign Created!";
+            CreateGroupVM.ErrorMessage = "Campaign Created! && Uploading Save...";
 
             if (!await App.Client.UploadSaveFolder(CreateGroupVM.SavePath, new_gm.Id))
             {

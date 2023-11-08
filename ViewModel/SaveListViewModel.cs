@@ -12,6 +12,7 @@ namespace SaveMyRPGClient.ViewModel
         public  ObservableCollection<SaveViewModel> _saveList;
         public UploadSaveCommand UploadSaveCMD { get; set; }
         public SyncSaveCommand SyncSavesCMD { get; set; }
+
         private string _statusMessage;
 
         public string StatusMessage
@@ -45,15 +46,19 @@ namespace SaveMyRPGClient.ViewModel
         public string GroupID { get; set; }
         public string GroupName { get; set; }
 
-        public SaveListViewModel(string group_id, string group_name)
+        public SaveListViewModel(string group_id, string group_name, CampaignViewModel cvm)
         {
             GroupID = group_id;
-            UploadSaveCMD = new UploadSaveCommand(this);
+            UploadSaveCMD = new UploadSaveCommand(this,cvm._clvm);
             SyncSavesCMD = new SyncSaveCommand(this);
-            
             GroupName = group_name;
+            RefreshSaveList();
 
-            var task = Task.Run(() => App.Client.RetrieveAllCampaignSaves(group_id));
+        }
+
+        public void RefreshSaveList()
+        {
+            var task = Task.Run(() => App.Client.RetrieveAllCampaignSaves(GroupID));
             task.Wait();
             var saves = task.Result;
 
@@ -70,6 +75,8 @@ namespace SaveMyRPGClient.ViewModel
                     Debug.WriteLine(save.Folder_Name + " Is saved locally");
                 }
             }
+
+
         }
 
     }

@@ -2,6 +2,7 @@
 using SaveMyRPGClient.Model;
 using System;
 using System.IO;
+using System.Linq;
 using System.Windows.Media.Imaging;
 
 namespace SaveMyRPGClient.ViewModel
@@ -105,12 +106,23 @@ namespace SaveMyRPGClient.ViewModel
         {
             get
             {
+
                 if (IsLocal)
+
                 {
-                    string imgPath = System.IO.Directory.GetFiles(Properties.Settings.Default.SavePath + "\\" + FolderName, "*.WebP")[0];
-                    return new BitmapImage(new Uri(imgPath));
+                    string[] imgPath = System.IO.Directory.GetFiles(Properties.Settings.Default.SavePath + "\\" + FolderName, "*.WebP");
+
+                    if (imgPath.Count() < 1)
+                    {
+                        return new BitmapImage(new Uri(@"Images\imagenotfound.WebP"));
+                    }
+                    else 
+                    {
+                        return new BitmapImage(new Uri(imgPath[0]));
+                    }
+                   
                 }
-                return new BitmapImage(new Uri("Images\\imagenotfound.webp"));
+                return new BitmapImage(new Uri(@"Images\imagenotfound.WebP"));
             }
 
 

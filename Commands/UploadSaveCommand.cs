@@ -8,9 +8,11 @@ namespace SaveMyRPGClient.Commands
     public class UploadSaveCommand : AsyncCommand
     {
         public SaveListViewModel SaveListVM { get; set; }
-        public UploadSaveCommand(SaveListViewModel slvm)
+        CampaignListViewModel _clvm;
+        public UploadSaveCommand(SaveListViewModel slvm,CampaignListViewModel clvm)
         {
             SaveListVM = slvm;
+            _clvm = clvm;
         }
 
         public override bool CanExecute()
@@ -48,6 +50,8 @@ namespace SaveMyRPGClient.Commands
                 SaveListVM.StatusMessage = "Failed to upload save...";
             }
             SaveListVM.StatusMessage = "Upload Successful!";
+            _clvm.changeCampaignView(SaveListVM.GroupID);
+            
         }
     }
 }

@@ -126,17 +126,7 @@
             Orientation="Vertical"
             Margin="0,35,0,0">
 
-            <TextBlock Text="Add a new Campaign!"
-               Foreground="LightGray"
-               FontSize="12"
-               FontWeight="Medium"
-               FontFamily="Arial"
-               TextWrapping="Wrap"
-               HorizontalAlignment="Center"
-               Margin="0,15,0,0"
-               Opacity="0.75"/>
-
-            <TextBlock Text="Campaign Name"
+            <TextBlock Text="Group Name"
                Foreground="DarkGray"
                FontSize="12"
                FontWeight="Medium"

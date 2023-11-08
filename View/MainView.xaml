@@ -132,10 +132,11 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <UC:CampaignListView x:Name="campaignListView" Grid.Row="1" Grid.Column="0" DataContext="{Binding CurrentCampaignListViewModel}"/>
+            <UC:CampaignListView x:Name="campaignListView" Grid.Row="1" Grid.Column="0" DataContext="{Binding CurrentCampaignListViewModel,Mode=OneWay}"/>
+            
             <StackPanel Grid.Column="1" Grid.Row="1">
-                <UC:SaveListView x:Name="saveListView" DataContext="{Binding CurrentCampaignListViewModel.CurrentSaveListViewModel}"/>
-                <UC:LoadingSpinnerView Height="40" x:Name="Spinner"/>
+                        <UC:SaveListView x:Name="saveListView" DataContext="{Binding CurrentCampaignListViewModel.CurrentSaveListViewModel,Mode=OneWay}"/>
+
              </StackPanel>
 
 

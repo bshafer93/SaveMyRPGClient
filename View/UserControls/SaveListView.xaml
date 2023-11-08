@@ -38,61 +38,16 @@
                 </ListView.ItemContainerStyle>
                 <ListView.View>
                     <GridView ColumnHeaderToolTip="Saves Information">
-                        <GridViewColumn Header="Name" Width="auto">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding FolderName}"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-
-                        <GridViewColumn Header="Date" Width="auto">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding DateCreated}"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-
-                        <GridViewColumn Header="Save Owner" Width="auto">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding SaveOwner}"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-
-                        <GridViewColumn Header="Comment" Width="auto">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBox Text="{Binding Comment,Mode=TwoWay}"
-                                             Background="Transparent"
-                                             Foreground="White"
-                                             BorderThickness="0"
-                                             TextWrapping="Wrap"
-                                             Height="Auto"
-                                             TextAlignment="Left"
-                                             VerticalContentAlignment="Top"/>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        <GridViewColumn Header="Image" Width="150">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <Image Source="{Binding ImageURL}" />
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
                         <GridViewColumn Header="">
 
-                        <GridViewColumn.CellTemplate>
+                            <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <Button x:Name="btnDownloadSave"
                                        Cursor="Hand"
                                        BorderThickness="0"
                                        Margin="5,0,5,0">
                                         <Button.Resources>
-                                            
+
                                             <Style TargetType="Button">
                                                 <Setter Property="Width" Value="30"/>
                                                 <Setter Property="Height" Value="30"/>
@@ -104,9 +59,9 @@
                                                     </Setter.Value>
                                                 </Setter>
                                                 <Setter Property="Command" Value="">
-                                                    
+
                                                 </Setter>
-                                                        <Style.Triggers>
+                                                <Style.Triggers>
                                                     <Trigger Property="IsMouseOver" Value="True">
                                                         <Setter Property="Background" Value="#28AEED"/>
                                                     </Trigger>
@@ -124,9 +79,56 @@
                                             </Style>
                                         </Button.Resources>
                                     </Button>
-                               </DataTemplate>
+                                </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
+                        <GridViewColumn Header="Image" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Image Source="{Binding ImageURL}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+                        <GridViewColumn Header="Name" Width="auto">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding FolderName}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+
+                        <GridViewColumn Header="Save Owner" Width="auto">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding SaveOwner}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Date" Width="auto">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding DateCreated}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Comment" Width="auto">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBox Text="{Binding Comment,Mode=TwoWay}"
+                                             Background="Transparent"
+                                             Foreground="White"
+                                             BorderThickness="0"
+                                             TextWrapping="Wrap"
+                                             Height="Auto"
+                                             TextAlignment="Left"
+                                             VerticalContentAlignment="Top"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+                        
                     </GridView>
                 </ListView.View>
             </ListView>

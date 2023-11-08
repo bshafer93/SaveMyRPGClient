@@ -1,17 +1,22 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using SaveMyRPGClient.Commands;
 using SaveMyRPGClient.Model;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 
 namespace SaveMyRPGClient.ViewModel
 {
     public class CampaignListViewModel : ViewModelBase
     {
-        private readonly ObservableCollection<CampaignViewModel> _campaignList;
+        static private ObservableCollection<CampaignViewModel> _campaignList;
 
-        private SaveListViewModel? _currentSLVM;
+        static private int _currentCampaignIndex = 0;
+
+        private SaveListViewModel? _currentSaveListViewModel;
 
         DialogService _dialogService;
         ShowJoinGroupService _joinGroupService;
@@ -51,26 +56,24 @@ namespace SaveMyRPGClient.ViewModel
         {
             get
             {
-                return _currentSLVM;
+                return _currentSaveListViewModel;
             }
             set
             {
-                _currentSLVM = value;
+                _currentSaveListViewModel = value;
                 OnPropertyChanged(nameof(CurrentSaveListViewModel));
             }
+ 
         }
-
-        public List<SaveListViewModel> SaveListViewModelList { get; set; }
 
         public CampaignListViewModel()
         {
             _dialogService = new DialogService(this);
             _joinGroupService = new ShowJoinGroupService(this);
             ShowJoinGroupCMD = new ShowJoinGroupCommand(this);
-
             CreateGroupCMD = new ShowCreateGroupCommand(this);
-            SaveListViewModelList = new List<SaveListViewModel>();
-            _campaignList = new ObservableCollection<CampaignViewModel>();
+            
+           _campaignList = new ObservableCollection<CampaignViewModel>();
 
 
             var task = Task.Run(() => App.Client.RetrieveAllJoinedCampaigns(Properties.Settings.Default.Email));
@@ -80,16 +83,14 @@ namespace SaveMyRPGClient.ViewModel
             {
                 return;
             }
-
+            int i = 0;
             foreach (GroupModel group in groups)
             {
-                _campaignList.Add(new CampaignViewModel(group, this));
-
-                SaveListViewModelList.Add(new SaveListViewModel(group.Id, group.Name));
-
+                _campaignList.Add(new CampaignViewModel(i,group, this));
+                i++;
             }
 
-            CurrentSaveListViewModel = (SaveListViewModelList.Count < 1) ? null : SaveListViewModelList[0];
+            CurrentSaveListViewModel = (_campaignList.Count < 1) ? null : _campaignList[0].SaveListVM;
 
         }
 
@@ -101,25 +102,31 @@ namespace SaveMyRPGClient.ViewModel
             if (groups == null) return;
 
             _campaignList.Clear();
-            SaveListViewModelList.Clear();
 
-            foreach (var group in groups)
+            int i = 0;
+            foreach (GroupModel group in groups)
             {
-                _campaignList.Add(new CampaignViewModel(group, this));
-
-                SaveListViewModelList.Add(new SaveListViewModel(group.Id, group.Name));
-
+                _campaignList.Add(new CampaignViewModel(i, group, this));
+                i++;
             }
 
-            if (SaveListViewModelList.IsNullOrEmpty()) return;
-
-            CurrentSaveListViewModel = SaveListViewModelList[0];
+            CurrentSaveListViewModel = (_campaignList.Count < 1) ? null : _campaignList[0].SaveListVM;
 
         }
 
         public void changeCampaignView(string group_id)
         {
-            CurrentSaveListViewModel = SaveListViewModelList.Find((SaveListViewModel a) => a.GroupID == group_id);
+
+            int index = CampaignList.Single(i => i.GroupID == group_id).listIndex;
+            _campaignList[index].updateSaveList();
+            CurrentSaveListViewModel = _campaignList[index].SaveListVM;
+        }
+
+        public void changeCampaignView(CampaignViewModel group)
+        {
+
+            _campaignList[group.listIndex].updateSaveList();
+            CurrentSaveListViewModel = _campaignList[group.listIndex].SaveListVM;
         }
 
         public async Task addCampaign(string group_id)
@@ -127,10 +134,9 @@ namespace SaveMyRPGClient.ViewModel
             var group = await App.Client.RetrieveCampaignInfo(group_id);
 
             if (group == null) return;
+            int index = _campaignList.Count - 1;
+            _campaignList.Add(new CampaignViewModel(index,group, this));
 
-            _campaignList.Add(new CampaignViewModel(group, this));
-
-            SaveListViewModelList.Add(new SaveListViewModel(group.Id, group.Name));
         }
     }
 }
