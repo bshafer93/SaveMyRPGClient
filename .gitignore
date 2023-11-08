@@ -4,7 +4,6 @@
 *.vsidx
 bin/
 obj/
-obj\
-bin\
 *.exe
 *.pdb
+*.bin
