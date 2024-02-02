@@ -5,6 +5,10 @@
 This is the code base for the client side of the SaveMyRPG application. 
 I originally built this application to allow players to share save files of Baulders Gate 3 among themselves.
 
+<b>UPDATE</b>
+
+Due to cost, the functionality of this software will cease.
+
 ## Technical Details
 
 * C#
